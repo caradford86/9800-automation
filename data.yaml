@@ -6,8 +6,7 @@ username: admin
 password: WWTwwt1!
 
 # ----------------- API ENDPOINTS --------------------------------
-# DO NOT edit this section. These are the endpoints for the script
-# to collect data from the controller.
+
 endpoints:
   interfaces: Cisco-IOS-XE-interfaces-oper:interfaces/interface
   vlans: Cisco-IOS-XE-vlan-oper:vlans/vlan
