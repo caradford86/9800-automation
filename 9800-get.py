@@ -1,8 +1,42 @@
+from libpath import Path
+
 import requests
 import json
 import re
+import yaml
 
 requests.packages.urllib3.disable_warnings()
+
+
+data = yaml.safe_load(Path('data.yml').read_text())
+HEADERS = {
+    'content-type': 'application/yang-data+json',
+    'accept': 'application/yang-data+json'
+}
+
+
+def _get(endpoint):
+    host = data.get('controller')
+    user = data.get('username')
+    pw = data.get('password')
+    port = data.get('port')
+
+    url = f'https://{host}:{port}/restconf/data/{endpoint}'
+    resp = requests.get(url, auth=(user, pw), headers=HEADERS)
+    return resp
+
+
+def write_to_file(key, content):
+    filename = f'{key}.json'
+    with open(filename, 'w') as out:
+        out.write(out)
+
+
+endpoints = data.get('endpoints')
+for key, value in endpoints.items():
+    print(f'retrieving data for {key}')
+    r = _get(value)
+    write_to_file(key, r.json())
 
 
 #Interfaces
@@ -36,7 +70,7 @@ with open('wlan-profiles.json','wb') as f:
     f.write(response.content)
 
 
-#Open the WLAN Profile JSON File 
+#Open the WLAN Profile JSON File
 fin = open("wlan-profiles.json", "r")
 fout = open("wlan-profiles-2.json", "w")
 
@@ -58,7 +92,7 @@ with open('policy-profiles.json','wb') as f:
     f.write(response.content)
 
 
-#Open the Policy Profile JSON File 
+#Open the Policy Profile JSON File
 fin = open("policy-profiles.json", "r")
 fout = open("policy-profiles-2.json", "w")
 
@@ -91,7 +125,7 @@ with open('ap-join-profiles.json','wb') as f:
     f.write(response.content)
 
 
-#Open the AP Join Profile JSON File 
+#Open the AP Join Profile JSON File
 fin = open("ap-join-profiles.json", "r")
 fout = open("ap-join-profiles-2.json", "w")
 
@@ -113,7 +147,7 @@ with open('flex-profiles.json','wb') as f:
     f.write(response.content)
 
 
-#Open the Flex Profile JSON File 
+#Open the Flex Profile JSON File
 fin = open("flex-profiles.json", "r")
 fout = open("flex-profiles-2.json", "w")
 
@@ -146,7 +180,7 @@ with open('rf-profiles.json','wb') as f:
     f.write(response.content)
 
 
-#Open the RF Profile JSON File 
+#Open the RF Profile JSON File
 fin = open("rf-profiles.json", "r")
 fout = open("rf-profiles-2.json", "w")
 

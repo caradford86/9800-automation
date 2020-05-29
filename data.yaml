@@ -1,0 +1,11 @@
+---
+controller: 10.1.1.111
+port: 443
+username: cradford
+password: P@22w0rd!@
+
+
+endpoints:
+  interfaces: Cisco-IOS-XE-interfaces-oper:interfaces/interface?with-defaults=report-all
+  vlans: Cisco-IOS-XE-vlan-oper:vlans/vlan?with-defaults=report-all
+  wlan_profile: Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/wlan-cfg-entries/wlan-cfg-entry?with-defaults=report-all
