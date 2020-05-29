@@ -1,0 +1,30 @@
+{
+  "Cisco-IOS-XE-wireless-site-cfg:site-tag-config": [
+    {
+      "site-tag-name": "WWT",
+      "description": "sample",
+      "flex-profile": "WWT",
+      "ap-join-profile": "WWT",
+      "is-local-site": false,
+      "fabric-control-plane-name": "",
+      "image-download-profile-name": ""
+    },
+    {
+      "site-tag-name": "WWT-Branch-1",
+      "description": "",
+      "flex-profile": "WWT-Branch-1",
+      "ap-join-profile": "WWT-Branch",
+      "is-local-site": false,
+      "fabric-control-plane-name": "",
+      "image-download-profile-name": ""
+    },
+    {
+      "site-tag-name": "default-site-tag",
+      "description": "default site tag",
+      "flex-profile": "default-flex-profile",
+      "ap-join-profile": "default-ap-profile",
+      "is-local-site": true,
+      "image-download-profile-name": "default"
+    }
+  ]
+}

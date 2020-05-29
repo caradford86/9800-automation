@@ -1,0 +1,2008 @@
+{
+  "Cisco-IOS-XE-interfaces-oper:interface": [
+    {
+      "name": "Capwap1",
+      "interface-type": "iana-iftype-ethernet-csmacd",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-ready",
+      "last-change": "2020-05-17T20:22:52.000304+00:00",
+      "if-index": 0,
+      "phys-address": "00:00:00:00:00:00",
+      "speed": "10240000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000273+00:00",
+        "in-octets": "0",
+        "in-unicast-pkts": "0",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 0,
+        "out-unicast-pkts": "0",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "vrf": "",
+      "description": "",
+      "mtu": 0,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:00:00:00:00:00",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "intf-class-unspecified": true
+    },
+    {
+      "name": "Control Plane",
+      "interface-type": "iana-iftype-other",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-ready",
+      "last-change": "2020-02-14T12:59:01.000527+00:00",
+      "if-index": 0,
+      "phys-address": "00:00:00:00:00:00",
+      "speed": "10240000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000273+00:00",
+        "in-octets": "0",
+        "in-unicast-pkts": "0",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 0,
+        "out-unicast-pkts": "0",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "vrf": "",
+      "description": "",
+      "mtu": 0,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:00:00:00:00:00",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "intf-class-unspecified": true
+    },
+    {
+      "name": "GigabitEthernet1",
+      "interface-type": "iana-iftype-ethernet-csmacd",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-ready",
+      "last-change": "2020-04-23T12:32:11.000274+00:00",
+      "if-index": 1,
+      "phys-address": "00:0c:29:73:22:d6",
+      "speed": "1024000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000273+00:00",
+        "in-octets": "43505720146",
+        "in-unicast-pkts": "233108245",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 3451991316,
+        "out-unicast-pkts": "11042010",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "29",
+        "rx-kbps": "28",
+        "tx-pps": "2",
+        "tx-kbps": "76",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "diffserv-info": [
+        {
+          "direction": "qos-outbound",
+          "policy-name": "AutoQos-4.0-wlan-Port-Output-Policy",
+          "diffserv-target-classifier-stats": [
+            {
+              "classifier-entry-name": "AutoQos-4.0-Output-CAPWAP-C-Class",
+              "parent-path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-CAPWAP-C-Class",
+              "classifier-entry-stats": {
+                "classified-pkts": "98283",
+                "classified-bytes": "12641243",
+                "classified-rate": "0"
+              },
+              "queuing-stats": {
+                "output-pkts": "98283",
+                "output-bytes": "12641243",
+                "queue-size-pkts": "0",
+                "queue-size-bytes": "0",
+                "drop-pkts": "0",
+                "drop-bytes": "0",
+                "wred-stats": {
+                  "early-drop-pkts": "0",
+                  "early-drop-bytes": "0",
+                  "mean-queue-depth": 0,
+                  "transmitted-pkts": "0",
+                  "transmitted-bytes": "0",
+                  "tail-drop-pkts": "0",
+                  "tail-drop-bytes": "0",
+                  "drop-pkts-flow": "0",
+                  "drop-pkts-no-buffer": "0",
+                  "queue-peak-size-pkts": "0",
+                  "queue-peak-size-bytes": "0",
+                  "bandwidth-exceed-drops": "0"
+                },
+                "cac-stats": {
+                  "num-admitted-flows": 0,
+                  "num-non-admitted-flows": 0
+                }
+              },
+              "marking-stats": {
+                "marking-dscp-stats-val": {
+                  "dscp": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dscp-tunnel-stats-val": {
+                  "dscp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-stats-val": {
+                  "cos-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-inner-stats-val": {
+                  "cos-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-discard-class-stats-val": {
+                  "disc-class-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-qos-grp-stats-val": {
+                  "qos-grp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-tunnel-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-imp-stats-val": {
+                  "mpls-exp-imp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-top-stats-val": {
+                  "mpls-exp-top-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-de-stats-val": {
+                  "fr-de": false,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-fecn-becn-stats-val": {
+                  "fecn-becn-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-atm-clp-stats-val": {
+                  "atm-clp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-vlan-inner-stats-val": {
+                  "vlan-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-imp-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-srp-priority-stats-val": {
+                  "srp-priority-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-wlan-user-priority-stats-val": {
+                  "wlan-user-priority-value": 0,
+                  "marked-pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier-entry-name": "AutoQos-4.0-Output-Voice-Class",
+              "parent-path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-Voice-Class",
+              "classifier-entry-stats": {
+                "classified-pkts": "0",
+                "classified-bytes": "0",
+                "classified-rate": "0"
+              },
+              "queuing-stats": {
+                "output-pkts": "0",
+                "output-bytes": "0",
+                "queue-size-pkts": "0",
+                "queue-size-bytes": "0",
+                "drop-pkts": "0",
+                "drop-bytes": "0",
+                "wred-stats": {
+                  "early-drop-pkts": "0",
+                  "early-drop-bytes": "0",
+                  "mean-queue-depth": 0,
+                  "transmitted-pkts": "0",
+                  "transmitted-bytes": "0",
+                  "tail-drop-pkts": "0",
+                  "tail-drop-bytes": "0",
+                  "drop-pkts-flow": "0",
+                  "drop-pkts-no-buffer": "0",
+                  "queue-peak-size-pkts": "0",
+                  "queue-peak-size-bytes": "0",
+                  "bandwidth-exceed-drops": "0"
+                },
+                "cac-stats": {
+                  "num-admitted-flows": 0,
+                  "num-non-admitted-flows": 0
+                }
+              },
+              "marking-stats": {
+                "marking-dscp-stats-val": {
+                  "dscp": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dscp-tunnel-stats-val": {
+                  "dscp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-stats-val": {
+                  "cos-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-inner-stats-val": {
+                  "cos-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-discard-class-stats-val": {
+                  "disc-class-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-qos-grp-stats-val": {
+                  "qos-grp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-tunnel-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-imp-stats-val": {
+                  "mpls-exp-imp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-top-stats-val": {
+                  "mpls-exp-top-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-de-stats-val": {
+                  "fr-de": false,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-fecn-becn-stats-val": {
+                  "fecn-becn-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-atm-clp-stats-val": {
+                  "atm-clp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-vlan-inner-stats-val": {
+                  "vlan-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-imp-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-srp-priority-stats-val": {
+                  "srp-priority-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-wlan-user-priority-stats-val": {
+                  "wlan-user-priority-value": 0,
+                  "marked-pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier-entry-name": "class-default",
+              "parent-path": "AutoQos-4.0-wlan-Port-Output-Policy class-default",
+              "classifier-entry-stats": {
+                "classified-pkts": "336882",
+                "classified-bytes": "248424391",
+                "classified-rate": "89"
+              },
+              "queuing-stats": {
+                "output-pkts": "254228",
+                "output-bytes": "234832189",
+                "queue-size-pkts": "0",
+                "queue-size-bytes": "0",
+                "drop-pkts": "0",
+                "drop-bytes": "0",
+                "wred-stats": {
+                  "early-drop-pkts": "0",
+                  "early-drop-bytes": "0",
+                  "mean-queue-depth": 0,
+                  "transmitted-pkts": "0",
+                  "transmitted-bytes": "0",
+                  "tail-drop-pkts": "0",
+                  "tail-drop-bytes": "0",
+                  "drop-pkts-flow": "0",
+                  "drop-pkts-no-buffer": "0",
+                  "queue-peak-size-pkts": "0",
+                  "queue-peak-size-bytes": "0",
+                  "bandwidth-exceed-drops": "0"
+                },
+                "cac-stats": {
+                  "num-admitted-flows": 0,
+                  "num-non-admitted-flows": 0
+                }
+              },
+              "marking-stats": {
+                "marking-dscp-stats-val": {
+                  "dscp": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dscp-tunnel-stats-val": {
+                  "dscp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-stats-val": {
+                  "cos-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-inner-stats-val": {
+                  "cos-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-discard-class-stats-val": {
+                  "disc-class-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-qos-grp-stats-val": {
+                  "qos-grp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-tunnel-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-imp-stats-val": {
+                  "mpls-exp-imp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-top-stats-val": {
+                  "mpls-exp-top-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-de-stats-val": {
+                  "fr-de": false,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-fecn-becn-stats-val": {
+                  "fecn-becn-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-atm-clp-stats-val": {
+                  "atm-clp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-vlan-inner-stats-val": {
+                  "vlan-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-imp-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-srp-priority-stats-val": {
+                  "srp-priority-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-wlan-user-priority-stats-val": {
+                  "wlan-user-priority-value": 0,
+                  "marked-pkts": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "vrf": "",
+      "description": "",
+      "mtu": 1500,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:0c:29:73:22:d6",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "ether-state": {
+        "negotiated-duplex-mode": "full-duplex",
+        "negotiated-port-speed": "speed-1gb",
+        "auto-negotiate": true,
+        "enable-flow-control": false
+      },
+      "ether-stats": {
+        "in-mac-control-frames": "0",
+        "in-mac-pause-frames": "0",
+        "in-oversize-frames": "0",
+        "in-jabber-frames": "0",
+        "in-fragment-frames": "0",
+        "in-8021q-frames": "0",
+        "out-mac-control-frames": "0",
+        "out-mac-pause-frames": "0",
+        "out-8021q-frames": "0"
+      }
+    },
+    {
+      "name": "GigabitEthernet2",
+      "interface-type": "iana-iftype-ethernet-csmacd",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-lower-layer-down",
+      "last-change": "2020-02-28T21:11:32.000584+00:00",
+      "if-index": 2,
+      "phys-address": "00:0c:29:73:22:e0",
+      "speed": "1024000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000273+00:00",
+        "in-octets": "23650923423",
+        "in-unicast-pkts": "54534647",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 3507965359,
+        "out-unicast-pkts": "5918151",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "diffserv-info": [
+        {
+          "direction": "qos-outbound",
+          "policy-name": "AutoQos-4.0-wlan-Port-Output-Policy",
+          "diffserv-target-classifier-stats": [
+            {
+              "classifier-entry-name": "AutoQos-4.0-Output-CAPWAP-C-Class",
+              "parent-path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-CAPWAP-C-Class",
+              "classifier-entry-stats": {
+                "classified-pkts": "0",
+                "classified-bytes": "0",
+                "classified-rate": "0"
+              },
+              "queuing-stats": {
+                "output-pkts": "0",
+                "output-bytes": "0",
+                "queue-size-pkts": "0",
+                "queue-size-bytes": "0",
+                "drop-pkts": "0",
+                "drop-bytes": "0",
+                "wred-stats": {
+                  "early-drop-pkts": "0",
+                  "early-drop-bytes": "0",
+                  "mean-queue-depth": 0,
+                  "transmitted-pkts": "0",
+                  "transmitted-bytes": "0",
+                  "tail-drop-pkts": "0",
+                  "tail-drop-bytes": "0",
+                  "drop-pkts-flow": "0",
+                  "drop-pkts-no-buffer": "0",
+                  "queue-peak-size-pkts": "0",
+                  "queue-peak-size-bytes": "0",
+                  "bandwidth-exceed-drops": "0"
+                },
+                "cac-stats": {
+                  "num-admitted-flows": 0,
+                  "num-non-admitted-flows": 0
+                }
+              },
+              "marking-stats": {
+                "marking-dscp-stats-val": {
+                  "dscp": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dscp-tunnel-stats-val": {
+                  "dscp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-stats-val": {
+                  "cos-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-inner-stats-val": {
+                  "cos-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-discard-class-stats-val": {
+                  "disc-class-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-qos-grp-stats-val": {
+                  "qos-grp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-tunnel-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-imp-stats-val": {
+                  "mpls-exp-imp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-top-stats-val": {
+                  "mpls-exp-top-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-de-stats-val": {
+                  "fr-de": false,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-fecn-becn-stats-val": {
+                  "fecn-becn-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-atm-clp-stats-val": {
+                  "atm-clp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-vlan-inner-stats-val": {
+                  "vlan-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-imp-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-srp-priority-stats-val": {
+                  "srp-priority-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-wlan-user-priority-stats-val": {
+                  "wlan-user-priority-value": 0,
+                  "marked-pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier-entry-name": "AutoQos-4.0-Output-Voice-Class",
+              "parent-path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-Voice-Class",
+              "classifier-entry-stats": {
+                "classified-pkts": "0",
+                "classified-bytes": "0",
+                "classified-rate": "0"
+              },
+              "queuing-stats": {
+                "output-pkts": "0",
+                "output-bytes": "0",
+                "queue-size-pkts": "0",
+                "queue-size-bytes": "0",
+                "drop-pkts": "0",
+                "drop-bytes": "0",
+                "wred-stats": {
+                  "early-drop-pkts": "0",
+                  "early-drop-bytes": "0",
+                  "mean-queue-depth": 0,
+                  "transmitted-pkts": "0",
+                  "transmitted-bytes": "0",
+                  "tail-drop-pkts": "0",
+                  "tail-drop-bytes": "0",
+                  "drop-pkts-flow": "0",
+                  "drop-pkts-no-buffer": "0",
+                  "queue-peak-size-pkts": "0",
+                  "queue-peak-size-bytes": "0",
+                  "bandwidth-exceed-drops": "0"
+                },
+                "cac-stats": {
+                  "num-admitted-flows": 0,
+                  "num-non-admitted-flows": 0
+                }
+              },
+              "marking-stats": {
+                "marking-dscp-stats-val": {
+                  "dscp": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dscp-tunnel-stats-val": {
+                  "dscp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-stats-val": {
+                  "cos-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-inner-stats-val": {
+                  "cos-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-discard-class-stats-val": {
+                  "disc-class-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-qos-grp-stats-val": {
+                  "qos-grp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-tunnel-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-imp-stats-val": {
+                  "mpls-exp-imp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-top-stats-val": {
+                  "mpls-exp-top-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-de-stats-val": {
+                  "fr-de": false,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-fecn-becn-stats-val": {
+                  "fecn-becn-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-atm-clp-stats-val": {
+                  "atm-clp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-vlan-inner-stats-val": {
+                  "vlan-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-imp-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-srp-priority-stats-val": {
+                  "srp-priority-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-wlan-user-priority-stats-val": {
+                  "wlan-user-priority-value": 0,
+                  "marked-pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier-entry-name": "class-default",
+              "parent-path": "AutoQos-4.0-wlan-Port-Output-Policy class-default",
+              "classifier-entry-stats": {
+                "classified-pkts": "0",
+                "classified-bytes": "0",
+                "classified-rate": "0"
+              },
+              "queuing-stats": {
+                "output-pkts": "0",
+                "output-bytes": "0",
+                "queue-size-pkts": "0",
+                "queue-size-bytes": "0",
+                "drop-pkts": "0",
+                "drop-bytes": "0",
+                "wred-stats": {
+                  "early-drop-pkts": "0",
+                  "early-drop-bytes": "0",
+                  "mean-queue-depth": 0,
+                  "transmitted-pkts": "0",
+                  "transmitted-bytes": "0",
+                  "tail-drop-pkts": "0",
+                  "tail-drop-bytes": "0",
+                  "drop-pkts-flow": "0",
+                  "drop-pkts-no-buffer": "0",
+                  "queue-peak-size-pkts": "0",
+                  "queue-peak-size-bytes": "0",
+                  "bandwidth-exceed-drops": "0"
+                },
+                "cac-stats": {
+                  "num-admitted-flows": 0,
+                  "num-non-admitted-flows": 0
+                }
+              },
+              "marking-stats": {
+                "marking-dscp-stats-val": {
+                  "dscp": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dscp-tunnel-stats-val": {
+                  "dscp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-stats-val": {
+                  "cos-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-inner-stats-val": {
+                  "cos-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-discard-class-stats-val": {
+                  "disc-class-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-qos-grp-stats-val": {
+                  "qos-grp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-tunnel-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-imp-stats-val": {
+                  "mpls-exp-imp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-top-stats-val": {
+                  "mpls-exp-top-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-de-stats-val": {
+                  "fr-de": false,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-fecn-becn-stats-val": {
+                  "fecn-becn-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-atm-clp-stats-val": {
+                  "atm-clp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-vlan-inner-stats-val": {
+                  "vlan-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-imp-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-srp-priority-stats-val": {
+                  "srp-priority-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-wlan-user-priority-stats-val": {
+                  "wlan-user-priority-value": 0,
+                  "marked-pkts": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "vrf": "",
+      "description": "",
+      "mtu": 1500,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:0c:29:73:22:e0",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "ether-state": {
+        "negotiated-duplex-mode": "full-duplex",
+        "negotiated-port-speed": "speed-1gb",
+        "auto-negotiate": true,
+        "enable-flow-control": false
+      },
+      "ether-stats": {
+        "in-mac-control-frames": "0",
+        "in-mac-pause-frames": "0",
+        "in-oversize-frames": "0",
+        "in-jabber-frames": "0",
+        "in-fragment-frames": "0",
+        "in-8021q-frames": "0",
+        "out-mac-control-frames": "0",
+        "out-mac-pause-frames": "0",
+        "out-8021q-frames": "0"
+      }
+    },
+    {
+      "name": "GigabitEthernet3",
+      "interface-type": "iana-iftype-ethernet-csmacd",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-lower-layer-down",
+      "last-change": "2020-02-14T12:59:02.000861+00:00",
+      "if-index": 3,
+      "phys-address": "00:0c:29:73:22:ea",
+      "speed": "1024000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000272+00:00",
+        "in-octets": "0",
+        "in-unicast-pkts": "0",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 0,
+        "out-unicast-pkts": "0",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "diffserv-info": [
+        {
+          "direction": "qos-outbound",
+          "policy-name": "AutoQos-4.0-wlan-Port-Output-Policy",
+          "diffserv-target-classifier-stats": [
+            {
+              "classifier-entry-name": "AutoQos-4.0-Output-CAPWAP-C-Class",
+              "parent-path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-CAPWAP-C-Class",
+              "classifier-entry-stats": {
+                "classified-pkts": "0",
+                "classified-bytes": "0",
+                "classified-rate": "0"
+              },
+              "queuing-stats": {
+                "output-pkts": "0",
+                "output-bytes": "0",
+                "queue-size-pkts": "0",
+                "queue-size-bytes": "0",
+                "drop-pkts": "0",
+                "drop-bytes": "0",
+                "wred-stats": {
+                  "early-drop-pkts": "0",
+                  "early-drop-bytes": "0",
+                  "mean-queue-depth": 0,
+                  "transmitted-pkts": "0",
+                  "transmitted-bytes": "0",
+                  "tail-drop-pkts": "0",
+                  "tail-drop-bytes": "0",
+                  "drop-pkts-flow": "0",
+                  "drop-pkts-no-buffer": "0",
+                  "queue-peak-size-pkts": "0",
+                  "queue-peak-size-bytes": "0",
+                  "bandwidth-exceed-drops": "0"
+                },
+                "cac-stats": {
+                  "num-admitted-flows": 0,
+                  "num-non-admitted-flows": 0
+                }
+              },
+              "marking-stats": {
+                "marking-dscp-stats-val": {
+                  "dscp": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dscp-tunnel-stats-val": {
+                  "dscp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-stats-val": {
+                  "cos-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-inner-stats-val": {
+                  "cos-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-discard-class-stats-val": {
+                  "disc-class-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-qos-grp-stats-val": {
+                  "qos-grp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-tunnel-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-imp-stats-val": {
+                  "mpls-exp-imp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-top-stats-val": {
+                  "mpls-exp-top-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-de-stats-val": {
+                  "fr-de": false,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-fecn-becn-stats-val": {
+                  "fecn-becn-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-atm-clp-stats-val": {
+                  "atm-clp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-vlan-inner-stats-val": {
+                  "vlan-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-imp-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-srp-priority-stats-val": {
+                  "srp-priority-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-wlan-user-priority-stats-val": {
+                  "wlan-user-priority-value": 0,
+                  "marked-pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier-entry-name": "AutoQos-4.0-Output-Voice-Class",
+              "parent-path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-Voice-Class",
+              "classifier-entry-stats": {
+                "classified-pkts": "0",
+                "classified-bytes": "0",
+                "classified-rate": "0"
+              },
+              "queuing-stats": {
+                "output-pkts": "0",
+                "output-bytes": "0",
+                "queue-size-pkts": "0",
+                "queue-size-bytes": "0",
+                "drop-pkts": "0",
+                "drop-bytes": "0",
+                "wred-stats": {
+                  "early-drop-pkts": "0",
+                  "early-drop-bytes": "0",
+                  "mean-queue-depth": 0,
+                  "transmitted-pkts": "0",
+                  "transmitted-bytes": "0",
+                  "tail-drop-pkts": "0",
+                  "tail-drop-bytes": "0",
+                  "drop-pkts-flow": "0",
+                  "drop-pkts-no-buffer": "0",
+                  "queue-peak-size-pkts": "0",
+                  "queue-peak-size-bytes": "0",
+                  "bandwidth-exceed-drops": "0"
+                },
+                "cac-stats": {
+                  "num-admitted-flows": 0,
+                  "num-non-admitted-flows": 0
+                }
+              },
+              "marking-stats": {
+                "marking-dscp-stats-val": {
+                  "dscp": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dscp-tunnel-stats-val": {
+                  "dscp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-stats-val": {
+                  "cos-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-inner-stats-val": {
+                  "cos-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-discard-class-stats-val": {
+                  "disc-class-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-qos-grp-stats-val": {
+                  "qos-grp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-tunnel-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-imp-stats-val": {
+                  "mpls-exp-imp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-top-stats-val": {
+                  "mpls-exp-top-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-de-stats-val": {
+                  "fr-de": false,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-fecn-becn-stats-val": {
+                  "fecn-becn-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-atm-clp-stats-val": {
+                  "atm-clp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-vlan-inner-stats-val": {
+                  "vlan-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-imp-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-srp-priority-stats-val": {
+                  "srp-priority-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-wlan-user-priority-stats-val": {
+                  "wlan-user-priority-value": 0,
+                  "marked-pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier-entry-name": "class-default",
+              "parent-path": "AutoQos-4.0-wlan-Port-Output-Policy class-default",
+              "classifier-entry-stats": {
+                "classified-pkts": "0",
+                "classified-bytes": "0",
+                "classified-rate": "0"
+              },
+              "queuing-stats": {
+                "output-pkts": "0",
+                "output-bytes": "0",
+                "queue-size-pkts": "0",
+                "queue-size-bytes": "0",
+                "drop-pkts": "0",
+                "drop-bytes": "0",
+                "wred-stats": {
+                  "early-drop-pkts": "0",
+                  "early-drop-bytes": "0",
+                  "mean-queue-depth": 0,
+                  "transmitted-pkts": "0",
+                  "transmitted-bytes": "0",
+                  "tail-drop-pkts": "0",
+                  "tail-drop-bytes": "0",
+                  "drop-pkts-flow": "0",
+                  "drop-pkts-no-buffer": "0",
+                  "queue-peak-size-pkts": "0",
+                  "queue-peak-size-bytes": "0",
+                  "bandwidth-exceed-drops": "0"
+                },
+                "cac-stats": {
+                  "num-admitted-flows": 0,
+                  "num-non-admitted-flows": 0
+                }
+              },
+              "marking-stats": {
+                "marking-dscp-stats-val": {
+                  "dscp": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dscp-tunnel-stats-val": {
+                  "dscp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-stats-val": {
+                  "cos-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-cos-inner-stats-val": {
+                  "cos-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-discard-class-stats-val": {
+                  "disc-class-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-qos-grp-stats-val": {
+                  "qos-grp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-prec-tunnel-stats-val": {
+                  "prec-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-imp-stats-val": {
+                  "mpls-exp-imp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-mpls-exp-top-stats-val": {
+                  "mpls-exp-top-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-de-stats-val": {
+                  "fr-de": false,
+                  "marked-pkts": "0"
+                },
+                "marking-fr-fecn-becn-stats-val": {
+                  "fecn-becn-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-atm-clp-stats-val": {
+                  "atm-clp-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-vlan-inner-stats-val": {
+                  "vlan-inner-val": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-dei-imp-stats-val": {
+                  "dei-imp-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-srp-priority-stats-val": {
+                  "srp-priority-value": 0,
+                  "marked-pkts": "0"
+                },
+                "marking-wlan-user-priority-stats-val": {
+                  "wlan-user-priority-value": 0,
+                  "marked-pkts": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "vrf": "",
+      "description": "",
+      "mtu": 1500,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:0c:29:73:22:ea",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "ether-state": {
+        "negotiated-duplex-mode": "full-duplex",
+        "negotiated-port-speed": "speed-1gb",
+        "auto-negotiate": true,
+        "enable-flow-control": false
+      },
+      "ether-stats": {
+        "in-mac-control-frames": "0",
+        "in-mac-pause-frames": "0",
+        "in-oversize-frames": "0",
+        "in-jabber-frames": "0",
+        "in-fragment-frames": "0",
+        "in-8021q-frames": "0",
+        "out-mac-control-frames": "0",
+        "out-mac-pause-frames": "0",
+        "out-8021q-frames": "0"
+      }
+    },
+    {
+      "name": "Loopback99",
+      "interface-type": "iana-iftype-sw-loopback",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-ready",
+      "last-change": "2020-04-15T16:59:06.000416+00:00",
+      "if-index": 9,
+      "phys-address": "00:1e:bd:d6:a0:00",
+      "speed": "8192000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000272+00:00",
+        "in-octets": "0",
+        "in-unicast-pkts": "0",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 0,
+        "out-unicast-pkts": "0",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "vrf": "",
+      "ipv4": "10.99.0.10",
+      "ipv4-subnet-mask": "255.255.255.0",
+      "description": "yanggang",
+      "mtu": 1514,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:00:00:00:00:00",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "intf-class-unspecified": true
+    },
+    {
+      "name": "Mcastdata1",
+      "interface-type": "iana-iftype-ethernet-csmacd",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-ready",
+      "last-change": "2020-02-14T12:56:37.000272+00:00",
+      "if-index": 0,
+      "phys-address": "00:00:00:00:00:00",
+      "speed": "10240000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000272+00:00",
+        "in-octets": "0",
+        "in-unicast-pkts": "0",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 0,
+        "out-unicast-pkts": "0",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "vrf": "",
+      "description": "",
+      "mtu": 0,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:00:00:00:00:00",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "intf-class-unspecified": true
+    },
+    {
+      "name": "Mobility1",
+      "interface-type": "iana-iftype-ethernet-csmacd",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-ready",
+      "last-change": "2020-04-23T12:32:13.000311+00:00",
+      "if-index": 0,
+      "phys-address": "00:00:00:00:00:00",
+      "speed": "10240000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000272+00:00",
+        "in-octets": "0",
+        "in-unicast-pkts": "0",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 0,
+        "out-unicast-pkts": "0",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "vrf": "",
+      "description": "",
+      "mtu": 0,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:00:00:00:00:00",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "intf-class-unspecified": true
+    },
+    {
+      "name": "Mobility2",
+      "interface-type": "iana-iftype-ethernet-csmacd",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-ready",
+      "last-change": "2020-04-23T12:32:13.000317+00:00",
+      "if-index": 0,
+      "phys-address": "00:00:00:00:00:00",
+      "speed": "10240000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000272+00:00",
+        "in-octets": "0",
+        "in-unicast-pkts": "0",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 0,
+        "out-unicast-pkts": "0",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "vrf": "",
+      "description": "",
+      "mtu": 0,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:00:00:00:00:00",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "intf-class-unspecified": true
+    },
+    {
+      "name": "Port-channel12",
+      "interface-type": "iana-iftype-propvirtual",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-lower-layer-down",
+      "last-change": "2020-04-15T16:59:27.000005+00:00",
+      "if-index": 10,
+      "phys-address": "00:00:00:00:00:00",
+      "speed": "10240000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000272+00:00",
+        "in-octets": "0",
+        "in-unicast-pkts": "0",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 0,
+        "out-unicast-pkts": "0",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "vrf": "",
+      "description": "yanggang",
+      "mtu": 1500,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:00:00:00:00:00",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "intf-class-unspecified": true
+    },
+    {
+      "name": "Vlan1",
+      "interface-type": "iana-iftype-propvirtual",
+      "admin-status": "if-state-down",
+      "oper-status": "if-oper-state-no-pass",
+      "last-change": "2020-02-14T12:59:08.000638+00:00",
+      "if-index": 6,
+      "phys-address": "00:1e:bd:d6:a0:ff",
+      "speed": "1024000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000272+00:00",
+        "in-octets": "60",
+        "in-unicast-pkts": "1",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 0,
+        "out-unicast-pkts": "0",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "vrf": "",
+      "description": "",
+      "mtu": 1500,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:1e:bd:d6:a0:ff",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "ether-state": {
+        "negotiated-duplex-mode": "unknown-duplex",
+        "negotiated-port-speed": "speed-auto",
+        "auto-negotiate": false,
+        "enable-flow-control": false
+      },
+      "ether-stats": {
+        "in-mac-control-frames": "0",
+        "in-mac-pause-frames": "0",
+        "in-oversize-frames": "0",
+        "in-jabber-frames": "0",
+        "in-fragment-frames": "0",
+        "in-8021q-frames": "0",
+        "out-mac-control-frames": "0",
+        "out-mac-pause-frames": "0",
+        "out-8021q-frames": "0"
+      }
+    },
+    {
+      "name": "Vlan100",
+      "interface-type": "iana-iftype-propvirtual",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-ready",
+      "last-change": "2020-04-23T12:32:14.000277+00:00",
+      "if-index": 7,
+      "phys-address": "00:1e:bd:d6:a0:ff",
+      "speed": "1024000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000271+00:00",
+        "in-octets": "4016370752",
+        "in-unicast-pkts": "47239911",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 539604581,
+        "out-unicast-pkts": "1818501",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "10",
+        "rx-kbps": "6",
+        "tx-pps": "0",
+        "tx-kbps": "0",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "vrf": "",
+      "ipv4": "10.1.1.111",
+      "ipv4-subnet-mask": "255.255.255.0",
+      "description": "test",
+      "mtu": 1500,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "24573517",
+        "in-octets": "2644287281",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "1531196",
+        "out-octets": "503882670",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "1531196",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:1e:bd:d6:a0:ff",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "ether-state": {
+        "negotiated-duplex-mode": "unknown-duplex",
+        "negotiated-port-speed": "speed-auto",
+        "auto-negotiate": false,
+        "enable-flow-control": false
+      },
+      "ether-stats": {
+        "in-mac-control-frames": "0",
+        "in-mac-pause-frames": "0",
+        "in-oversize-frames": "0",
+        "in-jabber-frames": "0",
+        "in-fragment-frames": "0",
+        "in-8021q-frames": "0",
+        "out-mac-control-frames": "0",
+        "out-mac-pause-frames": "0",
+        "out-8021q-frames": "0"
+      }
+    },
+    {
+      "name": "Vlan300",
+      "interface-type": "iana-iftype-propvirtual",
+      "admin-status": "if-state-up",
+      "oper-status": "if-oper-state-ready",
+      "last-change": "2020-04-23T12:32:14.000286+00:00",
+      "if-index": 8,
+      "phys-address": "00:1e:bd:d6:a0:ff",
+      "speed": "1024000000",
+      "statistics": {
+        "discontinuity-time": "2020-02-14T12:56:37.000271+00:00",
+        "in-octets": "488948639",
+        "in-unicast-pkts": "1509082",
+        "in-broadcast-pkts": "0",
+        "in-multicast-pkts": "0",
+        "in-discards": 0,
+        "in-errors": 0,
+        "in-unknown-protos": 0,
+        "out-octets": 565799346,
+        "out-unicast-pkts": "717771",
+        "out-broadcast-pkts": "0",
+        "out-multicast-pkts": "0",
+        "out-discards": "0",
+        "out-errors": "0",
+        "rx-pps": "0",
+        "rx-kbps": "0",
+        "tx-pps": "1",
+        "tx-kbps": "86",
+        "num-flaps": "0",
+        "in-crc-errors": "0"
+      },
+      "vrf": "",
+      "ipv4": "10.1.3.3",
+      "ipv4-subnet-mask": "255.255.255.0",
+      "description": "",
+      "mtu": 1500,
+      "input-security-acl": "",
+      "output-security-acl": "",
+      "v4-protocol-stats": {
+        "in-pkts": "1998875",
+        "in-octets": "633057851",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "601781",
+        "out-octets": "558607966",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "601781",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "v6-protocol-stats": {
+        "in-pkts": "0",
+        "in-octets": "0",
+        "in-error-pkts": "0",
+        "in-forwarded-pkts": "0",
+        "in-forwarded-octets": "0",
+        "in-discarded-pkts": "0",
+        "out-pkts": "0",
+        "out-octets": "0",
+        "out-error-pkts": "0",
+        "out-forwarded-pkts": "0",
+        "out-forwarded-octets": "0",
+        "out-discarded-pkts": "0"
+      },
+      "bia-address": "00:1e:bd:d6:a0:ff",
+      "ipv4-tcp-adjust-mss": 0,
+      "ipv6-tcp-adjust-mss": 0,
+      "ether-state": {
+        "negotiated-duplex-mode": "unknown-duplex",
+        "negotiated-port-speed": "speed-auto",
+        "auto-negotiate": false,
+        "enable-flow-control": false
+      },
+      "ether-stats": {
+        "in-mac-control-frames": "0",
+        "in-mac-pause-frames": "0",
+        "in-oversize-frames": "0",
+        "in-jabber-frames": "0",
+        "in-fragment-frames": "0",
+        "in-8021q-frames": "0",
+        "out-mac-control-frames": "0",
+        "out-mac-pause-frames": "0",
+        "out-8021q-frames": "0"
+      }
+    }
+  ]
+}

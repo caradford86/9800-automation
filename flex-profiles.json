@@ -1,0 +1,115 @@
+{
+  "Cisco-IOS-XE-wireless-flex-cfg:flex-policy-entry": [
+    {
+      "policy-name": "WWT",
+      "description": "sample",
+      "eap-fast-profile-name": "",
+      "radius-server-group-name": "",
+      "fallback-radio-shut": false,
+      "arp-caching": false,
+      "cts-inline-tagging": false,
+      "cts-rolebased-enforce": false,
+      "cts-profile-name": "default-sxp-profile",
+      "join-min-latency": false,
+      "radius-enable": true,
+      "vlan-enable": true,
+      "is-home-ap-enable": false,
+      "is-radio-backhaul": false,
+      "is-resilient-mode": true,
+      "efficient-ap-upgrade-enable": true,
+      "http-proxy-ip": "192.168.100.100",
+      "security": {
+        "is-peap": [null],
+        "is-leap": [null],
+        "is-tls": [null]
+      },
+      "native-vlan-id": 200,
+      "slave-max-retry-count": 0,
+      "http-proxy-port": 445,
+      "policy-acls": {
+        "policy-acl": [
+          {
+            "acl-name": "CWA",
+            "is-cwa": true,
+            "urlfilterlist-name": "wwt"
+          },
+          {
+            "acl-name": "blockSomething",
+            "is-cwa": false,
+            "urlfilterlist-name": ""
+          }
+        ]
+      },
+      "if-name-vlan-ids": {
+        "if-name-vlan-id": [
+          {
+            "interface-name": "30",
+            "vlan-id": 30,
+            "acl-name": "blockSomething"
+          },
+          {
+            "interface-name": "vlan10",
+            "vlan-id": 10,
+            "acl-name": ""
+          },
+          {
+            "interface-name": "vlan20",
+            "vlan-id": 20,
+            "acl-name": ""
+          }
+        ]
+      }
+    },
+    {
+      "policy-name": "WWT-Branch-1",
+      "description": "",
+      "eap-fast-profile-name": "",
+      "radius-server-group-name": "",
+      "fallback-radio-shut": false,
+      "arp-caching": false,
+      "cts-inline-tagging": false,
+      "cts-rolebased-enforce": false,
+      "cts-profile-name": "default-sxp-profile",
+      "join-min-latency": false,
+      "radius-enable": true,
+      "vlan-enable": true,
+      "is-home-ap-enable": false,
+      "is-radio-backhaul": false,
+      "is-resilient-mode": false,
+      "efficient-ap-upgrade-enable": true,
+      "http-proxy-ip": "0.0.0.0",
+      "native-vlan-id": 200,
+      "slave-max-retry-count": 0,
+      "http-proxy-port": 0,
+      "if-name-vlan-ids": {
+        "if-name-vlan-id": [
+          {
+            "interface-name": "BranchGuest",
+            "vlan-id": 220,
+            "acl-name": ""
+          }
+        ]
+      }
+    },
+    {
+      "policy-name": "default-flex-profile",
+      "description": "default flex profile",
+      "fallback-radio-shut": false,
+      "arp-caching": true,
+      "cts-inline-tagging": false,
+      "cts-rolebased-enforce": false,
+      "cts-profile-name": "default-sxp-profile",
+      "join-min-latency": false,
+      "radius-enable": true,
+      "vlan-enable": true,
+      "is-home-ap-enable": false,
+      "is-radio-backhaul": false,
+      "is-resilient-mode": false,
+      "efficient-ap-upgrade-enable": true,
+      "http-proxy-ip": "0.0.0.0",
+      "native-vlan-id": 1,
+      "slave-max-retry-count": 0,
+      "http-proxy-port": 0
+    }
+  ]
+}
