@@ -1,6 +1,6 @@
 # Catalyst Wireless Data Retrieval Tool
 
-The scripts in this file enable the retrieval of configuration data from IOS-XE based wireless controllers using RESTCONF.
+The scripts in this repository enable the retrieval of configuration data from IOS-XE based wireless controllers using `RESTCONF`.
 
 ## Requirements
 
