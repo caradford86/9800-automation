@@ -165,4 +165,3 @@ headers = {'content-type': 'application/yang-data+json', 'accept': 'application/
 response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
 
 
-#git enabled!
