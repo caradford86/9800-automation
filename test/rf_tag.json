@@ -1,0 +1,10 @@
+{
+  "Cisco_IOS_XE_wireless_rf_cfg:rf_tag": [
+    {
+      "tag_name": "default-rf-tag",
+      "description": "default RF tag",
+      "dot11a_rf_profile_name": "default_rf_5gh",
+      "dot11b_rf_profile_name": "default_rf_24gh"
+    }
+  ]
+}

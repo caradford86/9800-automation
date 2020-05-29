@@ -1,11 +1,20 @@
 ---
-controller: 10.1.1.111
+# Set connection details for the controllers
+controller: 10.255.131.125
 port: 443
-username: cradford
-password: P@22w0rd!@
+username: admin
+password: WWTwwt1!
 
-
+# ----------------- API ENDPOINTS --------------------------------
+# DO NOT edit this section. These are the endpoints for the script
+# to collect data from the controller.
 endpoints:
-  interfaces: Cisco-IOS-XE-interfaces-oper:interfaces/interface?with-defaults=report-all
-  vlans: Cisco-IOS-XE-vlan-oper:vlans/vlan?with-defaults=report-all
-  wlan_profile: Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/wlan-cfg-entries/wlan-cfg-entry?with-defaults=report-all
+  interfaces: Cisco-IOS-XE-interfaces-oper:interfaces/interface
+  vlans: Cisco-IOS-XE-vlan-oper:vlans/vlan
+  wlan_profile: Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/wlan-cfg-entries/wlan-cfg-entry
+  wlan_policy: Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/wlan-policies/wlan-policy
+  policy_tags: Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/policy-list-entries/policy-list-entry
+  ap_join_profiles: Cisco-IOS-XE-wireless-site-cfg:site-cfg-data/ap-cfg-profiles/ap-cfg-profile
+  flex_profiles: Cisco-IOS-XE-wireless-flex-cfg:flex-cfg-data/flex-policy-entries/flex-policy-entry
+  site_tags: Cisco-IOS-XE-wireless-site-cfg:site-cfg-data/site-tag-configs/site-tag-config
+  rf_tag: Cisco-IOS-XE-wireless-rf-cfg:rf-cfg-data/rf-tags/rf-tag

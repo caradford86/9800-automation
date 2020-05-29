@@ -1,0 +1,88 @@
+{
+  "Cisco_IOS_XE_vlan_oper:vlan": [
+    {
+      "id": 1,
+      "name": "default",
+      "status": "active",
+      "vlan_interfaces": [
+        {
+          "interface": "GigabitEthernet1",
+          "subinterface": 0
+        },
+        {
+          "interface": "GigabitEthernet2",
+          "subinterface": 0
+        },
+        {
+          "interface": "GigabitEthernet3",
+          "subinterface": 0
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "vlan20",
+      "status": "active"
+    },
+    {
+      "id": 30,
+      "name": "vlan30",
+      "status": "active"
+    },
+    {
+      "id": 40,
+      "name": "vlan40",
+      "status": "active"
+    },
+    {
+      "id": 100,
+      "name": "management",
+      "status": "active"
+    },
+    {
+      "id": 111,
+      "name": "vlan111",
+      "status": "active"
+    },
+    {
+      "id": 112,
+      "name": "vlan112",
+      "status": "active"
+    },
+    {
+      "id": 114,
+      "name": "vlan114",
+      "status": "active"
+    },
+    {
+      "id": 300,
+      "name": "annapolis",
+      "status": "active"
+    },
+    {
+      "id": 999,
+      "name": "deadnet",
+      "status": "active"
+    },
+    {
+      "id": 1002,
+      "name": "fddi-default",
+      "status": "suspend"
+    },
+    {
+      "id": 1003,
+      "name": "token-ring-default",
+      "status": "suspend"
+    },
+    {
+      "id": 1004,
+      "name": "fddinet-default",
+      "status": "suspend"
+    },
+    {
+      "id": 1005,
+      "name": "trnet-default",
+      "status": "suspend"
+    }
+  ]
+}

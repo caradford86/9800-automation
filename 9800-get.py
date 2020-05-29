@@ -1,4 +1,4 @@
-from libpath import Path
+from pathlib import Path
 
 import requests
 import json
@@ -8,194 +8,81 @@ import yaml
 requests.packages.urllib3.disable_warnings()
 
 
-data = yaml.safe_load(Path('data.yml').read_text())
+# Global variables
+OUTPUT_DIR = 'test'
 HEADERS = {
     'content-type': 'application/yang-data+json',
     'accept': 'application/yang-data+json'
 }
 
 
-def _get(endpoint):
+def get_url(url, auth=None, params={}, verify=False):
+    """Wrapper function to make GET calls using requests
+
+    Arguments:
+        endpoint {url} -- url to target for the resource
+        params {dict} -- key-value pairs to parameters to add to call
+
+    Returns:
+        JSON -- json response data for GET call
+    """
+    resp = requests.get(url, auth=auth, headers=HEADERS, params=params, verify=verify)
+    if resp.ok:
+        return resp.json()
+    resp.raise_for_status()
+
+
+def build_url(host, endpoint,  port=443):
+    """ Simple function to build the URLs
+    Arguments:
+        host {str]} -- This is the hostname of IP address
+        port {int} -- port number to connect to (default: 443)
+        endpoint {endpoint} -- the specific endpoint for the resource
+
+    Returns:
+        str -- the fully built url to make the make
+    """
+    url = f'https://{host}:{port}/restconf/data/{endpoint}'
+    return url
+
+
+def write_to_file(stem, content):
+    """Clean up and write content to file"""
+    filename = f'{OUTPUT_DIR}/{stem}.json'
+
+    with open(filename, 'w') as out:
+        output_string = json.dumps(content, indent=2)
+
+        # replace - with _ for Osiris compatibility
+        formatted_output = re.sub(r'-(?=.+\"\:)', r'_', output_string)
+        out.write(formatted_output)
+
+
+def main():
+    # load data from yaml file
+    data = yaml.safe_load(Path('data.yaml').read_text())
+
+    # set some variables for us to use
+    endpoint_data = data.get('endpoints')
     host = data.get('controller')
     user = data.get('username')
     pw = data.get('password')
     port = data.get('port')
 
-    url = f'https://{host}:{port}/restconf/data/{endpoint}'
-    resp = requests.get(url, auth=(user, pw), headers=HEADERS)
-    return resp
+    params = {"with-defaults": "report-all"}
 
+    # get the data for each endpoint defined in the data
+    # for example: vlans: Cisco-IOS-XE-vlan-oper:vlans/vlan
+    # in which case, ep_name = 'vlans' and ep_value = 'Cisco-IOS-XE-vlan-oper:vlans/vlan'
+    for ep_name, ep_value in endpoint_data.items():
+        url = build_url(host, ep_value, port=port)
 
-def write_to_file(key, content):
-    filename = f'{key}.json'
-    with open(filename, 'w') as out:
-        out.write(out)
+        print(f'retrieving data for: {ep_name}')
+        json_data = get_url(url, auth=(user, pw), params=params)
 
+        print(f'saving data for: {ep_name}')
+        write_to_file(ep_name, json_data)
 
-endpoints = data.get('endpoints')
-for key, value in endpoints.items():
-    print(f'retrieving data for {key}')
-    r = _get(value)
-    write_to_file(key, r.json())
 
-
-#Interfaces
-url = "https://10.1.1.111:443//restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface?with-defaults=report-all"
-headers = {'content-type': 'application/yang-data+json', 'accept': 'application/yang-data+json'}
-
-response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
-
-with open('interfaces.json','wb') as f:
-    f.write(response.content)
-
-
-#VLANs
-url = "https://10.1.1.111:443//restconf/data/Cisco-IOS-XE-vlan-oper:vlans/vlan?with-defaults=report-all"
-headers = {'content-type': 'application/yang-data+json', 'accept': 'application/yang-data+json'}
-
-response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
-
-with open('vlans.json','wb') as f:
-    f.write(response.content)
-
-
-
-#WLAN Profiles
-url = "https://10.1.1.111:443//restconf/data/Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/wlan-cfg-entries/wlan-cfg-entry?with-defaults=report-all"
-headers = {'content-type': 'application/yang-data+json', 'accept': 'application/yang-data+json'}
-
-response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
-
-with open('wlan-profiles.json','wb') as f:
-    f.write(response.content)
-
-
-#Open the WLAN Profile JSON File
-fin = open("wlan-profiles.json", "r")
-fout = open("wlan-profiles-2.json", "w")
-
-for line in fin:
-    fout.write(re.sub(r'-(?=.+\"\:)', r'_', line))
-
-fin.close()
-fout.close()
-
-
-
-#Policy Profiles
-url = "https://10.1.1.111:443//restconf/data/Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/wlan-policies/wlan-policy?with-defaults=report-all"
-headers = {'content-type': 'application/yang-data+json', 'accept': 'application/yang-data+json'}
-
-response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
-
-with open('policy-profiles.json','wb') as f:
-    f.write(response.content)
-
-
-#Open the Policy Profile JSON File
-fin = open("policy-profiles.json", "r")
-fout = open("policy-profiles-2.json", "w")
-
-for line in fin:
-    fout.write(re.sub(r'-(?=.+\"\:)', r'_', line))
-
-fin.close()
-fout.close()
-
-
-
-#Policy Tags
-url = "https://10.1.1.111:443//restconf/data/Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/policy-list-entries/policy-list-entry?with-defaults=report-all"
-headers = {'content-type': 'application/yang-data+json', 'accept': 'application/yang-data+json'}
-
-response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
-
-with open('policy-tags.json','wb') as f:
-    f.write(response.content)
-
-
-
-#AP Join Profiles
-url = "https://10.1.1.111:443//restconf/data/Cisco-IOS-XE-wireless-site-cfg:site-cfg-data/ap-cfg-profiles/ap-cfg-profile?with-defaults=report-all"
-headers = {'content-type': 'application/yang-data+json', 'accept': 'application/yang-data+json'}
-
-response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
-
-with open('ap-join-profiles.json','wb') as f:
-    f.write(response.content)
-
-
-#Open the AP Join Profile JSON File
-fin = open("ap-join-profiles.json", "r")
-fout = open("ap-join-profiles-2.json", "w")
-
-for line in fin:
-    fout.write(re.sub(r'-(?=.+\"\:)', r'_', line))
-
-fin.close()
-fout.close()
-
-
-
-#Flex Profiles
-url = "https://10.1.1.111:443//restconf/data/Cisco-IOS-XE-wireless-flex-cfg:flex-cfg-data/flex-policy-entries/flex-policy-entry?with-defaults=report-all"
-headers = {'content-type': 'application/yang-data+json', 'accept': 'application/yang-data+json'}
-
-response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
-
-with open('flex-profiles.json','wb') as f:
-    f.write(response.content)
-
-
-#Open the Flex Profile JSON File
-fin = open("flex-profiles.json", "r")
-fout = open("flex-profiles-2.json", "w")
-
-for line in fin:
-    fout.write(re.sub(r'-(?=.+\"\:)', r'_', line))
-
-fin.close()
-fout.close()
-
-
-
-#Site Tags
-url = "https://10.1.1.111:443//restconf/data/Cisco-IOS-XE-wireless-site-cfg:site-cfg-data/site-tag-configs/site-tag-config?with-defaults=report-all"
-headers = {'content-type': 'application/yang-data+json', 'accept': 'application/yang-data+json'}
-
-response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
-
-with open('site-tags.json','wb') as f:
-    f.write(response.content)
-
-
-
-#RF Profiles
-url = "https://10.1.1.111:443//restconf/data/Cisco-IOS-XE-wireless-rf-cfg:rf-cfg-data/rf-profiles/rf-profile?with-defaults=report-all"
-headers = {'content-type': 'application/yang-data+json', 'accept': 'application/yang-data+json'}
-
-response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
-
-with open('rf-profiles.json','wb') as f:
-    f.write(response.content)
-
-
-#Open the RF Profile JSON File
-fin = open("rf-profiles.json", "r")
-fout = open("rf-profiles-2.json", "w")
-
-for line in fin:
-    fout.write(re.sub(r'-(?=.+\"\:)', r'_', line))
-
-fin.close()
-fout.close()
-
-
-
-#RF Tags
-url = "https://10.1.1.111:443//restconf/data/Cisco-IOS-XE-wireless-rf-cfg:rf-cfg-data/rf-tags/rf-tag?with-defaults=report-all"
-headers = {'content-type': 'application/yang-data+json', 'accept': 'application/yang-data+json'}
-
-response = requests.get(url, auth=("cradford", "P@22w0rd!@"), headers=headers, verify=False)
-
-
+if __name__ == '__main__':
+    main()

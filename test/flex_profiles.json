@@ -1,0 +1,93 @@
+{
+  "Cisco_IOS_XE_wireless_flex_cfg:flex_policy_entry": [
+    {
+      "policy_name": "annapolis",
+      "description": "annapolis",
+      "eap_fast_profile_name": "EF_annapolis",
+      "fallback_radio_shut": false,
+      "arp_caching": true,
+      "cts_inline_tagging": false,
+      "cts_rolebased_enforce": false,
+      "cts_profile_name": "default-sxp-profile",
+      "join_min_latency": false,
+      "radius_enable": true,
+      "vlan_enable": true,
+      "is_home_ap_enable": false,
+      "is_radio_backhaul": false,
+      "is_resilient_mode": false,
+      "efficient_ap_upgrade_enable": true,
+      "http_proxy_ip": "0.0.0.0",
+      "security": {
+        "is_leap": [
+          null
+        ],
+        "is_eap": [
+          null
+        ]
+      },
+      "native_vlan_id": 1,
+      "slave_max_retry_count": 0,
+      "http_proxy_port": 0
+    },
+    {
+      "policy_name": "default-flex-group",
+      "description": "default-flex-group",
+      "fallback_radio_shut": false,
+      "arp_caching": true,
+      "cts_inline_tagging": false,
+      "cts_rolebased_enforce": false,
+      "cts_profile_name": "default-sxp-profile",
+      "join_min_latency": false,
+      "radius_enable": true,
+      "vlan_enable": true,
+      "is_home_ap_enable": false,
+      "is_radio_backhaul": false,
+      "is_resilient_mode": false,
+      "efficient_ap_upgrade_enable": true,
+      "http_proxy_ip": "0.0.0.0",
+      "native_vlan_id": 1,
+      "slave_max_retry_count": 0,
+      "http_proxy_port": 0
+    },
+    {
+      "policy_name": "default-flex-profile",
+      "description": "default flex profile",
+      "fallback_radio_shut": false,
+      "arp_caching": true,
+      "cts_inline_tagging": false,
+      "cts_rolebased_enforce": false,
+      "cts_profile_name": "default-sxp-profile",
+      "join_min_latency": false,
+      "radius_enable": true,
+      "vlan_enable": true,
+      "is_home_ap_enable": false,
+      "is_radio_backhaul": false,
+      "is_resilient_mode": false,
+      "efficient_ap_upgrade_enable": true,
+      "http_proxy_ip": "0.0.0.0",
+      "native_vlan_id": 1,
+      "slave_max_retry_count": 0,
+      "http_proxy_port": 0
+    },
+    {
+      "policy_name": "default-flex-group-1920483800",
+      "description": "default-flex-group-1920483800",
+      "fallback_radio_shut": false,
+      "arp_caching": true,
+      "cts_inline_tagging": false,
+      "cts_rolebased_enforce": false,
+      "cts_profile_name": "default-sxp-profile",
+      "join_min_latency": false,
+      "radius_enable": true,
+      "vlan_enable": true,
+      "is_home_ap_enable": false,
+      "is_radio_backhaul": false,
+      "is_resilient_mode": false,
+      "efficient_ap_upgrade_enable": true,
+      "http_proxy_ip": "0.0.0.0",
+      "native_vlan_id": 1,
+      "slave_max_retry_count": 0,
+      "http_proxy_port": 0
+    }
+  ]
+}

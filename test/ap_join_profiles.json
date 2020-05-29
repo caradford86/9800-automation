@@ -1,0 +1,196 @@
+{
+  "Cisco_IOS_XE_wireless_site_cfg:ap_cfg_profile": [
+    {
+      "profile_name": "default-ap-profile",
+      "description": "default ap profile",
+      "ble_beacon_interval": 1,
+      "ble_beacon_advpwr": 59,
+      "ap_packet_capture_profile": "pc_default-ap-profile",
+      "ap_trace_profile": "",
+      "stats_timer": {
+        "stats_timer": 180
+      },
+      "led_state": {
+        "led_state": true
+      },
+      "link_latency": {
+        "link_latency_flag": "link-auditing-disable"
+      },
+      "poe": {
+        "pre_standard8023af_switch_flag": false,
+        "power_injector_state": false,
+        "power_injector_selection": "pwrinj-unknown",
+        "injector_switch_mac": "00:00:00:00:00:00"
+      },
+      "device_mgmt": {
+        "telnet": false,
+        "ssh": false
+      },
+      "user_mgmt": {
+        "username": "",
+        "password": "",
+        "password_type": "clear",
+        "secret": "",
+        "secret_type": "clear"
+      },
+      "tcp_mss": {
+        "adjust_mss": true,
+        "tcp_adjust_mss": 1250
+      },
+      "tunnel": {
+        "preferred_mode": "preferred-mode-unconfig"
+      },
+      "capwap_timer": {
+        "heart_beat_timeout": 30,
+        "discovery_timeout": 10,
+        "fast_heart_beat_timeout": 1,
+        "primary_discovery_timeout": 120,
+        "primed_join_timeout": 0
+      },
+      "retransmit_timer": {
+        "count": 5,
+        "interval": 3
+      },
+      "login_credentials": {
+        "dot1x_username": "",
+        "dot1x_password": "",
+        "dot1x_password_type": "clear"
+      },
+      "dot1x_eap_type_info": {
+        "dot1x_eap_type": "dot1x-eap-fast"
+      },
+      "lsc_ap_auth_type_info": {
+        "lsc_ap_auth_type": "lsc-ap-auth-capwap-dtls"
+      },
+      "coredump": {
+        "coredump_flag": "tftp-coredump-disable",
+        "tftp_server_address": "0.0.0.0",
+        "corefile_name": "default"
+      },
+      "syslog": {
+        "facility_value": "facility-kern",
+        "log_level": "syslog-level-information",
+        "host": "10.1.1.100"
+      },
+      "backup_controllers": {
+        "fallback_enabled": true,
+        "primary_controller_name": "",
+        "secondary_controller_name": "",
+        "primary_controller_ip": "0.0.0.0",
+        "secondary_controller_ip": "0.0.0.0"
+      },
+      "hyperlocation": {
+        "hyperlocation_enable": false,
+        "pak_rssi_threshold_detection": -100,
+        "pak_rssi_threshold_trigger": 10,
+        "pak_rssi_threshold_reset": 8
+      },
+      "rogue_detection": {
+        "rogue_detection_monitor_mode_report_interval": 10,
+        "ap_rogue_detection_min_rssi": -80,
+        "ap_rogue_detection_transient_interval": 0,
+        "rogue_containment_flexconnect": false,
+        "rogue_containment_autorate": false,
+        "ap_rogue_detection": true
+      },
+      "lag_info": {
+        "ap_lag_enabled": false
+      },
+      "tftp_down_grade": {
+        "tftp_downgrade_ip_address": "0.0.0.0",
+        "tftp_downgrade_filename": ""
+      },
+      "traffic_limit": {
+        "max1x_session_limit_per_ap": 0
+      },
+      "cdp": {
+        "cdp_enable": true
+      },
+      "ntp_server": "0.0.0.0",
+      "mesh": {
+        "mesh_profile_name": "default-mesh-profile"
+      },
+      "reporting_interval": {
+        "radio_24ghz": 90,
+        "radio_5ghz": 90
+      },
+      "ext_module": {
+        "enable": false
+      },
+      "icap": {
+        "full_trace_enabled": false,
+        "partial_trace_enabled": false,
+        "partial_trace_proto_all": false,
+        "partial_trace_proto_mgmt_all": false,
+        "partial_trace_proto_mgmt_assoc": false,
+        "partial_trace_proto_mgmt_auth": false,
+        "partial_trace_proto_mgmt_probe": false,
+        "partial_trace_proto_data_all": false,
+        "partial_trace_proto_data_arp": false,
+        "partial_trace_proto_data_dhcp": false,
+        "partial_trace_proto_data_dhcpv6": false,
+        "partial_trace_proto_data_dns": false,
+        "partial_trace_proto_data_eap": false,
+        "partial_trace_proto_data_icmp": false,
+        "partial_trace_proto_data_icmpv6": false,
+        "partial_trace_proto_cisco_all": false,
+        "partial_trace_proto_cisco_ndp": false,
+        "anomaly_det_enabled": false,
+        "anomaly_det_trigger_trace_ap": false,
+        "anomaly_det_dhcp_timeout": 5,
+        "client_stats_enabled": false,
+        "client_stats_freq": 30,
+        "ap_stats_system_enabled": false,
+        "ap_stats_system_freq": 30,
+        "ap_stats_memory_enabled": false,
+        "ap_stats_memory_freq": 30,
+        "ap_stats_interface_enabled": false,
+        "ap_stats_interface_freq": 30,
+        "ap_stats_routing_enabled": false,
+        "ap_stats_routing_freq": 30,
+        "ap_stats_radio_enabled": false,
+        "ap_stats_radio_freq": 30,
+        "ap_stats_wlan_enabled": false,
+        "ap_stats_wlan_freq": 30,
+        "ap_stats_dns_enabled": false,
+        "ap_stats_dns_freq": 30,
+        "rf_spectrum_enabled": false,
+        "rf_spectrum_slot0_enabled": false,
+        "rf_spectrum_slot1_enabled": false,
+        "rf_spectrum_slot2_enabled": false,
+        "adr_individual_enable": true,
+        "adr_individual_throttle": 5,
+        "adr_summary_enable": false,
+        "adr_summary_frequency": 5,
+        "client_filter_stats_freq": 5,
+        "client_filter_stats_enabled": false
+      },
+      "lawful_interception": {
+        "enable": false,
+        "timer_interval": 60
+      },
+      "persistent_ssid_broadcast": {
+        "enable": false
+      },
+      "dhcp_server": {
+        "enable": false
+      },
+      "usb_module_status": {
+        "enable": true
+      },
+      "gas_rate_limit": {
+        "enable": false
+      },
+      "qosmap": {
+        "qosmap_action_frame": true
+      },
+      "client_rssi": {
+        "client_rssi_stats": true,
+        "client_rssi_stats_interval": 30
+      },
+      "ntp_server_info": {
+        "ntp_address": "0.0.0.0"
+      }
+    }
+  ]
+}
