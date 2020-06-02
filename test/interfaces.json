@@ -1,16 +1,85 @@
 {
   "Cisco_IOS_XE_interfaces_oper:interface": [
     {
-      "name": "Control Plane",
-      "interface_type": "iana-iftype-other",
+      "name": "Capwap1",
+      "interface_type": "iana-iftype-ethernet-csmacd",
       "admin_status": "if-state-up",
       "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T02:43:50.000652+00:00",
+      "last_change": "2020-05-17T20:22:52.000971+00:00",
       "if_index": 0,
       "phys_address": "00:00:00:00:00:00",
       "speed": "10240000000",
       "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000598+00:00",
+        "discontinuity_time": "2020-02-14T12:56:37.00094+00:00",
+        "in_octets": "0",
+        "in_unicast_pkts": "0",
+        "in_broadcast_pkts": "0",
+        "in_multicast_pkts": "0",
+        "in_discards": 0,
+        "in_errors": 0,
+        "in_unknown_protos": 0,
+        "out_octets": 0,
+        "out_unicast_pkts": "0",
+        "out_broadcast_pkts": "0",
+        "out_multicast_pkts": "0",
+        "out_discards": "0",
+        "out_errors": "0",
+        "rx_pps": "0",
+        "rx_kbps": "0",
+        "tx_pps": "0",
+        "tx_kbps": "0",
+        "num_flaps": "0",
+        "in_crc_errors": "0"
+      },
+      "vrf": "",
+      "description": "",
+      "mtu": 0,
+      "input_security_acl": "",
+      "output_security_acl": "",
+      "v4_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "v6_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "bia_address": "00:00:00:00:00:00",
+      "ipv4_tcp_adjust_mss": 0,
+      "ipv6_tcp_adjust_mss": 0,
+      "intf_class_unspecified": true
+    },
+    {
+      "name": "Control Plane",
+      "interface_type": "iana-iftype-other",
+      "admin_status": "if-state-up",
+      "oper_status": "if-oper-state-ready",
+      "last_change": "2020-02-14T12:59:02.000194+00:00",
+      "if_index": 0,
+      "phys_address": "00:00:00:00:00:00",
+      "speed": "10240000000",
+      "statistics": {
+        "discontinuity_time": "2020-02-14T12:56:37.00094+00:00",
         "in_octets": "0",
         "in_unicast_pkts": "0",
         "in_broadcast_pkts": "0",
@@ -74,32 +143,367 @@
       "interface_type": "iana-iftype-ethernet-csmacd",
       "admin_status": "if-state-up",
       "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T02:44:13.000359+00:00",
+      "last_change": "2020-04-23T12:32:11.000941+00:00",
       "if_index": 1,
-      "phys_address": "00:0c:29:75:9f:11",
+      "phys_address": "00:0c:29:73:22:d6",
       "speed": "1024000000",
       "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000598+00:00",
-        "in_octets": "1489427613",
-        "in_unicast_pkts": "4738638",
+        "discontinuity_time": "2020-02-14T12:56:37.00094+00:00",
+        "in_octets": "43637096207",
+        "in_unicast_pkts": "233598318",
         "in_broadcast_pkts": "0",
         "in_multicast_pkts": "0",
         "in_discards": 0,
         "in_errors": 0,
         "in_unknown_protos": 0,
-        "out_octets": 41481936,
-        "out_unicast_pkts": "70013",
+        "out_octets": 3453267580,
+        "out_unicast_pkts": "11048312",
         "out_broadcast_pkts": "0",
         "out_multicast_pkts": "0",
         "out_discards": "0",
         "out_errors": "0",
-        "rx_pps": "38",
-        "rx_kbps": "137",
+        "rx_pps": "27",
+        "rx_kbps": "23",
         "tx_pps": "0",
         "tx_kbps": "0",
         "num_flaps": "0",
         "in_crc_errors": "0"
       },
+      "diffserv_info": [
+        {
+          "direction": "qos-outbound",
+          "policy_name": "AutoQos-4.0-wlan-Port-Output-Policy",
+          "diffserv_target_classifier_stats": [
+            {
+              "classifier_entry_name": "AutoQos-4.0-Output-CAPWAP-C-Class",
+              "parent_path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-CAPWAP-C-Class",
+              "classifier_entry_stats": {
+                "classified_pkts": "100665",
+                "classified_bytes": "12948079",
+                "classified_rate": "0"
+              },
+              "queuing_stats": {
+                "output_pkts": "100665",
+                "output_bytes": "12948079",
+                "queue_size_pkts": "0",
+                "queue_size_bytes": "0",
+                "drop_pkts": "0",
+                "drop_bytes": "0",
+                "wred_stats": {
+                  "early_drop_pkts": "0",
+                  "early_drop_bytes": "0",
+                  "mean_queue_depth": 0,
+                  "transmitted_pkts": "0",
+                  "transmitted_bytes": "0",
+                  "tail_drop_pkts": "0",
+                  "tail_drop_bytes": "0",
+                  "drop_pkts_flow": "0",
+                  "drop_pkts_no_buffer": "0",
+                  "queue_peak_size_pkts": "0",
+                  "queue_peak_size_bytes": "0",
+                  "bandwidth_exceed_drops": "0"
+                },
+                "cac_stats": {
+                  "num_admitted_flows": 0,
+                  "num_non_admitted_flows": 0
+                }
+              },
+              "marking_stats": {
+                "marking_dscp_stats_val": {
+                  "dscp": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dscp_tunnel_stats_val": {
+                  "dscp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_stats_val": {
+                  "cos_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_inner_stats_val": {
+                  "cos_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_discard_class_stats_val": {
+                  "disc_class_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_qos_grp_stats_val": {
+                  "qos_grp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_tunnel_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_imp_stats_val": {
+                  "mpls_exp_imp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_top_stats_val": {
+                  "mpls_exp_top_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_de_stats_val": {
+                  "fr_de": false,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_fecn_becn_stats_val": {
+                  "fecn_becn_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_atm_clp_stats_val": {
+                  "atm_clp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_vlan_inner_stats_val": {
+                  "vlan_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_imp_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_srp_priority_stats_val": {
+                  "srp_priority_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_wlan_user_priority_stats_val": {
+                  "wlan_user_priority_value": 0,
+                  "marked_pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier_entry_name": "AutoQos-4.0-Output-Voice-Class",
+              "parent_path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-Voice-Class",
+              "classifier_entry_stats": {
+                "classified_pkts": "0",
+                "classified_bytes": "0",
+                "classified_rate": "0"
+              },
+              "queuing_stats": {
+                "output_pkts": "0",
+                "output_bytes": "0",
+                "queue_size_pkts": "0",
+                "queue_size_bytes": "0",
+                "drop_pkts": "0",
+                "drop_bytes": "0",
+                "wred_stats": {
+                  "early_drop_pkts": "0",
+                  "early_drop_bytes": "0",
+                  "mean_queue_depth": 0,
+                  "transmitted_pkts": "0",
+                  "transmitted_bytes": "0",
+                  "tail_drop_pkts": "0",
+                  "tail_drop_bytes": "0",
+                  "drop_pkts_flow": "0",
+                  "drop_pkts_no_buffer": "0",
+                  "queue_peak_size_pkts": "0",
+                  "queue_peak_size_bytes": "0",
+                  "bandwidth_exceed_drops": "0"
+                },
+                "cac_stats": {
+                  "num_admitted_flows": 0,
+                  "num_non_admitted_flows": 0
+                }
+              },
+              "marking_stats": {
+                "marking_dscp_stats_val": {
+                  "dscp": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dscp_tunnel_stats_val": {
+                  "dscp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_stats_val": {
+                  "cos_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_inner_stats_val": {
+                  "cos_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_discard_class_stats_val": {
+                  "disc_class_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_qos_grp_stats_val": {
+                  "qos_grp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_tunnel_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_imp_stats_val": {
+                  "mpls_exp_imp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_top_stats_val": {
+                  "mpls_exp_top_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_de_stats_val": {
+                  "fr_de": false,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_fecn_becn_stats_val": {
+                  "fecn_becn_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_atm_clp_stats_val": {
+                  "atm_clp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_vlan_inner_stats_val": {
+                  "vlan_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_imp_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_srp_priority_stats_val": {
+                  "srp_priority_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_wlan_user_priority_stats_val": {
+                  "wlan_user_priority_value": 0,
+                  "marked_pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier_entry_name": "class-default",
+              "parent_path": "AutoQos-4.0-wlan-Port-Output-Policy class-default",
+              "classifier_entry_stats": {
+                "classified_pkts": "340801",
+                "classified_bytes": "249393650",
+                "classified_rate": "0"
+              },
+              "queuing_stats": {
+                "output_pkts": "256078",
+                "output_bytes": "235461455",
+                "queue_size_pkts": "0",
+                "queue_size_bytes": "0",
+                "drop_pkts": "0",
+                "drop_bytes": "0",
+                "wred_stats": {
+                  "early_drop_pkts": "0",
+                  "early_drop_bytes": "0",
+                  "mean_queue_depth": 0,
+                  "transmitted_pkts": "0",
+                  "transmitted_bytes": "0",
+                  "tail_drop_pkts": "0",
+                  "tail_drop_bytes": "0",
+                  "drop_pkts_flow": "0",
+                  "drop_pkts_no_buffer": "0",
+                  "queue_peak_size_pkts": "0",
+                  "queue_peak_size_bytes": "0",
+                  "bandwidth_exceed_drops": "0"
+                },
+                "cac_stats": {
+                  "num_admitted_flows": 0,
+                  "num_non_admitted_flows": 0
+                }
+              },
+              "marking_stats": {
+                "marking_dscp_stats_val": {
+                  "dscp": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dscp_tunnel_stats_val": {
+                  "dscp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_stats_val": {
+                  "cos_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_inner_stats_val": {
+                  "cos_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_discard_class_stats_val": {
+                  "disc_class_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_qos_grp_stats_val": {
+                  "qos_grp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_tunnel_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_imp_stats_val": {
+                  "mpls_exp_imp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_top_stats_val": {
+                  "mpls_exp_top_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_de_stats_val": {
+                  "fr_de": false,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_fecn_becn_stats_val": {
+                  "fecn_becn_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_atm_clp_stats_val": {
+                  "atm_clp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_vlan_inner_stats_val": {
+                  "vlan_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_imp_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_srp_priority_stats_val": {
+                  "srp_priority_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_wlan_user_priority_stats_val": {
+                  "wlan_user_priority_value": 0,
+                  "marked_pkts": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
       "vrf": "",
       "description": "",
       "mtu": 1500,
@@ -133,7 +537,7 @@
         "out_forwarded_octets": "0",
         "out_discarded_pkts": "0"
       },
-      "bia_address": "00:0c:29:75:9f:11",
+      "bia_address": "00:0c:29:73:22:d6",
       "ipv4_tcp_adjust_mss": 0,
       "ipv6_tcp_adjust_mss": 0,
       "ether_state": {
@@ -159,21 +563,21 @@
       "interface_type": "iana-iftype-ethernet-csmacd",
       "admin_status": "if-state-up",
       "oper_status": "if-oper-state-lower-layer-down",
-      "last_change": "2020-05-29T02:43:51.000852+00:00",
+      "last_change": "2020-02-28T21:11:33.000251+00:00",
       "if_index": 2,
-      "phys_address": "00:0c:29:75:9f:1b",
+      "phys_address": "00:0c:29:73:22:e0",
       "speed": "1024000000",
       "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "0",
-        "in_unicast_pkts": "0",
+        "discontinuity_time": "2020-02-14T12:56:37.00094+00:00",
+        "in_octets": "23650923423",
+        "in_unicast_pkts": "54534647",
         "in_broadcast_pkts": "0",
         "in_multicast_pkts": "0",
         "in_discards": 0,
         "in_errors": 0,
         "in_unknown_protos": 0,
-        "out_octets": 0,
-        "out_unicast_pkts": "0",
+        "out_octets": 3507965359,
+        "out_unicast_pkts": "5918151",
         "out_broadcast_pkts": "0",
         "out_multicast_pkts": "0",
         "out_discards": "0",
@@ -185,6 +589,341 @@
         "num_flaps": "0",
         "in_crc_errors": "0"
       },
+      "diffserv_info": [
+        {
+          "direction": "qos-outbound",
+          "policy_name": "AutoQos-4.0-wlan-Port-Output-Policy",
+          "diffserv_target_classifier_stats": [
+            {
+              "classifier_entry_name": "AutoQos-4.0-Output-CAPWAP-C-Class",
+              "parent_path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-CAPWAP-C-Class",
+              "classifier_entry_stats": {
+                "classified_pkts": "0",
+                "classified_bytes": "0",
+                "classified_rate": "0"
+              },
+              "queuing_stats": {
+                "output_pkts": "0",
+                "output_bytes": "0",
+                "queue_size_pkts": "0",
+                "queue_size_bytes": "0",
+                "drop_pkts": "0",
+                "drop_bytes": "0",
+                "wred_stats": {
+                  "early_drop_pkts": "0",
+                  "early_drop_bytes": "0",
+                  "mean_queue_depth": 0,
+                  "transmitted_pkts": "0",
+                  "transmitted_bytes": "0",
+                  "tail_drop_pkts": "0",
+                  "tail_drop_bytes": "0",
+                  "drop_pkts_flow": "0",
+                  "drop_pkts_no_buffer": "0",
+                  "queue_peak_size_pkts": "0",
+                  "queue_peak_size_bytes": "0",
+                  "bandwidth_exceed_drops": "0"
+                },
+                "cac_stats": {
+                  "num_admitted_flows": 0,
+                  "num_non_admitted_flows": 0
+                }
+              },
+              "marking_stats": {
+                "marking_dscp_stats_val": {
+                  "dscp": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dscp_tunnel_stats_val": {
+                  "dscp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_stats_val": {
+                  "cos_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_inner_stats_val": {
+                  "cos_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_discard_class_stats_val": {
+                  "disc_class_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_qos_grp_stats_val": {
+                  "qos_grp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_tunnel_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_imp_stats_val": {
+                  "mpls_exp_imp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_top_stats_val": {
+                  "mpls_exp_top_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_de_stats_val": {
+                  "fr_de": false,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_fecn_becn_stats_val": {
+                  "fecn_becn_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_atm_clp_stats_val": {
+                  "atm_clp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_vlan_inner_stats_val": {
+                  "vlan_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_imp_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_srp_priority_stats_val": {
+                  "srp_priority_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_wlan_user_priority_stats_val": {
+                  "wlan_user_priority_value": 0,
+                  "marked_pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier_entry_name": "AutoQos-4.0-Output-Voice-Class",
+              "parent_path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-Voice-Class",
+              "classifier_entry_stats": {
+                "classified_pkts": "0",
+                "classified_bytes": "0",
+                "classified_rate": "0"
+              },
+              "queuing_stats": {
+                "output_pkts": "0",
+                "output_bytes": "0",
+                "queue_size_pkts": "0",
+                "queue_size_bytes": "0",
+                "drop_pkts": "0",
+                "drop_bytes": "0",
+                "wred_stats": {
+                  "early_drop_pkts": "0",
+                  "early_drop_bytes": "0",
+                  "mean_queue_depth": 0,
+                  "transmitted_pkts": "0",
+                  "transmitted_bytes": "0",
+                  "tail_drop_pkts": "0",
+                  "tail_drop_bytes": "0",
+                  "drop_pkts_flow": "0",
+                  "drop_pkts_no_buffer": "0",
+                  "queue_peak_size_pkts": "0",
+                  "queue_peak_size_bytes": "0",
+                  "bandwidth_exceed_drops": "0"
+                },
+                "cac_stats": {
+                  "num_admitted_flows": 0,
+                  "num_non_admitted_flows": 0
+                }
+              },
+              "marking_stats": {
+                "marking_dscp_stats_val": {
+                  "dscp": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dscp_tunnel_stats_val": {
+                  "dscp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_stats_val": {
+                  "cos_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_inner_stats_val": {
+                  "cos_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_discard_class_stats_val": {
+                  "disc_class_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_qos_grp_stats_val": {
+                  "qos_grp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_tunnel_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_imp_stats_val": {
+                  "mpls_exp_imp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_top_stats_val": {
+                  "mpls_exp_top_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_de_stats_val": {
+                  "fr_de": false,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_fecn_becn_stats_val": {
+                  "fecn_becn_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_atm_clp_stats_val": {
+                  "atm_clp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_vlan_inner_stats_val": {
+                  "vlan_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_imp_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_srp_priority_stats_val": {
+                  "srp_priority_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_wlan_user_priority_stats_val": {
+                  "wlan_user_priority_value": 0,
+                  "marked_pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier_entry_name": "class-default",
+              "parent_path": "AutoQos-4.0-wlan-Port-Output-Policy class-default",
+              "classifier_entry_stats": {
+                "classified_pkts": "0",
+                "classified_bytes": "0",
+                "classified_rate": "0"
+              },
+              "queuing_stats": {
+                "output_pkts": "0",
+                "output_bytes": "0",
+                "queue_size_pkts": "0",
+                "queue_size_bytes": "0",
+                "drop_pkts": "0",
+                "drop_bytes": "0",
+                "wred_stats": {
+                  "early_drop_pkts": "0",
+                  "early_drop_bytes": "0",
+                  "mean_queue_depth": 0,
+                  "transmitted_pkts": "0",
+                  "transmitted_bytes": "0",
+                  "tail_drop_pkts": "0",
+                  "tail_drop_bytes": "0",
+                  "drop_pkts_flow": "0",
+                  "drop_pkts_no_buffer": "0",
+                  "queue_peak_size_pkts": "0",
+                  "queue_peak_size_bytes": "0",
+                  "bandwidth_exceed_drops": "0"
+                },
+                "cac_stats": {
+                  "num_admitted_flows": 0,
+                  "num_non_admitted_flows": 0
+                }
+              },
+              "marking_stats": {
+                "marking_dscp_stats_val": {
+                  "dscp": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dscp_tunnel_stats_val": {
+                  "dscp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_stats_val": {
+                  "cos_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_inner_stats_val": {
+                  "cos_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_discard_class_stats_val": {
+                  "disc_class_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_qos_grp_stats_val": {
+                  "qos_grp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_tunnel_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_imp_stats_val": {
+                  "mpls_exp_imp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_top_stats_val": {
+                  "mpls_exp_top_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_de_stats_val": {
+                  "fr_de": false,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_fecn_becn_stats_val": {
+                  "fecn_becn_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_atm_clp_stats_val": {
+                  "atm_clp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_vlan_inner_stats_val": {
+                  "vlan_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_imp_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_srp_priority_stats_val": {
+                  "srp_priority_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_wlan_user_priority_stats_val": {
+                  "wlan_user_priority_value": 0,
+                  "marked_pkts": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
       "vrf": "",
       "description": "",
       "mtu": 1500,
@@ -218,7 +957,7 @@
         "out_forwarded_octets": "0",
         "out_discarded_pkts": "0"
       },
-      "bia_address": "00:0c:29:75:9f:1b",
+      "bia_address": "00:0c:29:73:22:e0",
       "ipv4_tcp_adjust_mss": 0,
       "ipv6_tcp_adjust_mss": 0,
       "ether_state": {
@@ -244,14 +983,781 @@
       "interface_type": "iana-iftype-ethernet-csmacd",
       "admin_status": "if-state-up",
       "oper_status": "if-oper-state-lower-layer-down",
-      "last_change": "2020-05-29T02:43:51.000852+00:00",
+      "last_change": "2020-02-14T12:59:03.000528+00:00",
       "if_index": 3,
-      "phys_address": "00:0c:29:75:9f:25",
+      "phys_address": "00:0c:29:73:22:ea",
       "speed": "1024000000",
       "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
+        "discontinuity_time": "2020-02-14T12:56:37.000939+00:00",
         "in_octets": "0",
         "in_unicast_pkts": "0",
+        "in_broadcast_pkts": "0",
+        "in_multicast_pkts": "0",
+        "in_discards": 0,
+        "in_errors": 0,
+        "in_unknown_protos": 0,
+        "out_octets": 0,
+        "out_unicast_pkts": "0",
+        "out_broadcast_pkts": "0",
+        "out_multicast_pkts": "0",
+        "out_discards": "0",
+        "out_errors": "0",
+        "rx_pps": "0",
+        "rx_kbps": "0",
+        "tx_pps": "0",
+        "tx_kbps": "0",
+        "num_flaps": "0",
+        "in_crc_errors": "0"
+      },
+      "diffserv_info": [
+        {
+          "direction": "qos-outbound",
+          "policy_name": "AutoQos-4.0-wlan-Port-Output-Policy",
+          "diffserv_target_classifier_stats": [
+            {
+              "classifier_entry_name": "AutoQos-4.0-Output-CAPWAP-C-Class",
+              "parent_path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-CAPWAP-C-Class",
+              "classifier_entry_stats": {
+                "classified_pkts": "0",
+                "classified_bytes": "0",
+                "classified_rate": "0"
+              },
+              "queuing_stats": {
+                "output_pkts": "0",
+                "output_bytes": "0",
+                "queue_size_pkts": "0",
+                "queue_size_bytes": "0",
+                "drop_pkts": "0",
+                "drop_bytes": "0",
+                "wred_stats": {
+                  "early_drop_pkts": "0",
+                  "early_drop_bytes": "0",
+                  "mean_queue_depth": 0,
+                  "transmitted_pkts": "0",
+                  "transmitted_bytes": "0",
+                  "tail_drop_pkts": "0",
+                  "tail_drop_bytes": "0",
+                  "drop_pkts_flow": "0",
+                  "drop_pkts_no_buffer": "0",
+                  "queue_peak_size_pkts": "0",
+                  "queue_peak_size_bytes": "0",
+                  "bandwidth_exceed_drops": "0"
+                },
+                "cac_stats": {
+                  "num_admitted_flows": 0,
+                  "num_non_admitted_flows": 0
+                }
+              },
+              "marking_stats": {
+                "marking_dscp_stats_val": {
+                  "dscp": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dscp_tunnel_stats_val": {
+                  "dscp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_stats_val": {
+                  "cos_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_inner_stats_val": {
+                  "cos_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_discard_class_stats_val": {
+                  "disc_class_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_qos_grp_stats_val": {
+                  "qos_grp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_tunnel_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_imp_stats_val": {
+                  "mpls_exp_imp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_top_stats_val": {
+                  "mpls_exp_top_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_de_stats_val": {
+                  "fr_de": false,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_fecn_becn_stats_val": {
+                  "fecn_becn_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_atm_clp_stats_val": {
+                  "atm_clp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_vlan_inner_stats_val": {
+                  "vlan_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_imp_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_srp_priority_stats_val": {
+                  "srp_priority_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_wlan_user_priority_stats_val": {
+                  "wlan_user_priority_value": 0,
+                  "marked_pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier_entry_name": "AutoQos-4.0-Output-Voice-Class",
+              "parent_path": "AutoQos-4.0-wlan-Port-Output-Policy AutoQos-4.0-Output-Voice-Class",
+              "classifier_entry_stats": {
+                "classified_pkts": "0",
+                "classified_bytes": "0",
+                "classified_rate": "0"
+              },
+              "queuing_stats": {
+                "output_pkts": "0",
+                "output_bytes": "0",
+                "queue_size_pkts": "0",
+                "queue_size_bytes": "0",
+                "drop_pkts": "0",
+                "drop_bytes": "0",
+                "wred_stats": {
+                  "early_drop_pkts": "0",
+                  "early_drop_bytes": "0",
+                  "mean_queue_depth": 0,
+                  "transmitted_pkts": "0",
+                  "transmitted_bytes": "0",
+                  "tail_drop_pkts": "0",
+                  "tail_drop_bytes": "0",
+                  "drop_pkts_flow": "0",
+                  "drop_pkts_no_buffer": "0",
+                  "queue_peak_size_pkts": "0",
+                  "queue_peak_size_bytes": "0",
+                  "bandwidth_exceed_drops": "0"
+                },
+                "cac_stats": {
+                  "num_admitted_flows": 0,
+                  "num_non_admitted_flows": 0
+                }
+              },
+              "marking_stats": {
+                "marking_dscp_stats_val": {
+                  "dscp": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dscp_tunnel_stats_val": {
+                  "dscp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_stats_val": {
+                  "cos_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_inner_stats_val": {
+                  "cos_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_discard_class_stats_val": {
+                  "disc_class_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_qos_grp_stats_val": {
+                  "qos_grp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_tunnel_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_imp_stats_val": {
+                  "mpls_exp_imp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_top_stats_val": {
+                  "mpls_exp_top_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_de_stats_val": {
+                  "fr_de": false,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_fecn_becn_stats_val": {
+                  "fecn_becn_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_atm_clp_stats_val": {
+                  "atm_clp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_vlan_inner_stats_val": {
+                  "vlan_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_imp_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_srp_priority_stats_val": {
+                  "srp_priority_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_wlan_user_priority_stats_val": {
+                  "wlan_user_priority_value": 0,
+                  "marked_pkts": "0"
+                }
+              }
+            },
+            {
+              "classifier_entry_name": "class-default",
+              "parent_path": "AutoQos-4.0-wlan-Port-Output-Policy class-default",
+              "classifier_entry_stats": {
+                "classified_pkts": "0",
+                "classified_bytes": "0",
+                "classified_rate": "0"
+              },
+              "queuing_stats": {
+                "output_pkts": "0",
+                "output_bytes": "0",
+                "queue_size_pkts": "0",
+                "queue_size_bytes": "0",
+                "drop_pkts": "0",
+                "drop_bytes": "0",
+                "wred_stats": {
+                  "early_drop_pkts": "0",
+                  "early_drop_bytes": "0",
+                  "mean_queue_depth": 0,
+                  "transmitted_pkts": "0",
+                  "transmitted_bytes": "0",
+                  "tail_drop_pkts": "0",
+                  "tail_drop_bytes": "0",
+                  "drop_pkts_flow": "0",
+                  "drop_pkts_no_buffer": "0",
+                  "queue_peak_size_pkts": "0",
+                  "queue_peak_size_bytes": "0",
+                  "bandwidth_exceed_drops": "0"
+                },
+                "cac_stats": {
+                  "num_admitted_flows": 0,
+                  "num_non_admitted_flows": 0
+                }
+              },
+              "marking_stats": {
+                "marking_dscp_stats_val": {
+                  "dscp": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dscp_tunnel_stats_val": {
+                  "dscp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_stats_val": {
+                  "cos_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_cos_inner_stats_val": {
+                  "cos_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_discard_class_stats_val": {
+                  "disc_class_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_qos_grp_stats_val": {
+                  "qos_grp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_prec_tunnel_stats_val": {
+                  "prec_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_imp_stats_val": {
+                  "mpls_exp_imp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_mpls_exp_top_stats_val": {
+                  "mpls_exp_top_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_de_stats_val": {
+                  "fr_de": false,
+                  "marked_pkts": "0"
+                },
+                "marking_fr_fecn_becn_stats_val": {
+                  "fecn_becn_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_atm_clp_stats_val": {
+                  "atm_clp_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_vlan_inner_stats_val": {
+                  "vlan_inner_val": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_dei_imp_stats_val": {
+                  "dei_imp_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_srp_priority_stats_val": {
+                  "srp_priority_value": 0,
+                  "marked_pkts": "0"
+                },
+                "marking_wlan_user_priority_stats_val": {
+                  "wlan_user_priority_value": 0,
+                  "marked_pkts": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "vrf": "",
+      "description": "",
+      "mtu": 1500,
+      "input_security_acl": "",
+      "output_security_acl": "",
+      "v4_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "v6_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "bia_address": "00:0c:29:73:22:ea",
+      "ipv4_tcp_adjust_mss": 0,
+      "ipv6_tcp_adjust_mss": 0,
+      "ether_state": {
+        "negotiated_duplex_mode": "full-duplex",
+        "negotiated_port_speed": "speed-1gb",
+        "auto_negotiate": true,
+        "enable_flow_control": false
+      },
+      "ether_stats": {
+        "in_mac_control_frames": "0",
+        "in_mac_pause_frames": "0",
+        "in_oversize_frames": "0",
+        "in_jabber_frames": "0",
+        "in_fragment_frames": "0",
+        "in_8021q_frames": "0",
+        "out_mac_control_frames": "0",
+        "out_mac_pause_frames": "0",
+        "out_8021q_frames": "0"
+      }
+    },
+    {
+      "name": "Loopback99",
+      "interface_type": "iana-iftype-sw-loopback",
+      "admin_status": "if-state-up",
+      "oper_status": "if-oper-state-ready",
+      "last_change": "2020-04-15T16:59:07.000083+00:00",
+      "if_index": 9,
+      "phys_address": "00:1e:bd:d6:a0:00",
+      "speed": "8192000000",
+      "statistics": {
+        "discontinuity_time": "2020-02-14T12:56:37.000939+00:00",
+        "in_octets": "0",
+        "in_unicast_pkts": "0",
+        "in_broadcast_pkts": "0",
+        "in_multicast_pkts": "0",
+        "in_discards": 0,
+        "in_errors": 0,
+        "in_unknown_protos": 0,
+        "out_octets": 0,
+        "out_unicast_pkts": "0",
+        "out_broadcast_pkts": "0",
+        "out_multicast_pkts": "0",
+        "out_discards": "0",
+        "out_errors": "0",
+        "rx_pps": "0",
+        "rx_kbps": "0",
+        "tx_pps": "0",
+        "tx_kbps": "0",
+        "num_flaps": "0",
+        "in_crc_errors": "0"
+      },
+      "vrf": "",
+      "ipv4": "10.99.0.10",
+      "ipv4_subnet_mask": "255.255.255.0",
+      "description": "yanggang",
+      "mtu": 1514,
+      "input_security_acl": "",
+      "output_security_acl": "",
+      "v4_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "v6_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "bia_address": "00:00:00:00:00:00",
+      "ipv4_tcp_adjust_mss": 0,
+      "ipv6_tcp_adjust_mss": 0,
+      "intf_class_unspecified": true
+    },
+    {
+      "name": "Mcastdata1",
+      "interface_type": "iana-iftype-ethernet-csmacd",
+      "admin_status": "if-state-up",
+      "oper_status": "if-oper-state-ready",
+      "last_change": "2020-02-14T12:56:37.000939+00:00",
+      "if_index": 0,
+      "phys_address": "00:00:00:00:00:00",
+      "speed": "10240000000",
+      "statistics": {
+        "discontinuity_time": "2020-02-14T12:56:37.000939+00:00",
+        "in_octets": "0",
+        "in_unicast_pkts": "0",
+        "in_broadcast_pkts": "0",
+        "in_multicast_pkts": "0",
+        "in_discards": 0,
+        "in_errors": 0,
+        "in_unknown_protos": 0,
+        "out_octets": 0,
+        "out_unicast_pkts": "0",
+        "out_broadcast_pkts": "0",
+        "out_multicast_pkts": "0",
+        "out_discards": "0",
+        "out_errors": "0",
+        "rx_pps": "0",
+        "rx_kbps": "0",
+        "tx_pps": "0",
+        "tx_kbps": "0",
+        "num_flaps": "0",
+        "in_crc_errors": "0"
+      },
+      "vrf": "",
+      "description": "",
+      "mtu": 0,
+      "input_security_acl": "",
+      "output_security_acl": "",
+      "v4_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "v6_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "bia_address": "00:00:00:00:00:00",
+      "ipv4_tcp_adjust_mss": 0,
+      "ipv6_tcp_adjust_mss": 0,
+      "intf_class_unspecified": true
+    },
+    {
+      "name": "Mobility1",
+      "interface_type": "iana-iftype-ethernet-csmacd",
+      "admin_status": "if-state-up",
+      "oper_status": "if-oper-state-ready",
+      "last_change": "2020-04-23T12:32:13.000978+00:00",
+      "if_index": 0,
+      "phys_address": "00:00:00:00:00:00",
+      "speed": "10240000000",
+      "statistics": {
+        "discontinuity_time": "2020-02-14T12:56:37.000939+00:00",
+        "in_octets": "0",
+        "in_unicast_pkts": "0",
+        "in_broadcast_pkts": "0",
+        "in_multicast_pkts": "0",
+        "in_discards": 0,
+        "in_errors": 0,
+        "in_unknown_protos": 0,
+        "out_octets": 0,
+        "out_unicast_pkts": "0",
+        "out_broadcast_pkts": "0",
+        "out_multicast_pkts": "0",
+        "out_discards": "0",
+        "out_errors": "0",
+        "rx_pps": "0",
+        "rx_kbps": "0",
+        "tx_pps": "0",
+        "tx_kbps": "0",
+        "num_flaps": "0",
+        "in_crc_errors": "0"
+      },
+      "vrf": "",
+      "description": "",
+      "mtu": 0,
+      "input_security_acl": "",
+      "output_security_acl": "",
+      "v4_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "v6_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "bia_address": "00:00:00:00:00:00",
+      "ipv4_tcp_adjust_mss": 0,
+      "ipv6_tcp_adjust_mss": 0,
+      "intf_class_unspecified": true
+    },
+    {
+      "name": "Mobility2",
+      "interface_type": "iana-iftype-ethernet-csmacd",
+      "admin_status": "if-state-up",
+      "oper_status": "if-oper-state-ready",
+      "last_change": "2020-04-23T12:32:13.000984+00:00",
+      "if_index": 0,
+      "phys_address": "00:00:00:00:00:00",
+      "speed": "10240000000",
+      "statistics": {
+        "discontinuity_time": "2020-02-14T12:56:37.000939+00:00",
+        "in_octets": "0",
+        "in_unicast_pkts": "0",
+        "in_broadcast_pkts": "0",
+        "in_multicast_pkts": "0",
+        "in_discards": 0,
+        "in_errors": 0,
+        "in_unknown_protos": 0,
+        "out_octets": 0,
+        "out_unicast_pkts": "0",
+        "out_broadcast_pkts": "0",
+        "out_multicast_pkts": "0",
+        "out_discards": "0",
+        "out_errors": "0",
+        "rx_pps": "0",
+        "rx_kbps": "0",
+        "tx_pps": "0",
+        "tx_kbps": "0",
+        "num_flaps": "0",
+        "in_crc_errors": "0"
+      },
+      "vrf": "",
+      "description": "",
+      "mtu": 0,
+      "input_security_acl": "",
+      "output_security_acl": "",
+      "v4_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "v6_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "bia_address": "00:00:00:00:00:00",
+      "ipv4_tcp_adjust_mss": 0,
+      "ipv6_tcp_adjust_mss": 0,
+      "intf_class_unspecified": true
+    },
+    {
+      "name": "Port-channel12",
+      "interface_type": "iana-iftype-propvirtual",
+      "admin_status": "if-state-up",
+      "oper_status": "if-oper-state-lower-layer-down",
+      "last_change": "2020-04-15T16:59:27.000672+00:00",
+      "if_index": 10,
+      "phys_address": "00:00:00:00:00:00",
+      "speed": "10240000",
+      "statistics": {
+        "discontinuity_time": "2020-02-14T12:56:37.000939+00:00",
+        "in_octets": "0",
+        "in_unicast_pkts": "0",
+        "in_broadcast_pkts": "0",
+        "in_multicast_pkts": "0",
+        "in_discards": 0,
+        "in_errors": 0,
+        "in_unknown_protos": 0,
+        "out_octets": 0,
+        "out_unicast_pkts": "0",
+        "out_broadcast_pkts": "0",
+        "out_multicast_pkts": "0",
+        "out_discards": "0",
+        "out_errors": "0",
+        "rx_pps": "0",
+        "rx_kbps": "0",
+        "tx_pps": "0",
+        "tx_kbps": "0",
+        "num_flaps": "0",
+        "in_crc_errors": "0"
+      },
+      "vrf": "",
+      "description": "yanggang",
+      "mtu": 1500,
+      "input_security_acl": "",
+      "output_security_acl": "",
+      "v4_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "v6_protocol_stats": {
+        "in_pkts": "0",
+        "in_octets": "0",
+        "in_error_pkts": "0",
+        "in_forwarded_pkts": "0",
+        "in_forwarded_octets": "0",
+        "in_discarded_pkts": "0",
+        "out_pkts": "0",
+        "out_octets": "0",
+        "out_error_pkts": "0",
+        "out_forwarded_pkts": "0",
+        "out_forwarded_octets": "0",
+        "out_discarded_pkts": "0"
+      },
+      "bia_address": "00:00:00:00:00:00",
+      "ipv4_tcp_adjust_mss": 0,
+      "ipv6_tcp_adjust_mss": 0,
+      "intf_class_unspecified": true
+    },
+    {
+      "name": "Vlan1",
+      "interface_type": "iana-iftype-propvirtual",
+      "admin_status": "if-state-down",
+      "oper_status": "if-oper-state-no-pass",
+      "last_change": "2020-02-14T12:59:09.000305+00:00",
+      "if_index": 6,
+      "phys_address": "00:1e:bd:d6:a0:ff",
+      "speed": "1024000000",
+      "statistics": {
+        "discontinuity_time": "2020-02-14T12:56:37.000939+00:00",
+        "in_octets": "60",
+        "in_unicast_pkts": "1",
         "in_broadcast_pkts": "0",
         "in_multicast_pkts": "0",
         "in_discards": 0,
@@ -303,94 +1809,7 @@
         "out_forwarded_octets": "0",
         "out_discarded_pkts": "0"
       },
-      "bia_address": "00:0c:29:75:9f:25",
-      "ipv4_tcp_adjust_mss": 0,
-      "ipv6_tcp_adjust_mss": 0,
-      "ether_state": {
-        "negotiated_duplex_mode": "full-duplex",
-        "negotiated_port_speed": "speed-1gb",
-        "auto_negotiate": true,
-        "enable_flow_control": false
-      },
-      "ether_stats": {
-        "in_mac_control_frames": "0",
-        "in_mac_pause_frames": "0",
-        "in_oversize_frames": "0",
-        "in_jabber_frames": "0",
-        "in_fragment_frames": "0",
-        "in_8021q_frames": "0",
-        "out_mac_control_frames": "0",
-        "out_mac_pause_frames": "0",
-        "out_8021q_frames": "0"
-      }
-    },
-    {
-      "name": "Vlan1",
-      "interface_type": "iana-iftype-propvirtual",
-      "admin_status": "if-state-up",
-      "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T02:46:45.000054+00:00",
-      "if_index": 6,
-      "phys_address": "00:1e:e6:11:5d:ff",
-      "speed": "1024000000",
-      "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "28396373",
-        "in_unicast_pkts": "310590",
-        "in_broadcast_pkts": "0",
-        "in_multicast_pkts": "0",
-        "in_discards": 0,
-        "in_errors": 0,
-        "in_unknown_protos": 0,
-        "out_octets": 40824015,
-        "out_unicast_pkts": "65101",
-        "out_broadcast_pkts": "0",
-        "out_multicast_pkts": "0",
-        "out_discards": "0",
-        "out_errors": "0",
-        "rx_pps": "4",
-        "rx_kbps": "2",
-        "tx_pps": "0",
-        "tx_kbps": "7",
-        "num_flaps": "0",
-        "in_crc_errors": "0"
-      },
-      "vrf": "",
-      "ipv4": "10.255.131.125",
-      "ipv4_subnet_mask": "255.255.255.0",
-      "description": "",
-      "mtu": 1500,
-      "input_security_acl": "",
-      "output_security_acl": "",
-      "v4_protocol_stats": {
-        "in_pkts": "194812",
-        "in_octets": "24169113",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "62473",
-        "out_octets": "40657803",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "62473",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "v6_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "bia_address": "00:1e:e6:11:5d:ff",
+      "bia_address": "00:1e:bd:d6:a0:ff",
       "ipv4_tcp_adjust_mss": 0,
       "ipv6_tcp_adjust_mss": 0,
       "ether_state": {
@@ -416,50 +1835,50 @@
       "interface_type": "iana-iftype-propvirtual",
       "admin_status": "if-state-up",
       "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T03:04:02.000734+00:00",
-      "if_index": 9,
-      "phys_address": "00:1e:e6:11:5d:ff",
+      "last_change": "2020-04-23T12:32:14.000944+00:00",
+      "if_index": 7,
+      "phys_address": "00:1e:bd:d6:a0:ff",
       "speed": "1024000000",
       "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "0",
-        "in_unicast_pkts": "0",
+        "discontinuity_time": "2020-02-14T12:56:37.000938+00:00",
+        "in_octets": "4026442240",
+        "in_unicast_pkts": "47375028",
         "in_broadcast_pkts": "0",
         "in_multicast_pkts": "0",
         "in_discards": 0,
         "in_errors": 0,
         "in_unknown_protos": 0,
-        "out_octets": 0,
-        "out_unicast_pkts": "0",
+        "out_octets": 540110121,
+        "out_unicast_pkts": "1822507",
         "out_broadcast_pkts": "0",
         "out_multicast_pkts": "0",
         "out_discards": "0",
         "out_errors": "0",
-        "rx_pps": "0",
-        "rx_kbps": "0",
+        "rx_pps": "9",
+        "rx_kbps": "5",
         "tx_pps": "0",
         "tx_kbps": "0",
         "num_flaps": "0",
         "in_crc_errors": "0"
       },
       "vrf": "",
-      "ipv4": "10.1.1.10",
+      "ipv4": "10.1.1.111",
       "ipv4_subnet_mask": "255.255.255.0",
-      "description": "\"management\"",
+      "description": "test",
       "mtu": 1500,
       "input_security_acl": "",
       "output_security_acl": "",
       "v4_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
+        "in_pkts": "24646336",
+        "in_octets": "2650593071",
         "in_error_pkts": "0",
         "in_forwarded_pkts": "0",
         "in_forwarded_octets": "0",
         "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
+        "out_pkts": "1535076",
+        "out_octets": "504380398",
         "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
+        "out_forwarded_pkts": "1535076",
         "out_forwarded_octets": "0",
         "out_discarded_pkts": "0"
       },
@@ -477,442 +1896,7 @@
         "out_forwarded_octets": "0",
         "out_discarded_pkts": "0"
       },
-      "bia_address": "00:1e:e6:11:5d:ff",
-      "ipv4_tcp_adjust_mss": 0,
-      "ipv6_tcp_adjust_mss": 0,
-      "ether_state": {
-        "negotiated_duplex_mode": "unknown-duplex",
-        "negotiated_port_speed": "speed-auto",
-        "auto_negotiate": false,
-        "enable_flow_control": false
-      },
-      "ether_stats": {
-        "in_mac_control_frames": "0",
-        "in_mac_pause_frames": "0",
-        "in_oversize_frames": "0",
-        "in_jabber_frames": "0",
-        "in_fragment_frames": "0",
-        "in_8021q_frames": "0",
-        "out_mac_control_frames": "0",
-        "out_mac_pause_frames": "0",
-        "out_8021q_frames": "0"
-      }
-    },
-    {
-      "name": "Vlan111",
-      "interface_type": "iana-iftype-propvirtual",
-      "admin_status": "if-state-up",
-      "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T03:04:10.000766+00:00",
-      "if_index": 10,
-      "phys_address": "00:1e:e6:11:5d:ff",
-      "speed": "1024000000",
-      "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "0",
-        "in_unicast_pkts": "0",
-        "in_broadcast_pkts": "0",
-        "in_multicast_pkts": "0",
-        "in_discards": 0,
-        "in_errors": 0,
-        "in_unknown_protos": 0,
-        "out_octets": 0,
-        "out_unicast_pkts": "0",
-        "out_broadcast_pkts": "0",
-        "out_multicast_pkts": "0",
-        "out_discards": "0",
-        "out_errors": "0",
-        "rx_pps": "0",
-        "rx_kbps": "0",
-        "tx_pps": "0",
-        "tx_kbps": "0",
-        "num_flaps": "0",
-        "in_crc_errors": "0"
-      },
-      "vrf": "",
-      "ipv4": "10.11.0.10",
-      "ipv4_subnet_mask": "255.255.255.0",
-      "description": "\"vlan111\"",
-      "mtu": 1500,
-      "input_security_acl": "",
-      "output_security_acl": "",
-      "v4_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "v6_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "bia_address": "00:1e:e6:11:5d:ff",
-      "ipv4_tcp_adjust_mss": 0,
-      "ipv6_tcp_adjust_mss": 0,
-      "ether_state": {
-        "negotiated_duplex_mode": "unknown-duplex",
-        "negotiated_port_speed": "speed-auto",
-        "auto_negotiate": false,
-        "enable_flow_control": false
-      },
-      "ether_stats": {
-        "in_mac_control_frames": "0",
-        "in_mac_pause_frames": "0",
-        "in_oversize_frames": "0",
-        "in_jabber_frames": "0",
-        "in_fragment_frames": "0",
-        "in_8021q_frames": "0",
-        "out_mac_control_frames": "0",
-        "out_mac_pause_frames": "0",
-        "out_8021q_frames": "0"
-      }
-    },
-    {
-      "name": "Vlan112",
-      "interface_type": "iana-iftype-propvirtual",
-      "admin_status": "if-state-up",
-      "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T03:04:18.000793+00:00",
-      "if_index": 11,
-      "phys_address": "00:1e:e6:11:5d:ff",
-      "speed": "1024000000",
-      "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "0",
-        "in_unicast_pkts": "0",
-        "in_broadcast_pkts": "0",
-        "in_multicast_pkts": "0",
-        "in_discards": 0,
-        "in_errors": 0,
-        "in_unknown_protos": 0,
-        "out_octets": 0,
-        "out_unicast_pkts": "0",
-        "out_broadcast_pkts": "0",
-        "out_multicast_pkts": "0",
-        "out_discards": "0",
-        "out_errors": "0",
-        "rx_pps": "0",
-        "rx_kbps": "0",
-        "tx_pps": "0",
-        "tx_kbps": "0",
-        "num_flaps": "0",
-        "in_crc_errors": "0"
-      },
-      "vrf": "",
-      "ipv4": "10.12.0.10",
-      "ipv4_subnet_mask": "255.255.255.0",
-      "description": "\"vlan112\"",
-      "mtu": 1500,
-      "input_security_acl": "",
-      "output_security_acl": "",
-      "v4_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "v6_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "bia_address": "00:1e:e6:11:5d:ff",
-      "ipv4_tcp_adjust_mss": 0,
-      "ipv6_tcp_adjust_mss": 0,
-      "ether_state": {
-        "negotiated_duplex_mode": "unknown-duplex",
-        "negotiated_port_speed": "speed-auto",
-        "auto_negotiate": false,
-        "enable_flow_control": false
-      },
-      "ether_stats": {
-        "in_mac_control_frames": "0",
-        "in_mac_pause_frames": "0",
-        "in_oversize_frames": "0",
-        "in_jabber_frames": "0",
-        "in_fragment_frames": "0",
-        "in_8021q_frames": "0",
-        "out_mac_control_frames": "0",
-        "out_mac_pause_frames": "0",
-        "out_8021q_frames": "0"
-      }
-    },
-    {
-      "name": "Vlan114",
-      "interface_type": "iana-iftype-propvirtual",
-      "admin_status": "if-state-up",
-      "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T03:04:26.000809+00:00",
-      "if_index": 12,
-      "phys_address": "00:1e:e6:11:5d:ff",
-      "speed": "1024000000",
-      "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "0",
-        "in_unicast_pkts": "0",
-        "in_broadcast_pkts": "0",
-        "in_multicast_pkts": "0",
-        "in_discards": 0,
-        "in_errors": 0,
-        "in_unknown_protos": 0,
-        "out_octets": 0,
-        "out_unicast_pkts": "0",
-        "out_broadcast_pkts": "0",
-        "out_multicast_pkts": "0",
-        "out_discards": "0",
-        "out_errors": "0",
-        "rx_pps": "0",
-        "rx_kbps": "0",
-        "tx_pps": "0",
-        "tx_kbps": "0",
-        "num_flaps": "0",
-        "in_crc_errors": "0"
-      },
-      "vrf": "",
-      "ipv4": "10.14.0.10",
-      "ipv4_subnet_mask": "255.255.255.0",
-      "description": "\"vlan114\"",
-      "mtu": 1500,
-      "input_security_acl": "",
-      "output_security_acl": "",
-      "v4_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "v6_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "bia_address": "00:1e:e6:11:5d:ff",
-      "ipv4_tcp_adjust_mss": 0,
-      "ipv6_tcp_adjust_mss": 0,
-      "ether_state": {
-        "negotiated_duplex_mode": "unknown-duplex",
-        "negotiated_port_speed": "speed-auto",
-        "auto_negotiate": false,
-        "enable_flow_control": false
-      },
-      "ether_stats": {
-        "in_mac_control_frames": "0",
-        "in_mac_pause_frames": "0",
-        "in_oversize_frames": "0",
-        "in_jabber_frames": "0",
-        "in_fragment_frames": "0",
-        "in_8021q_frames": "0",
-        "out_mac_control_frames": "0",
-        "out_mac_pause_frames": "0",
-        "out_8021q_frames": "0"
-      }
-    },
-    {
-      "name": "Vlan20",
-      "interface_type": "iana-iftype-propvirtual",
-      "admin_status": "if-state-up",
-      "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T03:04:34.000833+00:00",
-      "if_index": 13,
-      "phys_address": "00:1e:e6:11:5d:ff",
-      "speed": "1024000000",
-      "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "0",
-        "in_unicast_pkts": "0",
-        "in_broadcast_pkts": "0",
-        "in_multicast_pkts": "0",
-        "in_discards": 0,
-        "in_errors": 0,
-        "in_unknown_protos": 0,
-        "out_octets": 0,
-        "out_unicast_pkts": "0",
-        "out_broadcast_pkts": "0",
-        "out_multicast_pkts": "0",
-        "out_discards": "0",
-        "out_errors": "0",
-        "rx_pps": "0",
-        "rx_kbps": "0",
-        "tx_pps": "0",
-        "tx_kbps": "0",
-        "num_flaps": "0",
-        "in_crc_errors": "0"
-      },
-      "vrf": "",
-      "ipv4": "192.168.1.10",
-      "ipv4_subnet_mask": "255.255.255.0",
-      "description": "\"vlan20\"",
-      "mtu": 1500,
-      "input_security_acl": "",
-      "output_security_acl": "",
-      "v4_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "v6_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "bia_address": "00:1e:e6:11:5d:ff",
-      "ipv4_tcp_adjust_mss": 0,
-      "ipv6_tcp_adjust_mss": 0,
-      "ether_state": {
-        "negotiated_duplex_mode": "unknown-duplex",
-        "negotiated_port_speed": "speed-auto",
-        "auto_negotiate": false,
-        "enable_flow_control": false
-      },
-      "ether_stats": {
-        "in_mac_control_frames": "0",
-        "in_mac_pause_frames": "0",
-        "in_oversize_frames": "0",
-        "in_jabber_frames": "0",
-        "in_fragment_frames": "0",
-        "in_8021q_frames": "0",
-        "out_mac_control_frames": "0",
-        "out_mac_pause_frames": "0",
-        "out_8021q_frames": "0"
-      }
-    },
-    {
-      "name": "Vlan30",
-      "interface_type": "iana-iftype-propvirtual",
-      "admin_status": "if-state-up",
-      "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T03:04:41.000845+00:00",
-      "if_index": 14,
-      "phys_address": "00:1e:e6:11:5d:ff",
-      "speed": "1024000000",
-      "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "0",
-        "in_unicast_pkts": "0",
-        "in_broadcast_pkts": "0",
-        "in_multicast_pkts": "0",
-        "in_discards": 0,
-        "in_errors": 0,
-        "in_unknown_protos": 0,
-        "out_octets": 0,
-        "out_unicast_pkts": "0",
-        "out_broadcast_pkts": "0",
-        "out_multicast_pkts": "0",
-        "out_discards": "0",
-        "out_errors": "0",
-        "rx_pps": "0",
-        "rx_kbps": "0",
-        "tx_pps": "0",
-        "tx_kbps": "0",
-        "num_flaps": "0",
-        "in_crc_errors": "0"
-      },
-      "vrf": "",
-      "ipv4": "10.1.30.2",
-      "ipv4_subnet_mask": "255.255.255.0",
-      "description": "\"vlan30\"",
-      "mtu": 1500,
-      "input_security_acl": "",
-      "output_security_acl": "",
-      "v4_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "v6_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "bia_address": "00:1e:e6:11:5d:ff",
+      "bia_address": "00:1e:bd:d6:a0:ff",
       "ipv4_tcp_adjust_mss": 0,
       "ipv6_tcp_adjust_mss": 0,
       "ether_state": {
@@ -938,195 +1922,21 @@
       "interface_type": "iana-iftype-propvirtual",
       "admin_status": "if-state-up",
       "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T03:03:47.000687+00:00",
-      "if_index": 7,
-      "phys_address": "00:1e:e6:11:5d:ff",
-      "speed": "1024000000",
-      "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "0",
-        "in_unicast_pkts": "0",
-        "in_broadcast_pkts": "0",
-        "in_multicast_pkts": "0",
-        "in_discards": 0,
-        "in_errors": 0,
-        "in_unknown_protos": 0,
-        "out_octets": 0,
-        "out_unicast_pkts": "0",
-        "out_broadcast_pkts": "0",
-        "out_multicast_pkts": "0",
-        "out_discards": "0",
-        "out_errors": "0",
-        "rx_pps": "0",
-        "rx_kbps": "0",
-        "tx_pps": "0",
-        "tx_kbps": "0",
-        "num_flaps": "0",
-        "in_crc_errors": "0"
-      },
-      "vrf": "",
-      "ipv4": "10.1.3.2",
-      "ipv4_subnet_mask": "255.255.255.0",
-      "description": "\"annapolis\"",
-      "mtu": 1500,
-      "input_security_acl": "",
-      "output_security_acl": "",
-      "v4_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "v6_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "bia_address": "00:1e:e6:11:5d:ff",
-      "ipv4_tcp_adjust_mss": 0,
-      "ipv6_tcp_adjust_mss": 0,
-      "ether_state": {
-        "negotiated_duplex_mode": "unknown-duplex",
-        "negotiated_port_speed": "speed-auto",
-        "auto_negotiate": false,
-        "enable_flow_control": false
-      },
-      "ether_stats": {
-        "in_mac_control_frames": "0",
-        "in_mac_pause_frames": "0",
-        "in_oversize_frames": "0",
-        "in_jabber_frames": "0",
-        "in_fragment_frames": "0",
-        "in_8021q_frames": "0",
-        "out_mac_control_frames": "0",
-        "out_mac_pause_frames": "0",
-        "out_8021q_frames": "0"
-      }
-    },
-    {
-      "name": "Vlan40",
-      "interface_type": "iana-iftype-propvirtual",
-      "admin_status": "if-state-up",
-      "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T03:04:48.00091+00:00",
-      "if_index": 15,
-      "phys_address": "00:1e:e6:11:5d:ff",
-      "speed": "1024000000",
-      "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "0",
-        "in_unicast_pkts": "0",
-        "in_broadcast_pkts": "0",
-        "in_multicast_pkts": "0",
-        "in_discards": 0,
-        "in_errors": 0,
-        "in_unknown_protos": 0,
-        "out_octets": 0,
-        "out_unicast_pkts": "0",
-        "out_broadcast_pkts": "0",
-        "out_multicast_pkts": "0",
-        "out_discards": "0",
-        "out_errors": "0",
-        "rx_pps": "0",
-        "rx_kbps": "0",
-        "tx_pps": "0",
-        "tx_kbps": "0",
-        "num_flaps": "0",
-        "in_crc_errors": "0"
-      },
-      "vrf": "",
-      "ipv4": "10.1.40.2",
-      "ipv4_subnet_mask": "255.255.255.0",
-      "description": "\"vlan40\"",
-      "mtu": 1500,
-      "input_security_acl": "",
-      "output_security_acl": "",
-      "v4_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "v6_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
-        "in_error_pkts": "0",
-        "in_forwarded_pkts": "0",
-        "in_forwarded_octets": "0",
-        "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
-        "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
-        "out_forwarded_octets": "0",
-        "out_discarded_pkts": "0"
-      },
-      "bia_address": "00:1e:e6:11:5d:ff",
-      "ipv4_tcp_adjust_mss": 0,
-      "ipv6_tcp_adjust_mss": 0,
-      "ether_state": {
-        "negotiated_duplex_mode": "unknown-duplex",
-        "negotiated_port_speed": "speed-auto",
-        "auto_negotiate": false,
-        "enable_flow_control": false
-      },
-      "ether_stats": {
-        "in_mac_control_frames": "0",
-        "in_mac_pause_frames": "0",
-        "in_oversize_frames": "0",
-        "in_jabber_frames": "0",
-        "in_fragment_frames": "0",
-        "in_8021q_frames": "0",
-        "out_mac_control_frames": "0",
-        "out_mac_pause_frames": "0",
-        "out_8021q_frames": "0"
-      }
-    },
-    {
-      "name": "Vlan999",
-      "interface_type": "iana-iftype-propvirtual",
-      "admin_status": "if-state-up",
-      "oper_status": "if-oper-state-ready",
-      "last_change": "2020-05-29T03:03:54.000753+00:00",
+      "last_change": "2020-04-23T12:32:14.000953+00:00",
       "if_index": 8,
-      "phys_address": "00:1e:e6:11:5d:ff",
+      "phys_address": "00:1e:bd:d6:a0:ff",
       "speed": "1024000000",
       "statistics": {
-        "discontinuity_time": "2020-05-29T02:42:35.000597+00:00",
-        "in_octets": "0",
-        "in_unicast_pkts": "0",
+        "discontinuity_time": "2020-02-14T12:56:37.000938+00:00",
+        "in_octets": "491620635",
+        "in_unicast_pkts": "1518533",
         "in_broadcast_pkts": "0",
         "in_multicast_pkts": "0",
         "in_discards": 0,
         "in_errors": 0,
         "in_unknown_protos": 0,
-        "out_octets": 0,
-        "out_unicast_pkts": "0",
+        "out_octets": 566278776,
+        "out_unicast_pkts": "718530",
         "out_broadcast_pkts": "0",
         "out_multicast_pkts": "0",
         "out_discards": "0",
@@ -1139,23 +1949,23 @@
         "in_crc_errors": "0"
       },
       "vrf": "",
-      "ipv4": "10.9.9.9",
+      "ipv4": "10.1.3.3",
       "ipv4_subnet_mask": "255.255.255.0",
-      "description": "\"deadnet\"",
+      "description": "",
       "mtu": 1500,
       "input_security_acl": "",
       "output_security_acl": "",
       "v4_protocol_stats": {
-        "in_pkts": "0",
-        "in_octets": "0",
+        "in_pkts": "2013112",
+        "in_octets": "636825279",
         "in_error_pkts": "0",
         "in_forwarded_pkts": "0",
         "in_forwarded_octets": "0",
         "in_discarded_pkts": "0",
-        "out_pkts": "0",
-        "out_octets": "0",
+        "out_pkts": "602348",
+        "out_octets": "559075492",
         "out_error_pkts": "0",
-        "out_forwarded_pkts": "0",
+        "out_forwarded_pkts": "602348",
         "out_forwarded_octets": "0",
         "out_discarded_pkts": "0"
       },
@@ -1173,7 +1983,7 @@
         "out_forwarded_octets": "0",
         "out_discarded_pkts": "0"
       },
-      "bia_address": "00:1e:e6:11:5d:ff",
+      "bia_address": "00:1e:bd:d6:a0:ff",
       "ipv4_tcp_adjust_mss": 0,
       "ipv6_tcp_adjust_mss": 0,
       "ether_state": {

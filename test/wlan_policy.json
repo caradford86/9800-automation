@@ -1,11 +1,11 @@
 {
   "Cisco_IOS_XE_wireless_wlan_cfg:wlan_policy": [
     {
-      "policy_profile_name": "POLICY_PROFILE_1",
-      "description": "Policy profile for wlan-ids=['1']",
+      "policy_profile_name": "annapolis",
+      "description": "",
       "status": true,
       "passive_client": false,
-      "interface_name": "30",
+      "interface_name": "VLAN0300",
       "wlan_switching_policy": {
         "central_switching": true,
         "central_authentication": true,
@@ -18,12 +18,14 @@
         "vlan_central_switching": false
       },
       "static_ip_mobility": {
-        "is_static_ip_mobility": false
+        "is_static_ip_mobility": true
       },
       "wlan_acl": {
-        "ipv4_acl": "",
+        "ipv4_acl": "blockSomething",
         "ipv6_acl": "",
-        "layer2_acl": ""
+        "layer2_acl": "",
+        "pre_auth_urlfilter_list": "",
+        "post_auth_urlfilter_list": ""
       },
       "wlan_timeout": {
         "session_timeout": 1800,
@@ -33,12 +35,12 @@
       "wlan_local_profiling": {
         "device_classification": false,
         "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
+        "radius_profiling": true,
+        "http_tlv_caching": true,
+        "dhcp_tlv_caching": true
       },
       "wlan_mobility": {
-        "anchor": false
+        "anchor": true
       },
       "nbar_protocol_discovery": false,
       "reanchor_classmap_name": "",
@@ -47,8 +49,8 @@
         "egress_service_name": "platinum"
       },
       "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
+        "ingress_service_name": "test",
+        "egress_service_name": "test"
       },
       "autoqos_mode": {
         "mode": "autoqos-disabled"
@@ -68,7 +70,7 @@
         "vlan_id": false
       },
       "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
+        "policy_name": "default-mdns-service-policy"
       },
       "cts_policy": {
         "sgacl_enforcement": false
@@ -78,13 +80,13 @@
         "param_map_name": ""
       },
       "blacklist_params": {
-        "is_blacklist_enabled": false,
-        "blacklist_timeout": 0
+        "is_blacklist_enabled": true,
+        "blacklist_timeout": 60
       },
       "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
+        "aaa_override": true,
+        "nac": true,
+        "aaa_policy_name": "ISE_CUSTOM"
       },
       "et_analytics_params": {
         "is_tvi_enabled": false
@@ -94,16 +96,37 @@
         "wgb_vlan": false
       },
       "fabric_profile_name": "",
-      "accounting_list": "",
+      "accounting_list": "ISE_ACCT",
+      "atf_policy_map_entries": {
+        "atf_policy_map_entry": [
+          {
+            "band_id": 0,
+            "atf_policy_name": "default-atf-policy"
+          },
+          {
+            "band_id": 1,
+            "atf_policy_name": "default-atf-policy"
+          }
+        ]
+      },
+      "guest_mm_db_export_entries": {
+        "guest_mm_db_export_entry": [
+          {
+            "ip": "10.1.1.116",
+            "anchor_priority": "export-anchor-secondary"
+          },
+          {
+            "ip": "10.20.10.100",
+            "anchor_priority": "export-anchor-tertiary"
+          }
+        ]
+      },
       "call_snoop": false,
       "sip_cac_send_dis_assoc": false,
       "sip_cac_send_486_busy": false,
       "tunnel_profile_name": "",
       "avc_ipv4_fm_ingress_entries": {
         "avc_ipv4_fm_ingress_entry": [
-          {
-            "name": "cpi"
-          },
           {
             "name": "wireless-avc-basic"
           }
@@ -112,10 +135,21 @@
       "avc_ipv4_fm_egress_entries": {
         "avc_ipv4_fm_egress_entry": [
           {
-            "name": "cpi"
-          },
-          {
             "name": "wireless-avc-basic"
+          }
+        ]
+      },
+      "avc_ipv6_fm_ingress_entries": {
+        "avc_ipv6_fm_ingress_entry": [
+          {
+            "name": "wireless-avc-basic-ipv6"
+          }
+        ]
+      },
+      "avc_ipv6_fm_egress_entries": {
+        "avc_ipv6_fm_egress_entry": [
+          {
+            "name": "wireless-avc-basic-ipv6"
           }
         ]
       },
@@ -125,1089 +159,9 @@
       }
     },
     {
-      "policy_profile_name": "POLICY_PROFILE_2",
-      "description": "Policy profile for wlan-ids=['1']",
-      "status": true,
-      "passive_client": false,
-      "interface_name": "300",
-      "wlan_switching_policy": {
-        "central_switching": true,
-        "central_authentication": true,
-        "central_dhcp": true,
-        "override_nat_pat": false,
-        "central_assoc_enable": true
-      },
-      "wlan_flex_policy": {
-        "split_mac_acl": "",
-        "vlan_central_switching": false
-      },
-      "static_ip_mobility": {
-        "is_static_ip_mobility": false
-      },
-      "wlan_acl": {
-        "ipv4_acl": "",
-        "ipv6_acl": "",
-        "layer2_acl": ""
-      },
-      "wlan_timeout": {
-        "session_timeout": 1800,
-        "idle_timeout": 300,
-        "idle_threshold": 0
-      },
-      "wlan_local_profiling": {
-        "device_classification": false,
-        "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
-      },
-      "wlan_mobility": {
-        "anchor": false
-      },
-      "nbar_protocol_discovery": false,
-      "reanchor_classmap_name": "",
-      "per_ssid_qos": {
-        "ingress_service_name": "platinum-up",
-        "egress_service_name": "platinum"
-      },
-      "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "autoqos_mode": {
-        "mode": "autoqos-disabled"
-      },
-      "dhcp_params": {
-        "is_dhcp_enabled": false,
-        "dhcp_server_address": "0.0.0.0",
-        "dhcp_opt82_enable": false,
-        "dhcp_opt82_ascii": false,
-        "dhcp_opt82_rid": false,
-        "apmac": false,
-        "ssid": false,
-        "ap_ethmac": false,
-        "apname": false,
-        "policy_tag": false,
-        "ap_location": false,
-        "vlan_id": false
-      },
-      "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
-      },
-      "cts_policy": {
-        "sgacl_enforcement": false
-      },
-      "inline_tagging": false,
-      "umbrella_params": {
-        "param_map_name": ""
-      },
-      "blacklist_params": {
-        "is_blacklist_enabled": false,
-        "blacklist_timeout": 0
-      },
-      "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
-      },
-      "et_analytics_params": {
-        "is_tvi_enabled": false
-      },
-      "wgb_policy_params": {
-        "broadcast_tagging": false,
-        "wgb_vlan": false
-      },
-      "fabric_profile_name": "",
-      "accounting_list": "",
-      "call_snoop": false,
-      "sip_cac_send_dis_assoc": false,
-      "sip_cac_send_486_busy": false,
-      "tunnel_profile_name": "",
-      "avc_ipv4_fm_ingress_entries": {
-        "avc_ipv4_fm_ingress_entry": [
-          {
-            "name": "cpi"
-          },
-          {
-            "name": "wireless-avc-basic"
-          }
-        ]
-      },
-      "avc_ipv4_fm_egress_entries": {
-        "avc_ipv4_fm_egress_entry": [
-          {
-            "name": "cpi"
-          },
-          {
-            "name": "wireless-avc-basic"
-          }
-        ]
-      },
-      "hotspot_anqp_server": "",
-      "guest_lan": {
-        "enable_session_timeout": false
-      }
-    },
-    {
-      "policy_profile_name": "POLICY_PROFILE_3",
-      "description": "Policy profile for wlan-ids=['2']",
-      "status": true,
-      "passive_client": false,
-      "interface_name": "30",
-      "wlan_switching_policy": {
-        "central_switching": true,
-        "central_authentication": true,
-        "central_dhcp": true,
-        "override_nat_pat": false,
-        "central_assoc_enable": true
-      },
-      "wlan_flex_policy": {
-        "split_mac_acl": "",
-        "vlan_central_switching": false
-      },
-      "static_ip_mobility": {
-        "is_static_ip_mobility": false
-      },
-      "wlan_acl": {
-        "ipv4_acl": "",
-        "ipv6_acl": "",
-        "layer2_acl": ""
-      },
-      "wlan_timeout": {
-        "session_timeout": 1800,
-        "idle_timeout": 300,
-        "idle_threshold": 0
-      },
-      "wlan_local_profiling": {
-        "device_classification": false,
-        "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
-      },
-      "wlan_mobility": {
-        "anchor": false
-      },
-      "nbar_protocol_discovery": false,
-      "reanchor_classmap_name": "",
-      "per_ssid_qos": {
-        "ingress_service_name": "platinum-up",
-        "egress_service_name": "platinum"
-      },
-      "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "autoqos_mode": {
-        "mode": "autoqos-disabled"
-      },
-      "dhcp_params": {
-        "is_dhcp_enabled": false,
-        "dhcp_server_address": "0.0.0.0",
-        "dhcp_opt82_enable": false,
-        "dhcp_opt82_ascii": false,
-        "dhcp_opt82_rid": false,
-        "apmac": false,
-        "ssid": false,
-        "ap_ethmac": false,
-        "apname": false,
-        "policy_tag": false,
-        "ap_location": false,
-        "vlan_id": false
-      },
-      "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
-      },
-      "cts_policy": {
-        "sgacl_enforcement": false
-      },
-      "inline_tagging": false,
-      "umbrella_params": {
-        "param_map_name": ""
-      },
-      "blacklist_params": {
-        "is_blacklist_enabled": true,
-        "blacklist_timeout": 60
-      },
-      "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
-      },
-      "et_analytics_params": {
-        "is_tvi_enabled": false
-      },
-      "wgb_policy_params": {
-        "broadcast_tagging": false,
-        "wgb_vlan": false
-      },
-      "fabric_profile_name": "",
-      "accounting_list": "",
-      "call_snoop": false,
-      "sip_cac_send_dis_assoc": false,
-      "sip_cac_send_486_busy": false,
-      "tunnel_profile_name": "",
-      "hotspot_anqp_server": "",
-      "guest_lan": {
-        "enable_session_timeout": false
-      }
-    },
-    {
-      "policy_profile_name": "POLICY_PROFILE_4",
-      "description": "Policy profile for wlan-ids=['3']",
-      "status": true,
-      "passive_client": false,
-      "interface_name": "300",
-      "wlan_switching_policy": {
-        "central_switching": true,
-        "central_authentication": true,
-        "central_dhcp": true,
-        "override_nat_pat": false,
-        "central_assoc_enable": true
-      },
-      "wlan_flex_policy": {
-        "split_mac_acl": "",
-        "vlan_central_switching": false
-      },
-      "static_ip_mobility": {
-        "is_static_ip_mobility": false
-      },
-      "wlan_acl": {
-        "ipv4_acl": "",
-        "ipv6_acl": "",
-        "layer2_acl": ""
-      },
-      "wlan_timeout": {
-        "session_timeout": 1800,
-        "idle_timeout": 300,
-        "idle_threshold": 0
-      },
-      "wlan_local_profiling": {
-        "device_classification": false,
-        "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
-      },
-      "wlan_mobility": {
-        "anchor": false
-      },
-      "nbar_protocol_discovery": false,
-      "reanchor_classmap_name": "",
-      "per_ssid_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "autoqos_mode": {
-        "mode": "autoqos-disabled"
-      },
-      "dhcp_params": {
-        "is_dhcp_enabled": false,
-        "dhcp_server_address": "0.0.0.0",
-        "dhcp_opt82_enable": false,
-        "dhcp_opt82_ascii": false,
-        "dhcp_opt82_rid": false,
-        "apmac": false,
-        "ssid": false,
-        "ap_ethmac": false,
-        "apname": false,
-        "policy_tag": false,
-        "ap_location": false,
-        "vlan_id": false
-      },
-      "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
-      },
-      "cts_policy": {
-        "sgacl_enforcement": false
-      },
-      "inline_tagging": false,
-      "umbrella_params": {
-        "param_map_name": ""
-      },
-      "blacklist_params": {
-        "is_blacklist_enabled": true,
-        "blacklist_timeout": 60
-      },
-      "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
-      },
-      "et_analytics_params": {
-        "is_tvi_enabled": false
-      },
-      "wgb_policy_params": {
-        "broadcast_tagging": false,
-        "wgb_vlan": false
-      },
-      "fabric_profile_name": "",
-      "accounting_list": "",
-      "call_snoop": false,
-      "sip_cac_send_dis_assoc": false,
-      "sip_cac_send_486_busy": false,
-      "tunnel_profile_name": "",
-      "hotspot_anqp_server": "",
-      "guest_lan": {
-        "enable_session_timeout": false
-      }
-    },
-    {
-      "policy_profile_name": "POLICY_PROFILE_5",
-      "description": "Policy profile for wlan-ids=['3']",
-      "status": true,
-      "passive_client": false,
-      "interface_name": "30",
-      "wlan_switching_policy": {
-        "central_switching": true,
-        "central_authentication": true,
-        "central_dhcp": true,
-        "override_nat_pat": false,
-        "central_assoc_enable": true
-      },
-      "wlan_flex_policy": {
-        "split_mac_acl": "",
-        "vlan_central_switching": false
-      },
-      "static_ip_mobility": {
-        "is_static_ip_mobility": false
-      },
-      "wlan_acl": {
-        "ipv4_acl": "",
-        "ipv6_acl": "",
-        "layer2_acl": ""
-      },
-      "wlan_timeout": {
-        "session_timeout": 1800,
-        "idle_timeout": 300,
-        "idle_threshold": 0
-      },
-      "wlan_local_profiling": {
-        "device_classification": false,
-        "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
-      },
-      "wlan_mobility": {
-        "anchor": false
-      },
-      "nbar_protocol_discovery": false,
-      "reanchor_classmap_name": "",
-      "per_ssid_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "autoqos_mode": {
-        "mode": "autoqos-disabled"
-      },
-      "dhcp_params": {
-        "is_dhcp_enabled": false,
-        "dhcp_server_address": "0.0.0.0",
-        "dhcp_opt82_enable": false,
-        "dhcp_opt82_ascii": false,
-        "dhcp_opt82_rid": false,
-        "apmac": false,
-        "ssid": false,
-        "ap_ethmac": false,
-        "apname": false,
-        "policy_tag": false,
-        "ap_location": false,
-        "vlan_id": false
-      },
-      "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
-      },
-      "cts_policy": {
-        "sgacl_enforcement": false
-      },
-      "inline_tagging": false,
-      "umbrella_params": {
-        "param_map_name": ""
-      },
-      "blacklist_params": {
-        "is_blacklist_enabled": true,
-        "blacklist_timeout": 60
-      },
-      "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
-      },
-      "et_analytics_params": {
-        "is_tvi_enabled": false
-      },
-      "wgb_policy_params": {
-        "broadcast_tagging": false,
-        "wgb_vlan": false
-      },
-      "fabric_profile_name": "",
-      "accounting_list": "",
-      "call_snoop": false,
-      "sip_cac_send_dis_assoc": false,
-      "sip_cac_send_486_busy": false,
-      "tunnel_profile_name": "",
-      "hotspot_anqp_server": "",
-      "guest_lan": {
-        "enable_session_timeout": false
-      }
-    },
-    {
-      "policy_profile_name": "POLICY_PROFILE_6",
-      "description": "Policy profile for wlan-ids=['4']",
-      "status": true,
-      "passive_client": false,
-      "interface_name": "100",
-      "wlan_switching_policy": {
-        "central_switching": true,
-        "central_authentication": true,
-        "central_dhcp": true,
-        "override_nat_pat": false,
-        "central_assoc_enable": true
-      },
-      "wlan_flex_policy": {
-        "split_mac_acl": "",
-        "vlan_central_switching": false
-      },
-      "static_ip_mobility": {
-        "is_static_ip_mobility": false
-      },
-      "wlan_acl": {
-        "ipv4_acl": "test",
-        "ipv6_acl": "",
-        "layer2_acl": ""
-      },
-      "wlan_timeout": {
-        "session_timeout": 1800,
-        "idle_timeout": 300,
-        "idle_threshold": 0
-      },
-      "wlan_local_profiling": {
-        "device_classification": false,
-        "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
-      },
-      "wlan_mobility": {
-        "anchor": false
-      },
-      "nbar_protocol_discovery": false,
-      "reanchor_classmap_name": "",
-      "per_ssid_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "autoqos_mode": {
-        "mode": "autoqos-disabled"
-      },
-      "dhcp_params": {
-        "is_dhcp_enabled": false,
-        "dhcp_server_address": "0.0.0.0",
-        "dhcp_opt82_enable": false,
-        "dhcp_opt82_ascii": false,
-        "dhcp_opt82_rid": false,
-        "apmac": false,
-        "ssid": false,
-        "ap_ethmac": false,
-        "apname": false,
-        "policy_tag": false,
-        "ap_location": false,
-        "vlan_id": false
-      },
-      "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
-      },
-      "cts_policy": {
-        "sgacl_enforcement": false
-      },
-      "inline_tagging": false,
-      "umbrella_params": {
-        "param_map_name": ""
-      },
-      "blacklist_params": {
-        "is_blacklist_enabled": true,
-        "blacklist_timeout": 60
-      },
-      "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
-      },
-      "et_analytics_params": {
-        "is_tvi_enabled": false
-      },
-      "wgb_policy_params": {
-        "broadcast_tagging": false,
-        "wgb_vlan": false
-      },
-      "fabric_profile_name": "",
-      "accounting_list": "",
-      "call_snoop": false,
-      "sip_cac_send_dis_assoc": false,
-      "sip_cac_send_486_busy": false,
-      "tunnel_profile_name": "",
-      "hotspot_anqp_server": "",
-      "guest_lan": {
-        "enable_session_timeout": false
-      }
-    },
-    {
-      "policy_profile_name": "POLICY_PROFILE_7",
-      "description": "Policy profile for wlan-ids=['5']",
-      "status": true,
-      "passive_client": false,
-      "interface_name": "100",
-      "wlan_switching_policy": {
-        "central_switching": true,
-        "central_authentication": true,
-        "central_dhcp": true,
-        "override_nat_pat": false,
-        "central_assoc_enable": true
-      },
-      "wlan_flex_policy": {
-        "split_mac_acl": "",
-        "vlan_central_switching": false
-      },
-      "static_ip_mobility": {
-        "is_static_ip_mobility": false
-      },
-      "wlan_acl": {
-        "ipv4_acl": "",
-        "ipv6_acl": "",
-        "layer2_acl": ""
-      },
-      "wlan_timeout": {
-        "session_timeout": 1800,
-        "idle_timeout": 300,
-        "idle_threshold": 0
-      },
-      "wlan_local_profiling": {
-        "device_classification": false,
-        "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
-      },
-      "wlan_mobility": {
-        "anchor": false
-      },
-      "nbar_protocol_discovery": false,
-      "reanchor_classmap_name": "",
-      "per_ssid_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "autoqos_mode": {
-        "mode": "autoqos-disabled"
-      },
-      "dhcp_params": {
-        "is_dhcp_enabled": false,
-        "dhcp_server_address": "0.0.0.0",
-        "dhcp_opt82_enable": false,
-        "dhcp_opt82_ascii": false,
-        "dhcp_opt82_rid": false,
-        "apmac": false,
-        "ssid": false,
-        "ap_ethmac": false,
-        "apname": false,
-        "policy_tag": false,
-        "ap_location": false,
-        "vlan_id": false
-      },
-      "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
-      },
-      "cts_policy": {
-        "sgacl_enforcement": false
-      },
-      "inline_tagging": false,
-      "umbrella_params": {
-        "param_map_name": ""
-      },
-      "blacklist_params": {
-        "is_blacklist_enabled": true,
-        "blacklist_timeout": 60
-      },
-      "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
-      },
-      "et_analytics_params": {
-        "is_tvi_enabled": false
-      },
-      "wgb_policy_params": {
-        "broadcast_tagging": false,
-        "wgb_vlan": false
-      },
-      "fabric_profile_name": "",
-      "accounting_list": "",
-      "call_snoop": false,
-      "sip_cac_send_dis_assoc": false,
-      "sip_cac_send_486_busy": false,
-      "tunnel_profile_name": "",
-      "hotspot_anqp_server": "",
-      "guest_lan": {
-        "enable_session_timeout": false
-      }
-    },
-    {
-      "policy_profile_name": "POLICY_PROFILE_FLEX_1",
-      "description": "Policy profile for wlan-ids=['1']",
-      "status": true,
-      "passive_client": false,
-      "interface_name": "vlan30",
-      "wlan_switching_policy": {
-        "central_switching": true,
-        "central_authentication": true,
-        "central_dhcp": true,
-        "override_nat_pat": false,
-        "central_assoc_enable": true
-      },
-      "wlan_flex_policy": {
-        "split_mac_acl": "",
-        "vlan_central_switching": false
-      },
-      "static_ip_mobility": {
-        "is_static_ip_mobility": false
-      },
-      "wlan_acl": {
-        "ipv4_acl": "",
-        "ipv6_acl": "",
-        "layer2_acl": ""
-      },
-      "wlan_timeout": {
-        "session_timeout": 1800,
-        "idle_timeout": 300,
-        "idle_threshold": 0
-      },
-      "wlan_local_profiling": {
-        "device_classification": false,
-        "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
-      },
-      "wlan_mobility": {
-        "anchor": false
-      },
-      "nbar_protocol_discovery": false,
-      "reanchor_classmap_name": "",
-      "per_ssid_qos": {
-        "ingress_service_name": "platinum-up",
-        "egress_service_name": "platinum"
-      },
-      "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "autoqos_mode": {
-        "mode": "autoqos-disabled"
-      },
-      "dhcp_params": {
-        "is_dhcp_enabled": false,
-        "dhcp_server_address": "0.0.0.0",
-        "dhcp_opt82_enable": false,
-        "dhcp_opt82_ascii": false,
-        "dhcp_opt82_rid": false,
-        "apmac": false,
-        "ssid": false,
-        "ap_ethmac": false,
-        "apname": false,
-        "policy_tag": false,
-        "ap_location": false,
-        "vlan_id": false
-      },
-      "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
-      },
-      "cts_policy": {
-        "sgacl_enforcement": false
-      },
-      "inline_tagging": false,
-      "umbrella_params": {
-        "param_map_name": ""
-      },
-      "blacklist_params": {
-        "is_blacklist_enabled": false,
-        "blacklist_timeout": 0
-      },
-      "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
-      },
-      "et_analytics_params": {
-        "is_tvi_enabled": false
-      },
-      "wgb_policy_params": {
-        "broadcast_tagging": false,
-        "wgb_vlan": false
-      },
-      "fabric_profile_name": "",
-      "accounting_list": "",
-      "call_snoop": false,
-      "sip_cac_send_dis_assoc": false,
-      "sip_cac_send_486_busy": false,
-      "tunnel_profile_name": "",
-      "avc_ipv4_fm_ingress_entries": {
-        "avc_ipv4_fm_ingress_entry": [
-          {
-            "name": "cpi"
-          },
-          {
-            "name": "wireless-avc-basic"
-          }
-        ]
-      },
-      "avc_ipv4_fm_egress_entries": {
-        "avc_ipv4_fm_egress_entry": [
-          {
-            "name": "cpi"
-          },
-          {
-            "name": "wireless-avc-basic"
-          }
-        ]
-      },
-      "hotspot_anqp_server": "",
-      "guest_lan": {
-        "enable_session_timeout": false
-      }
-    },
-    {
-      "policy_profile_name": "POLICY_PROFILE_FLEX_2",
-      "description": "Policy profile for wlan-ids=['2']",
-      "status": true,
-      "passive_client": false,
-      "interface_name": "vlan30",
-      "wlan_switching_policy": {
-        "central_switching": true,
-        "central_authentication": true,
-        "central_dhcp": true,
-        "override_nat_pat": false,
-        "central_assoc_enable": true
-      },
-      "wlan_flex_policy": {
-        "split_mac_acl": "",
-        "vlan_central_switching": false
-      },
-      "static_ip_mobility": {
-        "is_static_ip_mobility": false
-      },
-      "wlan_acl": {
-        "ipv4_acl": "",
-        "ipv6_acl": "",
-        "layer2_acl": ""
-      },
-      "wlan_timeout": {
-        "session_timeout": 1800,
-        "idle_timeout": 300,
-        "idle_threshold": 0
-      },
-      "wlan_local_profiling": {
-        "device_classification": false,
-        "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
-      },
-      "wlan_mobility": {
-        "anchor": false
-      },
-      "nbar_protocol_discovery": false,
-      "reanchor_classmap_name": "",
-      "per_ssid_qos": {
-        "ingress_service_name": "platinum-up",
-        "egress_service_name": "platinum"
-      },
-      "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "autoqos_mode": {
-        "mode": "autoqos-disabled"
-      },
-      "dhcp_params": {
-        "is_dhcp_enabled": false,
-        "dhcp_server_address": "0.0.0.0",
-        "dhcp_opt82_enable": false,
-        "dhcp_opt82_ascii": false,
-        "dhcp_opt82_rid": false,
-        "apmac": false,
-        "ssid": false,
-        "ap_ethmac": false,
-        "apname": false,
-        "policy_tag": false,
-        "ap_location": false,
-        "vlan_id": false
-      },
-      "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
-      },
-      "cts_policy": {
-        "sgacl_enforcement": false
-      },
-      "inline_tagging": false,
-      "umbrella_params": {
-        "param_map_name": ""
-      },
-      "blacklist_params": {
-        "is_blacklist_enabled": true,
-        "blacklist_timeout": 60
-      },
-      "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
-      },
-      "et_analytics_params": {
-        "is_tvi_enabled": false
-      },
-      "wgb_policy_params": {
-        "broadcast_tagging": false,
-        "wgb_vlan": false
-      },
-      "fabric_profile_name": "",
-      "accounting_list": "",
-      "call_snoop": false,
-      "sip_cac_send_dis_assoc": false,
-      "sip_cac_send_486_busy": false,
-      "tunnel_profile_name": "",
-      "hotspot_anqp_server": "",
-      "guest_lan": {
-        "enable_session_timeout": false
-      }
-    },
-    {
-      "policy_profile_name": "POLICY_PROFILE_FLEX_3",
-      "description": "Policy profile for wlan-ids=['3']",
-      "status": true,
-      "passive_client": false,
-      "interface_name": "vlan30",
-      "wlan_switching_policy": {
-        "central_switching": true,
-        "central_authentication": true,
-        "central_dhcp": true,
-        "override_nat_pat": false,
-        "central_assoc_enable": true
-      },
-      "wlan_flex_policy": {
-        "split_mac_acl": "",
-        "vlan_central_switching": false
-      },
-      "static_ip_mobility": {
-        "is_static_ip_mobility": false
-      },
-      "wlan_acl": {
-        "ipv4_acl": "",
-        "ipv6_acl": "",
-        "layer2_acl": ""
-      },
-      "wlan_timeout": {
-        "session_timeout": 1800,
-        "idle_timeout": 300,
-        "idle_threshold": 0
-      },
-      "wlan_local_profiling": {
-        "device_classification": false,
-        "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
-      },
-      "wlan_mobility": {
-        "anchor": false
-      },
-      "nbar_protocol_discovery": false,
-      "reanchor_classmap_name": "",
-      "per_ssid_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "autoqos_mode": {
-        "mode": "autoqos-disabled"
-      },
-      "dhcp_params": {
-        "is_dhcp_enabled": false,
-        "dhcp_server_address": "0.0.0.0",
-        "dhcp_opt82_enable": false,
-        "dhcp_opt82_ascii": false,
-        "dhcp_opt82_rid": false,
-        "apmac": false,
-        "ssid": false,
-        "ap_ethmac": false,
-        "apname": false,
-        "policy_tag": false,
-        "ap_location": false,
-        "vlan_id": false
-      },
-      "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
-      },
-      "cts_policy": {
-        "sgacl_enforcement": false
-      },
-      "inline_tagging": false,
-      "umbrella_params": {
-        "param_map_name": ""
-      },
-      "blacklist_params": {
-        "is_blacklist_enabled": true,
-        "blacklist_timeout": 60
-      },
-      "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
-      },
-      "et_analytics_params": {
-        "is_tvi_enabled": false
-      },
-      "wgb_policy_params": {
-        "broadcast_tagging": false,
-        "wgb_vlan": false
-      },
-      "fabric_profile_name": "",
-      "accounting_list": "",
-      "call_snoop": false,
-      "sip_cac_send_dis_assoc": false,
-      "sip_cac_send_486_busy": false,
-      "tunnel_profile_name": "",
-      "hotspot_anqp_server": "",
-      "guest_lan": {
-        "enable_session_timeout": false
-      }
-    },
-    {
-      "policy_profile_name": "POLICY_PROFILE_FLEX_4",
-      "description": "Policy profile for wlan-ids=['4']",
-      "status": true,
-      "passive_client": false,
-      "interface_name": "1",
-      "wlan_switching_policy": {
-        "central_switching": true,
-        "central_authentication": true,
-        "central_dhcp": true,
-        "override_nat_pat": false,
-        "central_assoc_enable": true
-      },
-      "wlan_flex_policy": {
-        "split_mac_acl": "",
-        "vlan_central_switching": false
-      },
-      "static_ip_mobility": {
-        "is_static_ip_mobility": false
-      },
-      "wlan_acl": {
-        "ipv4_acl": "test",
-        "ipv6_acl": "",
-        "layer2_acl": ""
-      },
-      "wlan_timeout": {
-        "session_timeout": 1800,
-        "idle_timeout": 300,
-        "idle_threshold": 0
-      },
-      "wlan_local_profiling": {
-        "device_classification": false,
-        "subscriber_policy_name": "",
-        "radius_profiling": false,
-        "http_tlv_caching": false,
-        "dhcp_tlv_caching": false
-      },
-      "wlan_mobility": {
-        "anchor": false
-      },
-      "nbar_protocol_discovery": false,
-      "reanchor_classmap_name": "",
-      "per_ssid_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "per_client_qos": {
-        "ingress_service_name": "",
-        "egress_service_name": ""
-      },
-      "autoqos_mode": {
-        "mode": "autoqos-disabled"
-      },
-      "dhcp_params": {
-        "is_dhcp_enabled": false,
-        "dhcp_server_address": "0.0.0.0",
-        "dhcp_opt82_enable": false,
-        "dhcp_opt82_ascii": false,
-        "dhcp_opt82_rid": false,
-        "apmac": false,
-        "ssid": false,
-        "ap_ethmac": false,
-        "apname": false,
-        "policy_tag": false,
-        "ap_location": false,
-        "vlan_id": false
-      },
-      "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
-      },
-      "cts_policy": {
-        "sgacl_enforcement": false
-      },
-      "inline_tagging": false,
-      "umbrella_params": {
-        "param_map_name": ""
-      },
-      "blacklist_params": {
-        "is_blacklist_enabled": true,
-        "blacklist_timeout": 60
-      },
-      "aaa_policy_params": {
-        "aaa_override": false,
-        "nac": false,
-        "aaa_policy_name": "default-aaa-policy"
-      },
-      "et_analytics_params": {
-        "is_tvi_enabled": false
-      },
-      "wgb_policy_params": {
-        "broadcast_tagging": false,
-        "wgb_vlan": false
-      },
-      "fabric_profile_name": "",
-      "accounting_list": "",
-      "call_snoop": false,
-      "sip_cac_send_dis_assoc": false,
-      "sip_cac_send_486_busy": false,
-      "tunnel_profile_name": "",
-      "hotspot_anqp_server": "",
-      "guest_lan": {
-        "enable_session_timeout": false
-      }
-    },
-    {
-      "policy_profile_name": "POLICY_PROFILE_FLEX_5",
-      "description": "Policy profile for wlan-ids=['5']",
-      "status": true,
+      "policy_profile_name": "testpolicy",
+      "description": "",
+      "status": false,
       "passive_client": false,
       "interface_name": "1",
       "wlan_switching_policy": {
@@ -1227,7 +181,9 @@
       "wlan_acl": {
         "ipv4_acl": "",
         "ipv6_acl": "",
-        "layer2_acl": ""
+        "layer2_acl": "",
+        "pre_auth_urlfilter_list": "",
+        "post_auth_urlfilter_list": ""
       },
       "wlan_timeout": {
         "session_timeout": 1800,
@@ -1240,6 +196,501 @@
         "radius_profiling": false,
         "http_tlv_caching": false,
         "dhcp_tlv_caching": false
+      },
+      "wlan_mobility": {
+        "anchor": false
+      },
+      "nbar_protocol_discovery": false,
+      "reanchor_classmap_name": "",
+      "per_ssid_qos": {
+        "ingress_service_name": "AutoQos-4.0-wlan-ET-SSID-Input-AVC-Policy",
+        "egress_service_name": "AutoQos-4.0-wlan-ET-SSID-Output-Policy"
+      },
+      "per_client_qos": {
+        "ingress_service_name": "",
+        "egress_service_name": ""
+      },
+      "autoqos_mode": {
+        "mode": "autoqos-enterprise"
+      },
+      "dhcp_params": {
+        "is_dhcp_enabled": false,
+        "dhcp_server_address": "0.0.0.0",
+        "dhcp_opt82_enable": false,
+        "dhcp_opt82_ascii": false,
+        "dhcp_opt82_rid": false,
+        "apmac": false,
+        "ssid": false,
+        "ap_ethmac": false,
+        "apname": false,
+        "policy_tag": false,
+        "ap_location": false,
+        "vlan_id": false
+      },
+      "mdns_service_policy": {
+        "policy_name": "default-mdns-service-policy"
+      },
+      "cts_policy": {
+        "sgacl_enforcement": false
+      },
+      "inline_tagging": false,
+      "umbrella_params": {
+        "param_map_name": ""
+      },
+      "blacklist_params": {
+        "is_blacklist_enabled": true,
+        "blacklist_timeout": 60
+      },
+      "aaa_policy_params": {
+        "aaa_override": false,
+        "nac": false,
+        "aaa_policy_name": "default-aaa-policy"
+      },
+      "et_analytics_params": {
+        "is_tvi_enabled": false
+      },
+      "wgb_policy_params": {
+        "broadcast_tagging": false,
+        "wgb_vlan": false
+      },
+      "fabric_profile_name": "",
+      "accounting_list": "",
+      "atf_policy_map_entries": {
+        "atf_policy_map_entry": [
+          {
+            "band_id": 0,
+            "atf_policy_name": ""
+          },
+          {
+            "band_id": 1,
+            "atf_policy_name": ""
+          }
+        ]
+      },
+      "call_snoop": false,
+      "sip_cac_send_dis_assoc": false,
+      "sip_cac_send_486_busy": false,
+      "tunnel_profile_name": "",
+      "avc_ipv6_fm_ingress_entries": {
+        "avc_ipv6_fm_ingress_entry": [
+          {
+            "name": "wireless-avc-basic-ipv6"
+          }
+        ]
+      },
+      "avc_ipv6_fm_egress_entries": {
+        "avc_ipv6_fm_egress_entry": [
+          {
+            "name": "wireless-avc-basic-ipv6"
+          }
+        ]
+      },
+      "hotspot_anqp_server": "",
+      "guest_lan": {
+        "enable_session_timeout": false
+      }
+    },
+    {
+      "policy_profile_name": "Guest-Branch",
+      "description": "",
+      "status": true,
+      "passive_client": false,
+      "interface_name": "BranchGuest",
+      "wlan_switching_policy": {
+        "central_switching": true,
+        "central_authentication": true,
+        "central_dhcp": true,
+        "override_nat_pat": false,
+        "central_assoc_enable": true
+      },
+      "wlan_flex_policy": {
+        "split_mac_acl": "",
+        "vlan_central_switching": false
+      },
+      "static_ip_mobility": {
+        "is_static_ip_mobility": false
+      },
+      "wlan_acl": {
+        "ipv4_acl": "10",
+        "ipv6_acl": "implicit_deny_v6",
+        "layer2_acl": "",
+        "pre_auth_urlfilter_list": "",
+        "post_auth_urlfilter_list": ""
+      },
+      "wlan_timeout": {
+        "session_timeout": 1800,
+        "idle_timeout": 300,
+        "idle_threshold": 0
+      },
+      "wlan_local_profiling": {
+        "device_classification": false,
+        "subscriber_policy_name": "",
+        "radius_profiling": false,
+        "http_tlv_caching": true,
+        "dhcp_tlv_caching": false
+      },
+      "wlan_mobility": {
+        "anchor": false
+      },
+      "nbar_protocol_discovery": false,
+      "reanchor_classmap_name": "",
+      "per_ssid_qos": {
+        "ingress_service_name": "platinum-up",
+        "egress_service_name": "platinum"
+      },
+      "per_client_qos": {
+        "ingress_service_name": "",
+        "egress_service_name": ""
+      },
+      "autoqos_mode": {
+        "mode": "autoqos-voice"
+      },
+      "dhcp_params": {
+        "is_dhcp_enabled": false,
+        "dhcp_server_address": "0.0.0.0",
+        "dhcp_opt82_enable": false,
+        "dhcp_opt82_ascii": false,
+        "dhcp_opt82_rid": false,
+        "apmac": false,
+        "ssid": false,
+        "ap_ethmac": false,
+        "apname": false,
+        "policy_tag": false,
+        "ap_location": false,
+        "vlan_id": false
+      },
+      "mdns_service_policy": {
+        "policy_name": "default-mdns-service-policy"
+      },
+      "cts_policy": {
+        "sgacl_enforcement": false
+      },
+      "inline_tagging": false,
+      "umbrella_params": {
+        "param_map_name": ""
+      },
+      "blacklist_params": {
+        "is_blacklist_enabled": true,
+        "blacklist_timeout": 60
+      },
+      "aaa_policy_params": {
+        "aaa_override": false,
+        "nac": false,
+        "aaa_policy_name": "default-aaa-policy"
+      },
+      "et_analytics_params": {
+        "is_tvi_enabled": false
+      },
+      "wgb_policy_params": {
+        "broadcast_tagging": false,
+        "wgb_vlan": false
+      },
+      "fabric_profile_name": "",
+      "accounting_list": "",
+      "atf_policy_map_entries": {
+        "atf_policy_map_entry": [
+          {
+            "band_id": 0,
+            "atf_policy_name": "default-atf-policy"
+          },
+          {
+            "band_id": 1,
+            "atf_policy_name": "customerApp"
+          }
+        ]
+      },
+      "call_snoop": false,
+      "sip_cac_send_dis_assoc": false,
+      "sip_cac_send_486_busy": false,
+      "tunnel_profile_name": "",
+      "hotspot_anqp_server": "",
+      "guest_lan": {
+        "enable_session_timeout": false
+      }
+    },
+    {
+      "policy_profile_name": "WWT-Policy-A",
+      "description": "",
+      "status": false,
+      "passive_client": false,
+      "interface_name": "1",
+      "wlan_switching_policy": {
+        "central_switching": false,
+        "central_authentication": false,
+        "central_dhcp": false,
+        "override_nat_pat": false,
+        "central_assoc_enable": false
+      },
+      "wlan_flex_policy": {
+        "split_mac_acl": "",
+        "vlan_central_switching": false
+      },
+      "static_ip_mobility": {
+        "is_static_ip_mobility": false
+      },
+      "wlan_acl": {
+        "ipv4_acl": "",
+        "ipv6_acl": "",
+        "layer2_acl": "",
+        "pre_auth_urlfilter_list": "",
+        "post_auth_urlfilter_list": ""
+      },
+      "wlan_timeout": {
+        "session_timeout": 1801,
+        "idle_timeout": 301,
+        "idle_threshold": 0
+      },
+      "wlan_local_profiling": {
+        "device_classification": false,
+        "subscriber_policy_name": "",
+        "radius_profiling": false,
+        "http_tlv_caching": false,
+        "dhcp_tlv_caching": false
+      },
+      "wlan_mobility": {
+        "anchor": false
+      },
+      "nbar_protocol_discovery": false,
+      "reanchor_classmap_name": "",
+      "per_ssid_qos": {
+        "ingress_service_name": "AutoQos-4.0-wlan-GT-SSID-Input-Policy",
+        "egress_service_name": "AutoQos-4.0-wlan-GT-SSID-Output-Policy"
+      },
+      "per_client_qos": {
+        "ingress_service_name": "",
+        "egress_service_name": ""
+      },
+      "autoqos_mode": {
+        "mode": "autoqos-guest"
+      },
+      "dhcp_params": {
+        "is_dhcp_enabled": true,
+        "dhcp_server_address": "0.0.0.0",
+        "dhcp_opt82_enable": false,
+        "dhcp_opt82_ascii": false,
+        "dhcp_opt82_rid": false,
+        "apmac": false,
+        "ssid": false,
+        "ap_ethmac": false,
+        "apname": false,
+        "policy_tag": false,
+        "ap_location": false,
+        "vlan_id": false
+      },
+      "mdns_service_policy": {
+        "policy_name": "default-mdns-service-policy"
+      },
+      "cts_policy": {
+        "sgacl_enforcement": false
+      },
+      "inline_tagging": false,
+      "umbrella_params": {
+        "param_map_name": ""
+      },
+      "blacklist_params": {
+        "is_blacklist_enabled": true,
+        "blacklist_timeout": 61
+      },
+      "aaa_policy_params": {
+        "aaa_override": true,
+        "nac": true,
+        "aaa_policy_name": "default-aaa-policy"
+      },
+      "et_analytics_params": {
+        "is_tvi_enabled": false
+      },
+      "wgb_policy_params": {
+        "broadcast_tagging": false,
+        "wgb_vlan": false
+      },
+      "fabric_profile_name": "",
+      "accounting_list": "",
+      "atf_policy_map_entries": {
+        "atf_policy_map_entry": [
+          {
+            "band_id": 0,
+            "atf_policy_name": ""
+          },
+          {
+            "band_id": 1,
+            "atf_policy_name": ""
+          }
+        ]
+      },
+      "guest_mm_db_export_entries": {
+        "guest_mm_db_export_entry": [
+          {
+            "ip": "10.1.1.116",
+            "anchor_priority": "export-anchor-tertiary"
+          }
+        ]
+      },
+      "call_snoop": false,
+      "sip_cac_send_dis_assoc": false,
+      "sip_cac_send_486_busy": false,
+      "tunnel_profile_name": "",
+      "hotspot_anqp_server": "",
+      "guest_lan": {
+        "enable_session_timeout": false
+      }
+    },
+    {
+      "policy_profile_name": "WWT-Policy-B",
+      "description": "",
+      "status": false,
+      "passive_client": false,
+      "interface_name": "1",
+      "wlan_switching_policy": {
+        "central_switching": true,
+        "central_authentication": true,
+        "central_dhcp": true,
+        "override_nat_pat": false,
+        "central_assoc_enable": true
+      },
+      "wlan_flex_policy": {
+        "split_mac_acl": "",
+        "vlan_central_switching": false
+      },
+      "static_ip_mobility": {
+        "is_static_ip_mobility": false
+      },
+      "wlan_acl": {
+        "ipv4_acl": "",
+        "ipv6_acl": "",
+        "layer2_acl": "",
+        "pre_auth_urlfilter_list": "",
+        "post_auth_urlfilter_list": ""
+      },
+      "wlan_timeout": {
+        "session_timeout": 1800,
+        "idle_timeout": 300,
+        "idle_threshold": 0
+      },
+      "wlan_local_profiling": {
+        "device_classification": false,
+        "subscriber_policy_name": "",
+        "radius_profiling": false,
+        "http_tlv_caching": false,
+        "dhcp_tlv_caching": false
+      },
+      "wlan_mobility": {
+        "anchor": false
+      },
+      "nbar_protocol_discovery": false,
+      "reanchor_classmap_name": "",
+      "per_ssid_qos": {
+        "ingress_service_name": "",
+        "egress_service_name": ""
+      },
+      "per_client_qos": {
+        "ingress_service_name": "",
+        "egress_service_name": "test"
+      },
+      "autoqos_mode": {
+        "mode": "autoqos-fastlane"
+      },
+      "dhcp_params": {
+        "is_dhcp_enabled": false,
+        "dhcp_server_address": "0.0.0.0",
+        "dhcp_opt82_enable": false,
+        "dhcp_opt82_ascii": false,
+        "dhcp_opt82_rid": false,
+        "apmac": false,
+        "ssid": false,
+        "ap_ethmac": false,
+        "apname": false,
+        "policy_tag": false,
+        "ap_location": false,
+        "vlan_id": false
+      },
+      "mdns_service_policy": {
+        "policy_name": "default-mdns-service-policy"
+      },
+      "cts_policy": {
+        "sgacl_enforcement": false
+      },
+      "inline_tagging": false,
+      "umbrella_params": {
+        "param_map_name": ""
+      },
+      "blacklist_params": {
+        "is_blacklist_enabled": true,
+        "blacklist_timeout": 60
+      },
+      "aaa_policy_params": {
+        "aaa_override": false,
+        "nac": false,
+        "aaa_policy_name": "default-aaa-policy"
+      },
+      "et_analytics_params": {
+        "is_tvi_enabled": false
+      },
+      "wgb_policy_params": {
+        "broadcast_tagging": false,
+        "wgb_vlan": false
+      },
+      "fabric_profile_name": "",
+      "accounting_list": "",
+      "atf_policy_map_entries": {
+        "atf_policy_map_entry": [
+          {
+            "band_id": 0,
+            "atf_policy_name": ""
+          },
+          {
+            "band_id": 1,
+            "atf_policy_name": ""
+          }
+        ]
+      },
+      "call_snoop": false,
+      "sip_cac_send_dis_assoc": true,
+      "sip_cac_send_486_busy": false,
+      "tunnel_profile_name": "",
+      "hotspot_anqp_server": "",
+      "guest_lan": {
+        "enable_session_timeout": false
+      }
+    },
+    {
+      "policy_profile_name": "Internal-Branch",
+      "description": "",
+      "status": true,
+      "passive_client": false,
+      "interface_name": "210",
+      "mcast_vlan_id": 2,
+      "wlan_switching_policy": {
+        "central_switching": true,
+        "central_authentication": true,
+        "central_dhcp": true,
+        "override_nat_pat": false,
+        "central_assoc_enable": true
+      },
+      "wlan_flex_policy": {
+        "split_mac_acl": "",
+        "vlan_central_switching": false
+      },
+      "static_ip_mobility": {
+        "is_static_ip_mobility": false
+      },
+      "wlan_acl": {
+        "ipv4_acl": "",
+        "ipv6_acl": "",
+        "layer2_acl": "",
+        "pre_auth_urlfilter_list": "",
+        "post_auth_urlfilter_list": ""
+      },
+      "wlan_timeout": {
+        "session_timeout": 1800,
+        "idle_timeout": 300,
+        "idle_threshold": 0
+      },
+      "wlan_local_profiling": {
+        "device_classification": false,
+        "subscriber_policy_name": "",
+        "radius_profiling": true,
+        "http_tlv_caching": false,
+        "dhcp_tlv_caching": true
       },
       "wlan_mobility": {
         "anchor": false
@@ -1272,7 +723,7 @@
         "vlan_id": false
       },
       "mdns_service_policy": {
-        "policy_name": "default-mdns-profile"
+        "policy_name": "default-mdns-service-policy"
       },
       "cts_policy": {
         "sgacl_enforcement": false
@@ -1299,6 +750,18 @@
       },
       "fabric_profile_name": "",
       "accounting_list": "",
+      "atf_policy_map_entries": {
+        "atf_policy_map_entry": [
+          {
+            "band_id": 0,
+            "atf_policy_name": "customerApp"
+          },
+          {
+            "band_id": 1,
+            "atf_policy_name": "customerApp"
+          }
+        ]
+      },
       "call_snoop": false,
       "sip_cac_send_dis_assoc": false,
       "sip_cac_send_486_busy": false,

@@ -1,57 +1,29 @@
 {
   "Cisco_IOS_XE_wireless_wlan_cfg:policy_list_entry": [
     {
-      "tag_name": "APG_backup",
-      "description": "Policy tag for wlan-ids=set(['3'])",
-      "wlan_policies": {
-        "wlan_policy": [
-          {
-            "wlan_profile_name": "backup",
-            "policy_profile_name": "POLICY_PROFILE_4"
-          }
-        ]
-      }
-    },
-    {
-      "tag_name": "APG_annapolis",
-      "description": "Policy tag for wlan-ids=set(['1'])",
+      "tag_name": "annapolis",
+      "description": "",
       "wlan_policies": {
         "wlan_policy": [
           {
             "wlan_profile_name": "annapolis",
-            "policy_profile_name": "POLICY_PROFILE_2"
+            "policy_profile_name": "annapolis"
           }
         ]
       }
     },
     {
-      "tag_name": "FCG_annapolis",
-      "description": ""
-    },
-    {
-      "tag_name": "APG_default-group",
-      "description": "Policy tag for wlan-ids=set(['1', '3', '2', '5', '4'])",
+      "tag_name": "WWT-Branch-1",
+      "description": "test",
       "wlan_policies": {
         "wlan_policy": [
           {
             "wlan_profile_name": "WWT",
-            "policy_profile_name": "POLICY_PROFILE_7"
+            "policy_profile_name": "Internal-Branch"
           },
           {
-            "wlan_profile_name": "testt",
-            "policy_profile_name": "POLICY_PROFILE_6"
-          },
-          {
-            "wlan_profile_name": "backup",
-            "policy_profile_name": "POLICY_PROFILE_5"
-          },
-          {
-            "wlan_profile_name": "annapolis",
-            "policy_profile_name": "POLICY_PROFILE_1"
-          },
-          {
-            "wlan_profile_name": "annapolis5",
-            "policy_profile_name": "POLICY_PROFILE_3"
+            "wlan_profile_name": "WWT Guest",
+            "policy_profile_name": "Guest-Branch"
           }
         ]
       }
@@ -59,14 +31,6 @@
     {
       "tag_name": "default-policy-tag",
       "description": "default policy-tag"
-    },
-    {
-      "tag_name": "FCG_default-flex-group",
-      "description": ""
-    },
-    {
-      "tag_name": "FCG_default-flex-group-192048380",
-      "description": ""
     }
   ]
 }
