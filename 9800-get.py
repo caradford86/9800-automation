@@ -74,14 +74,17 @@ def main():
     # get the data for each endpoint defined in the data
     # for example: vlans: Cisco-IOS-XE-vlan-oper:vlans/vlan
     # in which case, ep_name = 'vlans' and ep_value = 'Cisco-IOS-XE-vlan-oper:vlans/vlan'
+    combined_data = {}
     for ep_name, ep_value in endpoint_data.items():
         url = build_url(host, ep_value, port=port)
 
         print(f'retrieving data for: {ep_name}')
         json_data = get_url(url, auth=(user, pw), params=params)
 
-        print(f'saving data for: {ep_name}')
-        write_to_file(ep_name, json_data)
+        combined_data.update(json_data)
+
+    print(f'saving data to file: {ep_name}')
+    write_to_file('combined_output', json_data)
 
 
 if __name__ == '__main__':
