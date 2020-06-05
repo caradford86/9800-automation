@@ -1,0 +1,3972 @@
+DEBUG:paramiko.transport:starting thread (client mode): 0xe50f750
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 10.1.1.111: b'9b9119fe3708e22305789e15bfd62091'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal length 0
+DEVyang#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+DEVyang#
+DEBUG:netmiko:terminal length 0
+DEVyang#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal\ width\ 511
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal width 511
+DEVyang#
+DEBUG:netmiko:Pattern found: terminal\ width\ 511 terminal width 511
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'aaa new-model\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: aaa new-model
+         ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: aaa new-model
+         ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 300\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: vlan 300
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 300
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "annapolis"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "annapolis"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "annapolis"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 300\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 300
+          ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 300
+          ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "annapolis"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description "annapolis"
+              ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "annapolis"
+              ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.1.3.2 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel:     ip address 10.1.3.2 255.255.255.0
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.1.3.2 255.255.255.0
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 999\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: vlan 999
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 999
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "deadnet"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel:     name "deadnet"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "deadnet"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 999\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 999
+          ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 999
+          ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "deadnet"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description "deadnet"
+              ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:paramiko.transport:starting thread (client mode): 0xfcbc690
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 10.1.1.111: b'9b9119fe3708e22305789e15bfd62091'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal length 0
+DEVyang#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+DEVyang#
+DEBUG:netmiko:terminal length 0
+DEVyang#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal\ width\ 511
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal width 511
+DEVyang#
+DEBUG:netmiko:Pattern found: terminal\ width\ 511 terminal width 511
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'aaa new-model\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: aaa new-model
+         ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: aaa new-model
+         ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 300\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: vlan 300
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 300
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "annapolis"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "annapolis"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "annapolis"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 300\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 300
+          ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 300
+          ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "annapolis"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description "annapolis"
+              ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "annapolis"
+              ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.1.3.2 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip address 10.1.3.2 255.255.255.0
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.1.3.2 255.255.255.0
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 999\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: vlan 999
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 999
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "deadnet"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "deadnet"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "deadnet"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 999\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 999
+          ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 999
+          ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "deadnet"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description "deadnet"
+              ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "deadnet"
+              ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.9.9.9 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip address 10.9.9.9 255.255.255.0
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.9.9.9 255.255.255.0
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip helper-address 10.9.9.1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel:     ip helper-address 10.9.9.1
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#    no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip helper-address 10.9.9.1
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#    no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 111\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: vlan 111
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 111
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "vlan111"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "vlan111"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "vlan111"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 111\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 111
+          ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 111
+          ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "vlan111"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description "vlan111"
+              ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "vlan111"
+              ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.11.0.10 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip address 10.11.0.10 255.255.255.0
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.11.0.10 255.255.255.0
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip helper-address 10.11.0.1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip helper-address 10.11.0.1
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip helper-address 10.11.0.1
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+               ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 112\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: vlan 112
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 112
+% Bad IP address or host name% Unknown command or computer name, or unable to find computer address
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "vlan112"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "vlan112"
+                 ^
+% Invalid input detected at '^' marker.
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:paramiko.transport:starting thread (client mode): 0x3a945d0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 10.1.1.111: b'9b9119fe3708e22305789e15bfd62091'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+
+
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal length 0
+DEVyang#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+DEVyang#
+DEBUG:netmiko:terminal length 0
+DEVyang#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal\ width\ 511
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal width 511
+DEVyang#
+DEBUG:netmiko:Pattern found: terminal\ width\ 511 terminal width 511
+DEVyang#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'conf t\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+DEVyang(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: Enter configuration commands, one per line.  End with CNTL/Z.
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'aaa new-model\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: aaa new-model
+DEVyang(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: aaa new-model
+DEVyang(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 300\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: vla
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: n 300
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 300
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "annapolis"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "annapolis"
+VLAN #300 and #50 have an identical name: annapolis
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "annapolis"
+VLAN #300 and #50 have an identical name: annapolis
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+%VLAN 300 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+%VLAN 300 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 300\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 300
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 300
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "annapolis"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description "annapolis"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "annapolis"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.1.3.2 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip addre
+DEBUG:netmiko:read_channel: ss 10.1.3.2 255.2
+DEBUG:netmiko:read_channel: 55.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.1.3.2 255.255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no 
+DEBUG:netmiko:read_channel: shutdown
+
+DEBUG:netmiko:read_channel: DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 999\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: vlan 999
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 999
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "deadnet"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "deadnet"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "deadnet"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+%VLAN 999 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+%VLAN 999 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 999\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vla
+DEBUG:netmiko:read_channel: n 999
+
+DEBUG:netmiko:read_channel: DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 999
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "deadnet"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description "
+DEBUG:netmiko:read_channel: deadnet"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "deadnet"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.9.9.9 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip address 10.9.9.9 255.255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.9.9.9 255.255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip helper-address 10.9.9.1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip hel
+DEBUG:netmiko:read_channel: per-address 10.
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 9.9.1
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip helper-address 10.9.9.1
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 111\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: vlan 111
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 111
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "vlan111"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "vlan111"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "vlan111"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+%VLAN 111 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+%VLAN 111 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 111\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 111
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 111
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "vlan111"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description "vlan111"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "vlan111"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.11.0.10 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip address 10.11.0.1
+DEBUG:netmiko:read_channel: 0 255.255.255.0
+
+DEBUG:netmiko:read_channel: DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.11.0.10 255.255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip helper-address 10.11.0.1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip helper-address 10.
+DEBUG:netmiko:read_channel: 11.0.1
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip helper-address 10.11.0.1
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 112\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: vlan 112
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 112
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "vlan112"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "vlan112"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "vlan112"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdow
+DEBUG:netmiko:read_channel: n
+%VLAN 112 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+%VLAN 112 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 112\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 112
+
+DEBUG:netmiko:read_channel: DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 112
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "vlan112"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:  
+DEBUG:netmiko:read_channel:  
+DEBUG:netmiko:read_channel:   description "vlan112"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "vlan112"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.12.0.10 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip address 10.12.0.10 255.25
+DEBUG:netmiko:read_channel: 5.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.12.0.10 255.255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip helper-address 10.12.0.1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip helper-ad
+DEBUG:netmiko:read_channel: dress 10.12.0.1
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip helper-address 10.12.0.1
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 114\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: vlan 114
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 114
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "vlan114"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "vl
+DEBUG:netmiko:read_channel: an114"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "vlan114"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+%VLAN 114 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+%VLAN 114 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 114\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 114
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 114
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "vlan114"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description 
+DEBUG:netmiko:read_channel: "vlan114"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "vlan114"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.14.0.10 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip address 10.14.0.10 255.255.255.0
+
+DEBUG:netmiko:read_channel: DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.14.0.10 255.255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip helper-address 10.14.0.1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip hel
+DEBUG:netmiko:read_channel: per-address 10.14.
+DEBUG:netmiko:read_channel: 0.1
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip helper-address 10.14.0.1
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 20\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: vlan 20
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 20
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "vlan20"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "vlan20"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "vlan20"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+%VLAN 20 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+%VLAN 20 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 20\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 20
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 20
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "vlan20"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description "vlan20"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "vlan20"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 192.168.1.10 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip address 192.168.1.1
+DEBUG:netmiko:read_channel: 0 255.255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 192.168.1.10 255.255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 30\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: vlan 30
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 30
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "vlan30"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "vlan30"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "vlan30"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+%VLAN 30 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+%VLAN 30 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 30\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vl
+DEBUG:netmiko:read_channel: an 30
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 30
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "vlan30"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     de
+DEBUG:netmiko:read_channel: scription "vlan30"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "vlan30"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.1.30.2 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip add
+DEBUG:netmiko:read_channel: ress 10.1
+DEBUG:netmiko:read_channel: .30.2 255.255.255.0
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.1.30.2 255.255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'vlan 40\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: vlan 40
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: vlan 40
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    name "vlan40"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     name "vlan40"
+
+DEBUG:netmiko:read_channel: DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     name "vlan40"
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+%VLAN 40 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+%VLAN 40 is not shutdown.
+DEVyang(config-vlan)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'interface vlan 40\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: interface vlan 40
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: interface vlan 40
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    description "vlan40"\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     description "vlan40"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     description "vlan40"
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    ip address 10.1.40.2 255.255.255.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     ip address 10.1.40.2 255
+DEBUG:netmiko:read_channel: .255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     ip address 10.1.40.2 255.255.255.0
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'do terminal length 40\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: do terminal length 40
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: do terminal length 40
+DEVyang(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'hostname WLC-1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: hostname WLC-1
+
+DEBUG:netmiko:read_channel: WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: hostname WLC-1
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ntp server 10.1.1.102\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: ntp server 10.1.1.102
+
+DEBUG:netmiko:read_channel: WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: ntp server 10.1.1.102
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'tacacs server TACACS_SERVER_AUTH_1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: tacacs server TACACS
+DEBUG:netmiko:read_channel: _SERVER_AUTH_1
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: tacacs server TACACS_SERVER_AUTH_1
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    address ipv4 10.1.1.26\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     address ipv4 10.1.1.26
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     address ipv4 10.1.1.26
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    port 49\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     port 49
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     port 49
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    key 0 WWTwwt1!\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     key 0 WWTwwt1!
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     key 0 WWTwwt1!
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    timeout 5\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     timeout 5
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     timeout 5
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'tacacs server TACACS_SERVER_ACCT_1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: tacacs server TACACS_SERVER_ACCT_1
+DEBUG:netmiko:read_channel: 
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: tacacs server TACACS_SERVER_ACCT_1
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    address ipv4 10.1.1.20\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     address ipv4 10.1.1.20
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     address ipv4 10.1.1.20
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    port 49\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     port 49
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     port 49
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    key 0 WWTwwt1!\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     key 0 WWTwwt1!
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     key 0 WWTwwt1!
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    timeout 5\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     timeout 5
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     timeout 5
+WLC-1(config-server-tacacs)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'radius server RADSER_AUTH_ACCT_1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: radius server RADSER_AUTH_ACCT_1
+WLC-1(config-radius-server)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: radius server RADSER_AUTH_ACCT_1
+WLC-1(config-radius-server)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    address ipv4 10.1.1.20 auth-port 1812 acct-port 1813\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     address ipv4 10.1.1.20 auth-port 1812 acct-port 1813
+WLC-1(config-radius-server)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     address ipv4 10.1.1.20 auth-port 1812 acct-port 1813
+WLC-1(config-radius-server)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    key 0 WWTwwt1!\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     key 0 WWTwwt1!
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+WLC-1(config-radius-server)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     key 0 WWTwwt1!
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+WLC-1(config-radius-server)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    retransmit 5\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     retransmit 5
+WLC-1(config-radius-server)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     retransmit 5
+WLC-1(config-radius-server)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    timeout 5\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     timeout 5
+WLC-1(config-radius-server)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     timeout 5
+WLC-1(config-radius-server)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ip access-list extended FA_test\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: ip access-list extended FA_test
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: ip access-list extended FA_test
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ip access-list extended ACL-WebAuth\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: ip access-list extended ACL-WebAuth
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: ip access-list extended ACL-WebAuth
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    1 permit 6 0.0.0.0 255.255.255.255 range 0 65535 172.16.207.142 0.0.0.0 range 8443 8443\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     1 permit 6 0.0.0.0 255.255.255.255 range 0 65535 172.16
+DEBUG:netmiko:read_channel: .207.142 0.0.0.0 range 8443 8443
+% Duplicate sequence number
+%Failed to add ace to access-list
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     1 permit 6 0.0.0.0 255.255.255.255 range 0 65535 172.16.207.142 0.0.0.0 range 8443 8443
+% Duplicate sequence number
+%Failed to add ace to access-list
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    2 permit 6 0.0.0.0 255.255.255.255 range 0 65535 172.16.207.143 0.0.0.0 range 8443 8443\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     2 permit 6 0.0.0.0 255.255.255.255 range 0 65535 172.16.207.143 0.0.0.0 range
+DEBUG:netmiko:read_channel:  8443 8443
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     2 permit 6 0.0.0.0 255.255.255.255 range 0 65535 172.16.207.143 0.0.0.0 range 8443 8443
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    3 permit 6 0.0.0.0 255.255.255.255 range 0 65535 50.204.239.207 0.0.0.0 range 8443 8443\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     3 permit 6 0.0.0.0 255.255.255.255 range 0 65535 50.204.239.20
+DEBUG:netmiko:read_channel: 7 0.0.0.0 range 8443 8443
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     3 permit 6 0.0.0.0 255.255.255.255 range 0 65535 50.204.239.207 0.0.0.0 range 8443 8443
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    4 permit 6 0.0.0.0 255.255.255.255 range 0 65535 50.204.239.208 0.0.0.0 range 8443 8443\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     4 perm
+DEBUG:netmiko:read_channel: it 6 0.0.0.0 255.255.255.255 range 0 65535 50.204.239.208 0.0
+DEBUG:netmiko:read_channel: .0.0 range 8443 8443
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     4 permit 6 0.0.0.0 255.255.255.255 range 0 65535 50.204.239.208 0.0.0.0 range 8443 8443
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    5 deny ip 0.0.0.0 255.255.255.255 0.0.0.0 255.255.255.255\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     5 deny ip 0.0.0.0 255.255.255.255 0.0.0.0 255.255.255.25
+DEBUG:netmiko:read_channel: 5
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     5 deny ip 0.0.0.0 255.255.255.255 0.0.0.0 255.255.255.255
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ip access-list extended ACL_WEBAUTH_REDIRECT\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: ip access-list extended ACL_WEBAUTH_REDIRECT
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: ip access-list extended ACL_WEBAUTH_REDIRECT
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0.0.0 255.255.255.255 range 53 53\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0.0.0 255.255.255.255 
+DEBUG:netmiko:read_channel: range 53 53
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0.0.0 255.255.255.255 range 53 53
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    2 permit 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 255.255.255.255 range 0 65535\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     2 permit 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 255.255.255.255 range 0
+DEBUG:netmiko:read_channel:  65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     2 permit 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 255.255.255.255 range 0 65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    3 permit 6 0.0.0.0 255.255.255.255 range 0 65535 10.1.1.104 0.0.0.0 range 8443 8443\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     3 permit 6 0.0.0.0 255.255.255.255 range 0 65535 10.1.1.104 0.0.0.0 range 8443 8443
+
+DEBUG:netmiko:read_channel: WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     3 permit 6 0.0.0.0 255.255.255.255 range 0 65535 10.1.1.104 0.0.0.0 range 8443 8443
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    4 permit 6 10.1.1.104 0.0.0.0 range 8443 8443 0.0.0.0 255.255.255.255 range 0 65535\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     4 permit 6 10.
+DEBUG:netmiko:read_channel: 1.1.104 0.0.0
+DEBUG:netmiko:read_channel: .0 range 8443 8443 0.0.0.0 255.255.255.255 range 0 65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     4 permit 6 10.1.1.104 0.0.0.0 range 8443 8443 0.0.0.0 255.255.255.255 range 0 65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ip access-list extended BLACKHOLE\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: ip access-l
+DEBUG:netmiko:read_channel: ist extended BLACKHOLE
+
+DEBUG:netmiko:read_channel: WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: ip access-list extended BLACKHOLE
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0.0.0 255.255.255.255 range 53 53\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0.0.0 25
+DEBUG:netmiko:read_channel: 5.255.255.255 range 53 53
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0.0.0 255.255.255.255 range 53 53
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    2 permit 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 255.255.255.255 range 0 65535\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     2 permit 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 25
+DEBUG:netmiko:read_channel: 5.255.255.255 range 0 65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     2 permit 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 255.255.255.255 range 0 65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    3 permit ip 0.0.0.0 255.255.255.255 10.1.1.104 0.0.0.0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     3 permit ip 0.0.0.0 255.255.255.255 10.1.1.104 0.0.0.
+DEBUG:netmiko:read_channel: 0
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     3 permit ip 0.0.0.0 255.255.255.255 10.1.1.104 0.0.0.0
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    4 permit ip 10.1.1.104 0.0.0.0 0.0.0.0 255.255.255.255\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     4 permit ip 10.1.1.104 0.0.0.0 0.0.0.0 255.255.255.255
+
+DEBUG:netmiko:read_channel: WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     4 permit ip 10.1.1.104 0.0.0.0 0.0.0.0 255.255.255.255
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ip access-list extended REDIRECT\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: ip access-list extended REDIRECT
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: ip access-list extended REDIRECT
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0.0.0 255.255.255.255 range 53 53\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0
+DEBUG:netmiko:read_channel: .0.0 255.255.255.255 range 53 53
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0.0.0 255.255.255.255 range 53 53
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    2 permit 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 255.255.255.255 range 0 65535\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     2 permit 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 255.255.255
+DEBUG:netmiko:read_channel: .255 range 0 65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     2 permit 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 255.255.255.255 range 0 65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    3 permit 6 0.0.0.0 255.255.255.255 range 0 65535 10.1.101.26 0.0.0.0 range 8443 8443\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     3 permit 6 0.0.0.0 255.255.255.255 range 0 65
+DEBUG:netmiko:read_channel: 535 10.1.101.26 0.0.0.0 range 8443 8443
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     3 permit 6 0.0.0.0 255.255.255.255 range 0 65535 10.1.101.26 0.0.0.0 range 8443 8443
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    4 permit 6 10.1.101.26 0.0.0.0 range 8443 8443 0.0.0.0 255.255.255.255 range 0 65535\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     4 permit 6 10.1.101.26 0.0.0.0 range 8443 8443 0.0.0.0 2
+DEBUG:netmiko:read_channel: 55.255.255.255 range 0 65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     4 permit 6 10.1.101.26 0.0.0.0 range 8443 8443 0.0.0.0 255.255.255.255 range 0 65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ip access-list extended test\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: ip access-list extended test
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: ip access-list extended test
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0.0.0 255.255.255.255 range 53 53\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     1 permit 17 0.0.0.0 255.255.255.255 r
+DEBUG:netmiko:read_channel: ange 0 65535 0.0.0.0 255.255.255.255
+DEBUG:netmiko:read_channel:  range 53 53
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     1 permit 17 0.0.0.0 255.255.255.255 range 0 65535 0.0.0.0 255.255.255.255 range 53 53
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    2 deny 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 255.255.255.255 range 0 65535\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     2 deny 17 0.0.0.0 255.255.255.255 r
+DEBUG:netmiko:read_channel: ange 53 53 0.0.0.0 255.255.255.255 range 0 65535
+DEBUG:netmiko:read_channel: 
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     2 deny 17 0.0.0.0 255.255.255.255 range 53 53 0.0.0.0 255.255.255.255 range 0 65535
+WLC-1(config-ext-nacl)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless mobility group name Lab\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless mobility group name Lab
+Changing mobility domain name may disrupt connectivity for clients on 11r or Adaptive 11r capable active WLANs
+Are you sure you want to continue? (y/n)[y]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless mobility group name Lab
+Changing mobility domain name may disrupt connectivity for clients on 11r or Adaptive 11r capable active WLANs
+Are you sure you want to continue? (y/n)[y]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless mobility group member mac-address 38:ed:18:50:0a:11 ip 10.1.1.58 public-ip 10.1.1.58 group Lab\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: wireless mobility group member mac-address 38:ed:18:50:0a:11 ip 10.1.1.58 public-ip 10.1.1.58 group Lab
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless mobility group member mac-address 38:ed:18:50:0a:11 ip 10.1.1.58 public-ip 10.1.1.58 group Lab
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless mobility group member mac-address 00:1e:f6:c8:d6:ff ip 10.1.1.110 public-ip 10.1.1.110 group Lab\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless mobility group member mac-address 00:1
+DEBUG:netmiko:read_channel: e:f6:c8:d6:ff ip 10.1.1.110 public-
+DEBUG:netmiko:read_channel: ip 10.1.1.110 group Lab
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless mobility group member mac-address 00:1e:f6:c8:d6:ff ip 10.1.1.110 public-ip 10.1.1.110 group Lab
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless mobility dscp 0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: wireless mobility dscp 0
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless mobility dscp 0
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no nmsp cloud-services enable\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no nmsp cloud-ser
+DEBUG:netmiko:read_channel: vices enable
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no nmsp cloud-services enable
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless wps rogue adhoc\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless wps rogue adhoc
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless wps rogue adhoc
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless wps rogue ap aaa\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless wps rogue ap aaa
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless wps rogue ap aaa
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless wps rogue client aaa\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless wps rogue client aaa
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless wps rogue client aaa
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless wps rogue client contain e4a4.717d.665d 1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no wireless wps rogue client contain e4a4.717d.665d 1
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless wps rogue client contain e4a4.717d.665d 1
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless wps rogue client contain 985f.d3f2.cac3 1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no wireless wps rogue client contain 985f.d3f2.cac3 1
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless wps rogue client contain 985f.d3f2.cac3 1
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless wps rogue client contain 347c.2581.9ad7 1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no wireless wps rogue client contain 347c.2581.9ad7 1
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless wps rogue client contain 347c.2581.9ad7 1
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless wps rogue client contain 50dc.e7e3.e0cf 1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no
+DEBUG:netmiko:read_channel:  wireless wps rogue client c
+DEBUG:netmiko:read_channel: ontain 50dc
+DEBUG:netmiko:read_channel: .e7e3.e0cf 1
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless wps rogue client contain 50dc.e7e3.e0cf 1
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless wps rogue client mse\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no wireless wps rogue client mse
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless wps rogue client mse
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless wps rogue ap rldp\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no wireless wps rogue ap rldp
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless wps rogue ap rldp
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless wps rogue ap rldp schedule\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no wireless wps rogue ap rldp schedule
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless wps rogue ap rldp schedule
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless wps rogue ap valid-client auto-contain\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no wireless wps rogue ap valid-client auto-contain
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless wps rogue ap valid-client auto-contain
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless wps rogue security-level custom\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless wps rogue security-level custom
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless wps rogue security-level custom
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless wps rogue client client-threshold 0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless wps rogue client client-threshold 0
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless wps rogue client client-threshold 0
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'snmp-server host 10.1.1.22 version 2c 10.1.1.22\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: snmp-server host 10.1.1.22 version 2c 10.1.1.22
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: snmp-server host 10.1.1.22 version 2c 10.1.1.22
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'snmp-server host 10.1.1.22 version 2c prime\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: snmp-server host 10.1.1.22 version 2c prime
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: snmp-server host 10.1.1.22 version 2c prime
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'location expiry calibrating-client 5\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: location expiry calibrating-client 5
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: location expiry calibrating-client 5
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'location expiry client 5\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: location expiry client 
+DEBUG:netmiko:read_channel: 5
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: location expiry client 5
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'location expiry tags 5\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: location expiry
+DEBUG:netmiko:read_channel:  tags 5
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: location expiry tags 5
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cts sxp enable\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: cts sxp enable
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: cts sxp enable
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cts sxp connection peer 10.1.1.1 source 10.1.1.10 password default mode local speaker\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: cts sxp connection peer 10
+DEBUG:netmiko:read_channel: .1.1.1 source 10.1.1.10 p
+DEBUG:netmiko:read_channel: assword default mode loc
+DEBUG:netmiko:read_channel: al speaker
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: cts sxp connection peer 10.1.1.1 source 10.1.1.10 password default mode local speaker
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'location rssi-half-life rogue-aps ENM_HALF_LIFE_TIME_0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: location rssi-half-life rogue-aps ENM_HALF_LIFE_TIME_0
+
+DEBUG:netmiko:read_channel: WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: location rssi-half-life rogue-aps ENM_HALF_LIFE_TIME_0
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    location rssi-half-life tags 0\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     location rssi
+DEBUG:netmiko:read_channel: -half-life tags 0
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     location rssi-half-life tags 0
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no trapflags ap mfp\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: no trapflags ap mfp
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no trapflags ap mfp
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless management interface Vlan100\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless management
+DEBUG:netmiko:read_channel:  interface Vlan100
+
+DEBUG:netmiko:read_channel: WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless management interface Vlan100
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless security dot1x group-key interval 3600\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless security dot1x group-key interva
+DEBUG:netmiko:read_channel: l 3600
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless security dot1x group-key interval 3600
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless mgmt-via-wireless\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless mgmt-via-wireless
+
+DEBUG:netmiko:read_channel: WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless mgmt-via-wireless
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless rf-network Lab\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#wireless rf-network Lab
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#wireless rf-network Lab
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ap dot11 5ghz load-balancing window 5\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: ap dot11 5ghz load-balancing window 5
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: ap dot11 5ghz load-balancing window 5
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ap dot11 24ghz load-balancing window 5\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: ap dot11 24ghz load-balancing window 5
+
+DEBUG:netmiko:read_channel: WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: ap dot11 24ghz load-balancing window 5
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless broadcast\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless broadcast
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless broadcast
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'mdns-sd gateway\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: mdns-sd gateway
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: mdns-sd gateway
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    active-query timer 15\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     active-query timer 15
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     active-query timer 15
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no ipv6 nd ra-throttler policy RA-THROTTLE\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no ipv6 nd ra-throttler policy RA-THROTTLE
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no ipv6 nd ra-throttler policy RA-THROTTLE
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'device-tracking binding down-lifetime 30\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: device-tracking binding down-lifetime 30
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: device-tracking binding down-lifetime 30
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'device-tracking binding reachable-lifetime 300\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: device-tracking binding reach
+DEBUG:netmiko:read_channel: able-lifetime 300
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: device-tracking binding reachable-lifetime 300
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'device-tracking binding stale-lifetime 86400\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: device-tracking binding stale-li
+DEBUG:netmiko:read_channel: fetime 86400
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: device-tracking binding stale-lifetime 86400
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless media-stream message\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no wireless media-stream message
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless media-stream message
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless media-stream message\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no wireless media-stream message
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless media-stream message
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'no wireless mesh backhaul rrm\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: no wireless mesh backhaul rrm
+
+DEBUG:netmiko:read_channel: WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: no wireless mesh backhaul rrm
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wireless profile mesh default-mesh-profile\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wireless profile mesh default-m
+DEBUG:netmiko:read_channel: esh-profile
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wireless profile mesh default-mesh-profile
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no background-scanning\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no background-scanning
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no background-scanning
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security eap\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security eap
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     security eap
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-wireless-mesh-profile)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'parameter-map type webauth global\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: parameter-map type webauth global
+
+DEBUG:netmiko:read_channel: WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: parameter-map type webauth global
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    captive-bypass-portal\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     captive-bypass-portal
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     captive-bypass-portal
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    virtual-ip ipv4 192.0.2.1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel:     virtual-ip ipv4 192.0.2.1
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     virtual-ip ipv4 192.0.2.1
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    captive-bypass-portal\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     captive-bypass-portal
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     captive-bypass-portal
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-params-parameter-map)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wlan annapolis 1 annapolis\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wlan annapolis 1 annapolis
+% Cannot change the name of an existing WLAN.
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wlan annapolis 1 annapolis
+% Cannot change the name of an existing WLAN.
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security wpa akm cckm timestamp-tolerance 1000\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security wpa akm cckm timesta
+DEBUG:netmiko:read_channel: mp-tolerance 1000
+                           ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     security wpa akm cckm timestamp-tolerance 1000
+                           ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no load-balance\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no load-balance
+                         ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no load-balance
+                         ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    band-select\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:  
+DEBUG:netmiko:read_channel:    band-select
+                     ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     band-select
+                     ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security pmf association-comeback 1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security pmf assoc
+DEBUG:netmiko:read_channel: iation-comeback 1
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     security pmf association-comeback 1
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security pmf saquery-retry-time 200\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security pmf saqu
+DEBUG:netmiko:read_channel: ery-retry-time 200
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     security pmf saquery-retry-time 200
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no assisted-roaming dual-list\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no assisted-roaming dual-list
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no assisted-roaming dual-list
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    assisted-roaming neighbor-list\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     assisted-roaming neighbor-list
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     assisted-roaming neighbor-list
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bss-transition disassociation-imminent oproam-timer 40\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     bss-transition disassociation-imminent oproam-timer 40
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     bss-transition disassociation-imminent oproam-timer 40
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bss-transition disassociation-imminent timer 200\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     bss-transition disassociation-imminent timer 200
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     bss-transition disassociation-imminent timer 200
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no assisted-roaming prediction\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel:     no assisted-roaming prediction
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no assisted-roaming prediction
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bssmaxidle\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    mdns-sd gateway\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+DEBUG:netmiko:read_channel:     bssmaxidle
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+WLC-1(config)#    mdns-sd gat
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: eway
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no shutdown
+                             ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+                             ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config-mdns-sd)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wlan annapolis5 2 annapolis5\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wlan annapolis5 2 annapolis5
+% Cannot change the name of an existing WLAN.
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wlan annapolis5 2 annapolis5
+% Cannot change the name of an existing WLAN.
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security ft adaptive\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security ft adaptive
+                           ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     security ft adaptive
+                           ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security wpa akm cckm timestamp-tolerance 1000\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security wpa akm cckm t
+DEBUG:netmiko:read_channel: imestamp-tolerance 1000
+                           ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     security wpa akm cckm timestamp-tolerance 1000
+                           ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no load-balance\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no load-balance
+                         ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no load-balance
+                         ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no band-select\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel:     no band-select
+                        ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no band-select
+                        ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security pmf association-comeback 1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security pmf association-comeback 1
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     security pmf association-comeback 1
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security pmf saquery-retry-time 200\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security pmf saquery-retry-
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: time 200
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     security pmf saquery-retry-time 200
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no assisted-roaming dual-list\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no assisted-roaming dual-list
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no assisted-roaming dual-list
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    assisted-roaming neighbor-list\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     assisted-roaming neighbor-list
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     assisted-roaming neighbor-list
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bss-transition\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     bss-transition
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     bss-transition
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bss-transition disassociation-imminent oproam-timer 40\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     bss-transition disassociation-imminent op
+DEBUG:netmiko:read_channel: roam-timer 40
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     bss-transition disassociation-imminent oproam-timer 40
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bss-transition disassociation-imminent timer 200\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     bss-transition disassociation-imminent timer 200
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     bss-transition disassociation-imminent timer 200
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no assisted-roaming prediction\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel:     no assisted-roaming prediction
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no assisted-roaming prediction
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bssmaxidle\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     bssmaxidle
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     bssmaxidle
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    dms\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     dms
+                   ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     dms
+                   ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    radio dot11a\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     radio dot11a
+                      ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     radio dot11a
+                      ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no mdns-sd gateway\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no mdns-sd gateway
+%Warning: Ensure all the WLAN(s) are in Bridge mode for mDNS
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no mdns-sd gateway
+%Warning: Ensure all the WLAN(s) are in Bridge mode for mDNS
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wlan backup 3 backup\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wlan backup 3 backup
+% Cannot change the name of an existing WLAN.
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wlan backup 3 backup
+% Cannot change the name of an existing WLAN.
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security wpa akm cckm timestamp-tolerance 1000\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security wpa akm cckm timestamp-tolerance 1000
+                           ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     security wpa akm cckm timestamp-tolerance 1000
+                           ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no broadcast-ssid\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no broadcast-ssid
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no broadcast-ssid
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no load-balance\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no load-balance
+                         ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no load-balance
+                         ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no band-select\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no band-select
+                        ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no band-select
+                        ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security pmf association-comeback 1\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security pmf association-comeback 1
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     security pmf association-comeback 1
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security pmf saquery-retry-time 200\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#    security pmf saquery-retry-time 200
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#    security pmf saquery-retry-time 200
+                            ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no assisted-roaming dual-list\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no assisted-roaming dual-list
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no assisted-roaming dual-list
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    assisted-roaming neighbor-list\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     assisted-roaming neighbor-list
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     assisted-roaming neighbor-list
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bss-transition\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     bss-transition
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     bss-transition
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bss-transition disassociation-imminent oproam-timer 40\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     bss-transition disassociation-imminent oproam-
+DEBUG:netmiko:read_channel: timer 40
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     bss-transition disassociation-imminent oproam-timer 40
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bss-transition disassociation-imminent timer 200\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     bss-transition disassociation-imminent timer 200
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     bss-transition disassociation-imminent timer 200
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no assisted-roaming prediction\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no assisted-roaming prediction
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no assisted-roaming prediction
+                       ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    bssmaxidle\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     bssmaxidle
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     bssmaxidle
+                    ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    dms\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     dms
+                   ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     dms
+                   ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    radio dot11a\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     radio dot11a
+                      ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     radio dot11a
+                      ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no mdns-sd gateway\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no mdns-sd gateway
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no mdns-sd gateway
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no shutdown\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no 
+DEBUG:netmiko:read_channel: shutdown
+% Incomplete command.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no shutdown
+% Incomplete command.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'type consent\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: type consent
+               ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: type consent
+               ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'wlan testt 4 testt\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: wlan testt 4 testt
+% Cannot change the name of an existing WLAN.
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: wlan testt 4 testt
+% Cannot change the name of an existing WLAN.
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    no security wpa\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     no security wpa
+                              ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output:     no security wpa
+                              ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'    security ft adaptive\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel:     security ft adaptive
+                           ^
+% Invalid input detected at '^' marker.
+
+WLC-1(config)#
+DEBUG:netmiko:read_channel: 
