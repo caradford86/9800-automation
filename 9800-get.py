@@ -84,7 +84,7 @@ def main():
         combined_data.update(json_data)
 
     print(f'saving data to file: {ep_name}')
-    write_to_file('combined_output', json_data)
+    write_to_file('combined_output', combined_data)
 
 
 if __name__ == '__main__':

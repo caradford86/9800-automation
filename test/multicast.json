@@ -1,0 +1,12 @@
+{
+  "Cisco_IOS_XE_wireless_general_cfg:multicast_config": {
+    "multicast_over_multicast_ipv4_addr": "239.0.1.15",
+    "multicast_over_multicast_ipv6_addr": "::",
+    "is_mcast_enabled": true,
+    "is_non_ip_multicast_enabled": false,
+    "is_mdns_enabled": true,
+    "multicast_mode": true,
+    "multicast_v6_mode": false,
+    "is_broadcast_enabled": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "Cisco_IOS_XE_wireless_general_oper:mgmt_intf_data": {
+    "intf_name": "Vlan100",
+    "intf_type": "Management",
+    "intf_id": 100,
+    "mgmt_ip": "10.1.1.111",
+    "net_mask": "255.255.255.0",
+    "mgmt_mac": "00:1e:bd:d6:a0:ff"
+  }
+}

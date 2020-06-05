@@ -1,0 +1,2289 @@
+{
+  "Cisco_IOS_XE_wireless_rf_cfg:rf_profile": [
+    {
+      "name": "Home5GHz",
+      "description": "",
+      "tx_power_min": -10,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -70,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-5-ghz-band",
+      "data_rate_1m": "apf-tx-rate-basic",
+      "data_rate_2m": "apf-tx-rate-basic",
+      "data_rate_5_5m": "apf-tx-rate-basic",
+      "data_rate_11m": "apf-tx-rate-basic",
+      "data_rate_6m": "apf-tx-rate-basic",
+      "data_rate_9m": "apf-tx-rate-supported",
+      "data_rate_12m": "apf-tx-rate-basic",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-basic",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -80,
+      "min_num_clients": 3,
+      "coverage_voice_packet_rssi_threshold": -80,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": false,
+      "rf_dca_chan_width": "rf-dca-chan-width-20-mhz",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 199,
+      "multicast_data_rate": "mcast-data-rate-default",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-custom",
+      "rx_sen_sop_custom": -85,
+      "client_network_preference": "default",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-ssid",
+      "atf_optimization": "apf-atf-stealing-policy-enable",
+      "bridge_client_access": true,
+      "airtime_allocation": 5,
+      "client_aware_fra": true,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      },
+      "rf_dca_allowed_channels": {
+        "rf_dca_allowed_channel": [
+          {
+            "channel": 165
+          }
+        ]
+      },
+      "rfdca_removed_channels": {
+        "rfdca_removed_channel": [
+          {
+            "channel": 44
+          },
+          {
+            "channel": 52
+          },
+          {
+            "channel": 100
+          },
+          {
+            "channel": 157
+          }
+        ]
+      }
+    },
+    {
+      "name": "WWT-5GHz",
+      "description": "",
+      "tx_power_min": -10,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -70,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-5-ghz-band",
+      "data_rate_1m": "apf-tx-rate-basic",
+      "data_rate_2m": "apf-tx-rate-basic",
+      "data_rate_5_5m": "apf-tx-rate-basic",
+      "data_rate_11m": "apf-tx-rate-basic",
+      "data_rate_6m": "apf-tx-rate-basic",
+      "data_rate_9m": "apf-tx-rate-supported",
+      "data_rate_12m": "apf-tx-rate-basic",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-basic",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -80,
+      "min_num_clients": 3,
+      "coverage_voice_packet_rssi_threshold": -80,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-40-mhz",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-6m",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-medium",
+      "rx_sen_sop_custom": -85,
+      "client_network_preference": "connectivity",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-monitor",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "WWT_5GHz",
+      "description": "",
+      "tx_power_min": -10,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -70,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-5-ghz-band",
+      "data_rate_1m": "apf-tx-rate-basic",
+      "data_rate_2m": "apf-tx-rate-basic",
+      "data_rate_5_5m": "apf-tx-rate-basic",
+      "data_rate_11m": "apf-tx-rate-basic",
+      "data_rate_6m": "apf-tx-rate-basic",
+      "data_rate_9m": "apf-tx-rate-supported",
+      "data_rate_12m": "apf-tx-rate-basic",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-basic",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -80,
+      "min_num_clients": 3,
+      "coverage_voice_packet_rssi_threshold": -80,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-160-mhz",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-9m",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-low",
+      "rx_sen_sop_custom": -85,
+      "client_network_preference": "throughput",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-disable",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Home24GHz",
+      "description": "",
+      "tx_power_min": -10,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -70,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-2-dot-4-ghz-band",
+      "data_rate_1m": "apf-tx-rate-basic",
+      "data_rate_2m": "apf-tx-rate-basic",
+      "data_rate_5_5m": "apf-tx-rate-basic",
+      "data_rate_11m": "apf-tx-rate-basic",
+      "data_rate_6m": "apf-tx-rate-supported",
+      "data_rate_9m": "apf-tx-rate-supported",
+      "data_rate_12m": "apf-tx-rate-supported",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-supported",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -80,
+      "min_num_clients": 3,
+      "coverage_voice_packet_rssi_threshold": -80,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-best",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-12m",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-auto",
+      "rx_sen_sop_custom": -85,
+      "client_network_preference": "default",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-disable",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "WWT-24GHz",
+      "description": "",
+      "tx_power_min": -10,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -70,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-2-dot-4-ghz-band",
+      "data_rate_1m": "apf-tx-rate-basic",
+      "data_rate_2m": "apf-tx-rate-basic",
+      "data_rate_5_5m": "apf-tx-rate-basic",
+      "data_rate_11m": "apf-tx-rate-basic",
+      "data_rate_6m": "apf-tx-rate-supported",
+      "data_rate_9m": "apf-tx-rate-supported",
+      "data_rate_12m": "apf-tx-rate-supported",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-supported",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -80,
+      "min_num_clients": 3,
+      "coverage_voice_packet_rssi_threshold": -80,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-best",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-18m",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-auto",
+      "rx_sen_sop_custom": -85,
+      "client_network_preference": "default",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-disable",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "WWT_24GHz",
+      "description": "Sample",
+      "tx_power_min": 5,
+      "tx_power_max": 14,
+      "tx_power_v1_threshold": -70,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-2-dot-4-ghz-band",
+      "data_rate_1m": "apf-tx-rate-unsupported",
+      "data_rate_2m": "apf-tx-rate-unsupported",
+      "data_rate_5_5m": "apf-tx-rate-unsupported",
+      "data_rate_11m": "apf-tx-rate-unsupported",
+      "data_rate_6m": "apf-tx-rate-unsupported",
+      "data_rate_9m": "apf-tx-rate-unsupported",
+      "data_rate_12m": "apf-tx-rate-basic",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-supported",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -80,
+      "min_num_clients": 3,
+      "coverage_voice_packet_rssi_threshold": -80,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-best",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-24m",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-custom",
+      "rx_sen_sop_custom": -85,
+      "client_network_preference": "default",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-disable",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Low_Client_Density_rf_5gh",
+      "description": "pre configured Low Client Density rfprofile for 5gh radio",
+      "tx_power_min": -10,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -60,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-5-ghz-band",
+      "data_rate_1m": "apf-tx-rate-basic",
+      "data_rate_2m": "apf-tx-rate-basic",
+      "data_rate_5_5m": "apf-tx-rate-basic",
+      "data_rate_11m": "apf-tx-rate-basic",
+      "data_rate_6m": "apf-tx-rate-basic",
+      "data_rate_9m": "apf-tx-rate-supported",
+      "data_rate_12m": "apf-tx-rate-basic",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-basic",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -90,
+      "min_num_clients": 2,
+      "coverage_voice_packet_rssi_threshold": -90,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-best",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-default",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-low",
+      "client_network_preference": "default",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-disable",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "High_Client_Density_rf_5gh",
+      "description": "pre configured High Client Density rfprofile for 5gh radio",
+      "tx_power_min": 7,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -65,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-5-ghz-band",
+      "data_rate_1m": "apf-tx-rate-basic",
+      "data_rate_2m": "apf-tx-rate-basic",
+      "data_rate_5_5m": "apf-tx-rate-basic",
+      "data_rate_11m": "apf-tx-rate-basic",
+      "data_rate_6m": "apf-tx-rate-unsupported",
+      "data_rate_9m": "apf-tx-rate-unsupported",
+      "data_rate_12m": "apf-tx-rate-basic",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-basic",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -80,
+      "min_num_clients": 3,
+      "coverage_voice_packet_rssi_threshold": -80,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-best",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-default",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-medium",
+      "client_network_preference": "default",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-disable",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Low_Client_Density_rf_24gh",
+      "description": "pre configured Low Client Density rfprofile for 2.4gh radio",
+      "tx_power_min": -10,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -65,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-2-dot-4-ghz-band",
+      "data_rate_1m": "apf-tx-rate-basic",
+      "data_rate_2m": "apf-tx-rate-basic",
+      "data_rate_5_5m": "apf-tx-rate-basic",
+      "data_rate_11m": "apf-tx-rate-basic",
+      "data_rate_6m": "apf-tx-rate-supported",
+      "data_rate_9m": "apf-tx-rate-supported",
+      "data_rate_12m": "apf-tx-rate-supported",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-supported",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -90,
+      "min_num_clients": 2,
+      "coverage_voice_packet_rssi_threshold": -90,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-best",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-default",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-low",
+      "client_network_preference": "default",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-disable",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "High_Client_Density_rf_24gh",
+      "description": "pre configured High Client Density rfprofile for 2.4gh radio",
+      "tx_power_min": 7,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -70,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-2-dot-4-ghz-band",
+      "data_rate_1m": "apf-tx-rate-unsupported",
+      "data_rate_2m": "apf-tx-rate-unsupported",
+      "data_rate_5_5m": "apf-tx-rate-unsupported",
+      "data_rate_11m": "apf-tx-rate-unsupported",
+      "data_rate_6m": "apf-tx-rate-unsupported",
+      "data_rate_9m": "apf-tx-rate-supported",
+      "data_rate_12m": "apf-tx-rate-basic",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-supported",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -80,
+      "min_num_clients": 3,
+      "coverage_voice_packet_rssi_threshold": -80,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-best",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-default",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-medium",
+      "client_network_preference": "default",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-disable",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Typical_Client_Density_rf_5gh",
+      "description": "pre configured Typical Density rfprofile for 5gh radio",
+      "tx_power_min": -10,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -70,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-5-ghz-band",
+      "data_rate_1m": "apf-tx-rate-basic",
+      "data_rate_2m": "apf-tx-rate-basic",
+      "data_rate_5_5m": "apf-tx-rate-basic",
+      "data_rate_11m": "apf-tx-rate-basic",
+      "data_rate_6m": "apf-tx-rate-basic",
+      "data_rate_9m": "apf-tx-rate-supported",
+      "data_rate_12m": "apf-tx-rate-basic",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-basic",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -80,
+      "min_num_clients": 3,
+      "coverage_voice_packet_rssi_threshold": -80,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-best",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-default",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-auto",
+      "client_network_preference": "default",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-disable",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Typical_Client_Density_rf_24gh",
+      "description": "pre configured Typical Client Density rfprofile for 2.4gh radio",
+      "tx_power_min": -10,
+      "tx_power_max": 30,
+      "tx_power_v1_threshold": -70,
+      "tx_power_v2_threshold": -67,
+      "status": true,
+      "band": "dot11-2-dot-4-ghz-band",
+      "data_rate_1m": "apf-tx-rate-unsupported",
+      "data_rate_2m": "apf-tx-rate-unsupported",
+      "data_rate_5_5m": "apf-tx-rate-unsupported",
+      "data_rate_11m": "apf-tx-rate-unsupported",
+      "data_rate_6m": "apf-tx-rate-unsupported",
+      "data_rate_9m": "apf-tx-rate-supported",
+      "data_rate_12m": "apf-tx-rate-basic",
+      "data_rate_18m": "apf-tx-rate-supported",
+      "data_rate_24m": "apf-tx-rate-supported",
+      "data_rate_36m": "apf-tx-rate-supported",
+      "data_rate_48m": "apf-tx-rate-supported",
+      "data_rate_54m": "apf-tx-rate-supported",
+      "coverage_data_packet_rssi_threshold": -80,
+      "min_num_clients": 3,
+      "coverage_voice_packet_rssi_threshold": -80,
+      "exception_level": 25,
+      "band_select_client_rssi": -80,
+      "band_select_client_mid_rssi": -80,
+      "band_select_cycle_count": 2,
+      "band_select_cycle_threshold": 200,
+      "band_select_age_out_dual_band": 60,
+      "band_select_age_out_suppression": 20,
+      "band_select_probe_response": false,
+      "dca_contribution_interference": true,
+      "rf_dca_chan_width": "rf-dca-chan-width-best",
+      "load_balancing_window": 5,
+      "load_balancing_denial_count": 3,
+      "trap_threshold_clients": 12,
+      "trap_threshold_interference": 10,
+      "trap_threshold_noise": -70,
+      "trap_threshold_utilization": 80,
+      "max_radio_clients": 200,
+      "multicast_data_rate": "mcast-data-rate-default",
+      "rx_sen_sop_threshold": "rrm-ewlc-rxsensop-threshold-auto",
+      "client_network_preference": "default",
+      "hsr_mode": false,
+      "hsr_neighbor_timeout": 5,
+      "opt_roam_rssi_treshold": -127,
+      "opt_roam_rssi_check_enable": false,
+      "atf_oper_mode": "apf-atf-mode-disable",
+      "atf_optimization": "apf-atf-stealing-policy-disable",
+      "bridge_client_access": false,
+      "airtime_allocation": 5,
+      "client_aware_fra": false,
+      "client_select_threshold": 50,
+      "client_reset_threshold": 5,
+      "rf_mcs_entries": {
+        "rf_mcs_entry": [
+          {
+            "rf_index": 0,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 1,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 2,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 3,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 4,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 5,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 6,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 7,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 8,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 9,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 10,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 11,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 12,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 13,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 14,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 15,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 16,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 17,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 18,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 19,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 20,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 21,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 22,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 23,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 24,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 25,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 26,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 27,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 28,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 29,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 30,
+            "rf_80211n_mcs_enable": true
+          },
+          {
+            "rf_index": 31,
+            "rf_80211n_mcs_enable": true
+          }
+        ]
+      }
+    }
+  ]
+}
