@@ -32,7 +32,8 @@ def socket_check(ip, port=22, socket_timeout=1, scan_timeout=400, retry=1):
             a_socket.settimeout(socket_timeout)
             a_socket.connect((ip, port))
             return True
-        except ConnectionRefusedError:
+        except Exception as e:
+            print(str(e))
             print(f"{ip}:{port} not open..sleep for {retry} seconds")
             sleep(retry)
         finally:
