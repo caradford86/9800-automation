@@ -1,0 +1,28 @@
+---
+# Set connection details for the controllers
+controller: 10.1.1.111
+port: 443
+username: cradford
+password: P@22w0rd!@
+
+# ----------------- API ENDPOINTS --------------------------------
+
+endpoints:
+  interfaces: Cisco-IOS-XE-interfaces-oper:interfaces/interface
+  vlans: Cisco-IOS-XE-vlan-oper:vlans/vlan
+  wlan_profile: Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/wlan-cfg-entries/wlan-cfg-entry
+  wlan_policy: Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/wlan-policies/wlan-policy
+  policy_tags: Cisco-IOS-XE-wireless-wlan-cfg:wlan-cfg-data/policy-list-entries/policy-list-entry
+  ap_join_profiles: Cisco-IOS-XE-wireless-site-cfg:site-cfg-data/ap-cfg-profiles/ap-cfg-profile
+  flex_profiles: Cisco-IOS-XE-wireless-flex-cfg:flex-cfg-data/flex-policy-entries/flex-policy-entry
+  site_tags: Cisco-IOS-XE-wireless-site-cfg:site-cfg-data/site-tag-configs/site-tag-config
+  rf_tag: Cisco-IOS-XE-wireless-rf-cfg:rf-cfg-data/rf-tags/rf-tag
+  rf_profile: Cisco-IOS-XE-wireless-rf-cfg:rf-cfg-data/rf-profiles/rf-profile
+  mobility: Cisco-IOS-XE-wireless-mobility-cfg:mobility-cfg-data/mobility-config
+  wireless_mgmt: Cisco-IOS-XE-wireless-general-oper:general-oper-data/mgmt-intf-data
+  multicast: Cisco-IOS-XE-wireless-general-cfg:general-cfg-data/multicast-config
+  snmp: Cisco-IOS-XE-native:native/snmp-server
+  aaa: Cisco-IOS-XE-native:native/aaa
+  radius: Cisco-IOS-XE-native:native/radius
+  tacacs: Cisco-IOS-XE-native:native/tacacs
+  acl: Cisco-IOS-XE-native:native/ip/access-list

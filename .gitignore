@@ -1,4 +1,16 @@
 .DS_Store
 .vscode
+<<<<<<< HEAD
 input
 output
+=======
+
+.venv
+*.local*
+__pycache__/
+
+# Ignore the contents of these folders
+
+input/*
+output/*
+>>>>>>> tafsir-contrib
