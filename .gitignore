@@ -1,9 +1,5 @@
 .DS_Store
 .vscode
-<<<<<<< HEAD
-input
-output
-=======
 
 .venv
 *.local*
@@ -13,4 +9,3 @@ __pycache__/
 
 input/*
 output/*
->>>>>>> tafsir-contrib
