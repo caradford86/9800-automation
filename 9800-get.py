@@ -1,66 +1,15 @@
+import json
 from pathlib import Path
 
-import requests
-import json
-import re
 import yaml
 
-requests.packages.urllib3.disable_warnings()
-
-
-# Global variables
-OUTPUT_DIR = 'test'
-HEADERS = {
-    'content-type': 'application/yang-data+json',
-    'accept': 'application/yang-data+json'
-}
-
-
-def get_url(url, auth=None, params={}, verify=False):
-    """Wrapper function to make GET calls using requests
-
-    Arguments:
-        endpoint {url} -- url to target for the resource
-        params {dict} -- key-value pairs to parameters to add to call
-
-    Returns:
-        JSON -- json response data for GET call
-    """
-    resp = requests.get(url, auth=auth, headers=HEADERS, params=params, verify=verify)
-    if resp.ok:
-        return resp.json()
-    resp.raise_for_status()
-
-
-def build_url(host, endpoint,  port=443):
-    """ Simple function to build the URLs
-    Arguments:
-        host {str]} -- This is the hostname of IP address
-        port {int} -- port number to connect to (default: 443)
-        endpoint {endpoint} -- the specific endpoint for the resource
-
-    Returns:
-        str -- the fully built url to make the make
-    """
-    url = f'https://{host}:{port}/restconf/data/{endpoint}'
-    return url
-
-
-def write_to_file(stem, content):
-    """Clean up and write content to file"""
-    filename = f'{OUTPUT_DIR}/{stem}.json'
-
-    with open(filename, 'w') as out:
-        output_string = json.dumps(content, indent=2)
-
-        # replace - with _ for Osiris compatibility
-        formatted_output = re.sub(r'-(?=.+\"\:)', r'_', output_string)
-        out.write(formatted_output)
+from utils import build_url, get_url, write_to_file, format_output
 
 
 def main():
     # load data from yaml file
     data = yaml.safe_load(Path('data.yaml').read_text())
+    output_dir = "output"
 
     # set some variables for us to use
     endpoint_data = data.get('endpoints')
@@ -83,8 +32,12 @@ def main():
 
         combined_data.update(json_data)
 
-    print(f'saving data to file: {ep_name}')
-    write_to_file('combined_output', combined_data)
+    outputfile_stem = "combined_output"
+
+    print(f'saving data to file: {outputfile_stem}.json')
+    input_string = json.dumps(combined_data, indent=2)
+    formatted_output = format_output(input_string)
+    write_to_file(outputfile_stem, formatted_output, output_dir=output_dir)
 
 
 if __name__ == '__main__':

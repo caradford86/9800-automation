@@ -2,3 +2,10 @@
 .vscode
 
 .venv
+*.local*
+__pycache__/
+
+# Ignore the contents of these folders
+
+input/*
+output/*
