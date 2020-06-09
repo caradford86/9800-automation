@@ -39,7 +39,7 @@ def main():
     if response is None:
         print(f"{url} is unavailable")
     else:
-        print(response.status_code)
+        print(f"{url} is responsive with {response.status_code}")
 
 
 if __name__ == "__main__":
