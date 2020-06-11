@@ -1,27 +1,27 @@
 import argparse
+import time
 
 from netmiko import ConnectHandler
 from netmiko import file_transfer
 import yaml
 
 from socket_check import socket_check
+from http_check import http_check
 from documentation import document
 
 
-DEVICEFILE = "config.yml"
+DEVICEFILE = "data.yaml"
 
 
 def reboot_device(conn):
-    print('reload initiated')
+    print('Reload initiated')
     output = conn.send_command_timing('reload', delay_factor=6)
-    print(output)
     if "confirm" in output:
-        print('sending new line')
         output += conn.send_command_timing(
             "\n", strip_command=False, strip_prompt=False
         )
     else:
-        print('prompt not detected')
+        print('Reloading')
 
 
 def parse_cli():
@@ -47,8 +47,9 @@ def main():
 
     # load device file
     with open(devicefile) as f:
-        device = yaml.safe_load(f.read())
-
+        data = yaml.safe_load(f.read())
+        device = data.get('controller')
+    
     # open SSH connection
     net_connect = ConnectHandler(**device)
 
@@ -56,35 +57,39 @@ def main():
     net_connect.send_config_set(['ip scp server enable'])
 
     # copy the configuration to flash
-    print('Transferring File')
+    print('Copying Translated_Config.cfg to flash')
     file_transfer(net_connect, source_file=inputfile, dest_file=destfile)
 
     # copy the file in flash to the startup-config and accept the prompt
     try:
-        print('copying file to startup')
+        print('Copying flash:Translated_Config.cfg to startup-config')
         output = net_connect.send_command_timing('copy flash:initial.cfg startup-config')
-        print(output)
         if "filename" in output:
-            print('sending new line')
             output += net_connect.send_command_timing(
                 "\n", strip_command=False, strip_prompt=False
             )
         else:
-            print('prompt not detected')
+            print('Translated_Config.cfg copied to startup-config successfully')
     except ValueError as error:
         if 'already exists' in str(error):
-            print('File already exists, please move or rename and run the script again')
+            print('File already present in controller flash, please move or rename and run the script again')
         else:
             raise error
 
     reboot_device(net_connect)
     net_connect.disconnect()
+    port = data.get('api_port')
+    protocol = 'https' if port == 443 else 'http'
+    url = f"{protocol}://{device['host']}"
+    headers = {
+    'content-type': 'application/yang-data+json',
+    'accept': 'application/yang-data+json'
+    }
+    nginx_is_up = http_check(url='https://10.1.1.111/restconf/data/ietf-yang-library:modules-state', headers=headers)
+    netconf_is_up = socket_check(ip=device['host'], port=830)
 
-    port_is_open = socket_check(device['host'], port=22, scan_timeout=300)
-
-    if port_is_open:
-        print('Device is up')
-        print('Verifying configuration')
+    if nginx_is_up and netconf_is_up:
+        print('Data collection initiated')
         document()
     else:
         print('Device did not come up before timeout expired')

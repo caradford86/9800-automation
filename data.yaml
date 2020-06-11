@@ -1,12 +1,15 @@
 ---
 # Set connection details for the controllers
-controller: 10.1.1.111
-port: 443
-username: cradford
-password: P@22w0rd!@
+controller:
+  host: 10.1.1.111
+  port: 22
+  device_type: 'cisco_xe'
+  username: cradford
+  password: P@22w0rd!@
 
 # ----------------- API ENDPOINTS --------------------------------
 
+api_port: 443
 endpoints:
   interfaces: Cisco-IOS-XE-interfaces-oper:interfaces/interface
   vlans: Cisco-IOS-XE-vlan-oper:vlans/vlan

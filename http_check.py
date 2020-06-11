@@ -1,6 +1,8 @@
 import requests
 from time import time, sleep
 
+requests.packages.urllib3.disable_warnings()
+
 
 def http_check(
     url='',
@@ -8,7 +10,7 @@ def http_check(
     headers='',
     params='',
     payload='',
-    scan_timeout=120,
+    scan_timeout=480,
     retry=1
 ):
     ''''
@@ -22,7 +24,8 @@ def http_check(
                 url=url,
                 headers=headers,
                 params=params,
-                json=payload)
+                json=payload,
+                verify=False)
             response.raise_for_status()
             return response
         except Exception as e:
@@ -34,7 +37,7 @@ def http_check(
 
 
 def main():
-    url = 'http://127.0.0.1:9000'
+    url = 'https://10.1.1.111'
     response = http_check(url=url, scan_timeout=10)
     if response is None:
         print(f"{url} is unavailable")

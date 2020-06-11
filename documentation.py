@@ -9,14 +9,15 @@ from utils import build_url, get_url, write_to_file, format_output
 def document():
     # load data from yaml file
     data = yaml.safe_load(Path('data.yaml').read_text())
-    output_dir = "output"
 
     # set some variables for us to use
+    output_dir = "output"
+    device = data.get('controller')
     endpoint_data = data.get('endpoints')
-    host = data.get('controller')
-    user = data.get('username')
-    pw = data.get('password')
-    port = data.get('port')
+    port = data.get('api_port')
+    host = device.get('host')
+    user = device.get('username')
+    pw = device.get('password')
 
     params = {"with-defaults": "report-all"}
 
