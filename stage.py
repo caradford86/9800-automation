@@ -1,13 +1,13 @@
 import argparse
-import time
+# import time
 
 from netmiko import ConnectHandler
 from netmiko import file_transfer
 import yaml
 
-from http_check import http_check
 from documentation import document
-
+from http_check import http_check
+from socket_check import socket_check
 
 DEVICEFILE = "data.yaml"
 
@@ -95,9 +95,9 @@ def main():
         headers=headers,
         auth=auth
     )
+    netconf_is_up = socket_check(ip=device['host'], port=830)
 
-    if nginx_is_up:
-        time.sleep(20)
+    if nginx_is_up and netconf_is_up:
         print('Data collection initiated')
         document()
     else:
