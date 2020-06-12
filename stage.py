@@ -1,5 +1,5 @@
 import argparse
-# import time
+import time
 
 from netmiko import ConnectHandler
 from netmiko import file_transfer
@@ -77,7 +77,7 @@ def main():
 
     reboot_device(net_connect)
     net_connect.disconnect()
-
+    time.sleep(10)
     port = data.get('api_port')
     protocol = 'https' if port == 443 else 'http'
     url = f"{protocol}://{device['host']}"
