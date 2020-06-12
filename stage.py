@@ -1,4 +1,5 @@
 import argparse
+import time
 
 from netmiko import ConnectHandler
 from netmiko import file_transfer
@@ -96,6 +97,7 @@ def main():
     )
 
     if nginx_is_up:
+        time.sleep(20)
         print('Data collection initiated')
         document()
     else:
