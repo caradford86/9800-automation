@@ -1,11 +1,9 @@
 import argparse
-import time
 
 from netmiko import ConnectHandler
 from netmiko import file_transfer
 import yaml
 
-from socket_check import socket_check
 from http_check import http_check
 from documentation import document
 
@@ -49,7 +47,7 @@ def main():
     with open(devicefile) as f:
         data = yaml.safe_load(f.read())
         device = data.get('controller')
-    
+
     # open SSH connection
     net_connect = ConnectHandler(**device)
 
@@ -78,17 +76,26 @@ def main():
 
     reboot_device(net_connect)
     net_connect.disconnect()
+
     port = data.get('api_port')
     protocol = 'https' if port == 443 else 'http'
     url = f"{protocol}://{device['host']}"
+    endpoint = data.get('check_endpoint', '/restconf/data/ietf-yang-library:modules-state')
     headers = {
-    'content-type': 'application/yang-data+json',
-    'accept': 'application/yang-data+json'
+        'content-type': 'application/yang-data+json',
+        'accept': 'application/yang-data+json'
     }
-    nginx_is_up = http_check(url='https://10.1.1.111/restconf/data/ietf-yang-library:modules-state', headers=headers)
-    netconf_is_up = socket_check(ip=device['host'], port=830)
+    username = device.get('username')
+    pw = device.get('password')
+    auth = (username, pw)
 
-    if nginx_is_up and netconf_is_up:
+    nginx_is_up = http_check(
+        url=f"{url}{endpoint}",
+        headers=headers,
+        auth=auth
+    )
+
+    if nginx_is_up:
         print('Data collection initiated')
         document()
     else:

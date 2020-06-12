@@ -10,6 +10,7 @@ def http_check(
     headers='',
     params='',
     payload='',
+    auth='',
     scan_timeout=480,
     retry=1
 ):
@@ -25,6 +26,7 @@ def http_check(
                 headers=headers,
                 params=params,
                 json=payload,
+                auth=auth,
                 verify=False)
             response.raise_for_status()
             return response
