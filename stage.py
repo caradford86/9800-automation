@@ -90,7 +90,7 @@ def main():
     pw = device.get('password')
     auth = (username, pw)
 
-    # netconf_is_up = socket_check(ip=device['host'], port=830)
+    netconf_is_up = socket_check(ip=device['host'], port=830)
 
     nginx_is_up = http_check(
         url=f"{url}{endpoint}",
@@ -98,7 +98,7 @@ def main():
         auth=auth
     )
 
-    if nginx_is_up:
+    if nginx_is_up and netconf_is_up:
         print('Data collection initiated')
         document()
     else:
