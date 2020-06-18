@@ -37,8 +37,7 @@ def http_check(
         except Exception as e:
             scan_timeout = scan_timeout - retry
             if counter == message_to_display:
-                print(f"{url} reports {str(e)}..sleeping for {retry} "
-                      f"seconds ({scan_timeout} seconds left)")
+                print("Waiting for device to respond")
                 counter = 1
             else:
                 counter += 1

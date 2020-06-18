@@ -35,7 +35,7 @@ def socket_check(ip, port=22, socket_timeout=1, scan_timeout=400, retry=1, messa
             return True
         except Exception as e:
             if counter == message_to_display:
-                print(f"Sleeping for {retry} because of {e}")
+                print(f"Waiting for device to respond")
                 counter = 1
             else:
                 counter += 1
