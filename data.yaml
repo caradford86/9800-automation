@@ -7,9 +7,18 @@ controller:
   username: cradford
   password: P@22w0rd!@
 
+interface_information:
+  description: MANAGEMENT_NETWORK
+  vlan: 888
+  subnet_mask: 255.255.255.0
+  gateway: 10.1.1.01
+
 # ----------------- API ENDPOINTS --------------------------------
 
 api_port: 443
+services:
+  restconf_enabled: True
+  netconf_enabled: True
 endpoints:
   interfaces: Cisco-IOS-XE-interfaces-oper:interfaces/interface
   vlans: Cisco-IOS-XE-vlan-oper:vlans/vlan

@@ -6,8 +6,10 @@ from netmiko import file_transfer
 import yaml
 
 from documentation import document
-from http_check import http_check
-from socket_check import socket_check
+# from http_check import http_check
+# from socket_check import socket_check
+from utils import create_templates, write_template_to_config, \
+                  socket_check, http_check
 
 DEVICEFILE = "data.yaml"
 
@@ -26,7 +28,7 @@ def reboot_device(conn):
 def parse_cli():
     parser = argparse.ArgumentParser(description='Configure WLC')
     parser.add_argument('-c', '--config',
-                        help='Path to staging WLC config file [config.yml]',
+                        help='Path to staging WLC config file [data.yml]',
                         default=DEVICEFILE)
     parser.add_argument('-i', '--input-file',
                         help='Path to Translated_Config file [Translated_Config.cfg]',
@@ -34,6 +36,12 @@ def parse_cli():
     parser.add_argument('-d', '--dest-file',
                         help='Output filename',
                         default='initial.cfg')
+    parser.add_argument('-t', '--template',
+                        help='Jinja Template',
+                        default='templates/config_additions.j2')
+    parser.add_argument('-r', '--rendered-config',
+                        help='Final configuration file',
+                        default='input/rendered_config.cg')
     args = parser.parse_args()
     return args
 
@@ -43,11 +51,16 @@ def main():
     devicefile = cli_args.config
     inputfile = cli_args.input_file
     destfile = cli_args.dest_file
+    jinja_template = cli_args.template
+    rendered_config = cli_args.rendered_config
 
     # load device file
     with open(devicefile) as f:
         data = yaml.safe_load(f.read())
         device = data.get('controller')
+
+    config_snippet = create_templates(jinja_template, data)
+    write_template_to_config(inputfile, config_snippet, rendered_config)
 
     # open SSH connection
     net_connect = ConnectHandler(**device)
@@ -57,7 +70,7 @@ def main():
 
     # copy the configuration to flash
     print('Copying Translated_Config.cfg to flash')
-    file_transfer(net_connect, source_file=inputfile, dest_file=destfile)
+    file_transfer(net_connect, source_file=rendered_config, dest_file=destfile)
 
     # copy the file in flash to the startup-config and accept the prompt
     try:
