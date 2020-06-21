@@ -64,6 +64,19 @@ def format_output(input_string):
 
 
 def create_templates(jinja_template, data):
+    '''
+    Create Template
+
+    This function will use jinja templating to create a config snippet.
+
+    Args:
+        jinja_template(str): Filename of the jinja template.
+        data(dict): Dictionary that contains the data used by the jinja
+                    template.
+
+    Returns:
+        String. This is the rendered template.
+    '''
     with open(jinja_template) as f:
         template = Template(f.read())
         config_snippet = template.render(data)
@@ -71,6 +84,19 @@ def create_templates(jinja_template, data):
 
 
 def write_template_to_config(inputfile, config_snippet, rendered_config):
+    '''
+    Write Template
+
+    This function will merge two files and create a new file.
+
+    Args:
+        inputfule(str): Filename of the original file.
+        config_snippet(str): Rendered template.
+        rendered_config(str): Filename of the merged file.
+
+    Returns:
+        None
+    '''
     with open(inputfile) as f:
         input_data = f.read()
     input_data += config_snippet
@@ -78,7 +104,14 @@ def write_template_to_config(inputfile, config_snippet, rendered_config):
         f.write(input_data)
 
 
-def socket_check(ip, port=22, socket_timeout=1, scan_timeout=400, retry=1, message_to_display=10):
+def socket_check(
+    ip,
+    port=22,
+    socket_timeout=1,
+    scan_timeout=400,
+    retry=1,
+    message_to_display=10
+):
     '''
     Socket Check
 
@@ -93,6 +126,10 @@ def socket_check(ip, port=22, socket_timeout=1, scan_timeout=400, retry=1, messa
         scan_timeout(int): Amount of time in seconds to scan the device.
         retry(int): Amount of time in seconds to wait before trying to
                     scan the device again.
+        message_to_display(int): Only display the message to the screen once
+                                 this number has been reached. This is to
+                                 cut down on the verbosity of messages to
+                                 screen.
     Returns:
         Boolean. True if port becomes responsive during the scan_timeout.
                  False is scan_timeout is reached and device is still
@@ -134,7 +171,34 @@ def http_check(
     message_to_display=10
 ):
     ''''
+    HTTP Check
 
+    This function will continually check a URL for the status code. If the
+    status code is non-200 it will continue to check until the website
+    returns a 200 level status code, or the max time has been reached.
+
+    Args:
+        url(str): URL to check
+        http_verb(str): URL ver (get, post, put, patch, delete, etc)
+        headers(str): http headers to send
+        params(str): http parameters
+        payload(str): http payload
+        auth(str): http authentication
+        timeout(int): http timeout. Default to 1 second.
+        scan_timeout(int): Amount of time in seconds to retry before
+                           website is considered unresponsive.
+        retry(int): Amount of time to wait before retrying.
+        message_to_display(int): Only display the message to the screen once
+                                 this number has been reached. This is to
+                                 cut down on the verbosity of messages to
+                                 screen.
+    Returns:
+        Boolean. True if port becomes responsive during the scan_timeout.
+                 False is scan_timeout is reached and device is still
+                   unresponsive.
+
+    Outputs:
+        None
     '''
     end_time = time() + scan_timeout
     counter = 1
