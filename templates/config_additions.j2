@@ -1,0 +1,20 @@
+{% if interface_information is defined -%}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Network Management VLAN
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+interface vlan {{ interface_information.vlan }}
+  description {{ interface_information.description }}
+  ip address {{ controller.host }} {{ interface_information.subnet_mask }}
+  no shutdown
+{% endif %}
+{% if services is defined -%}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Enable Network Services
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+{% if services.restconf_enabled -%}
+(enable restconfig command)
+{% endif -%}
+{% if services.netconf_enabled -%}
+(enable netconf comman)
+{% endif -%}
+{% endif %}
