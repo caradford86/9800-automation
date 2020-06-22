@@ -7,6 +7,12 @@ interface vlan {{ interface_information.vlan }}
   ip address {{ controller.host }} {{ interface_information.subnet_mask }}
   no shutdown
 {% endif %}
+{% if interface_information.gateway %}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Default Gateway
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ip route 0.0.0.0 0.0.0.0 {{ interface_information.gateway }}
+{%endif %}
 {% if services is defined -%}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Enable Network Services
