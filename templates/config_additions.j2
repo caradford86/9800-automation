@@ -7,7 +7,7 @@ interface vlan {{ interface_information.vlan }}
   ip address {{ controller.host }} {{ interface_information.subnet_mask }}
   no shutdown
 {% endif %}
-{% if interface_information.gateway %}
+{% if interface_information.gateway -%}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Default Gateway
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
