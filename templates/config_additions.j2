@@ -21,6 +21,6 @@ ip route 0.0.0.0 0.0.0.0 {{ interface_information.gateway }}
 netconf-yang
 {% endif -%}
 {% if services.netconf_enabled -%}
-restconf-yang
+restconf
 {% endif -%}
 {% endif %}
