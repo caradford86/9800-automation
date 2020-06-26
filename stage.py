@@ -41,7 +41,7 @@ def parse_cli():
                         default='templates/config_additions.j2')
     parser.add_argument('-r', '--rendered-config',
                         help='Final configuration file',
-                        default='input/rendered_config.cg')
+                        default='input/rendered_config.cfg')
     args = parser.parse_args()
     return args
 

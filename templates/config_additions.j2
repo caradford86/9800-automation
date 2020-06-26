@@ -18,9 +18,9 @@ ip route 0.0.0.0 0.0.0.0 {{ interface_information.gateway }}
 ! Enable Network Services
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 {% if services.restconf_enabled -%}
-(enable restconfig command)
+netconf-yang
 {% endif -%}
 {% if services.netconf_enabled -%}
-(enable netconf comman)
+restconf-yang
 {% endif -%}
 {% endif %}
