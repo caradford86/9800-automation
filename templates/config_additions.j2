@@ -2,6 +2,8 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Network Management VLAN
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+vlan {{ interface_information.vlan }}
+  name {{ interface_information.description }}
 interface vlan {{ interface_information.vlan }}
   description {{ interface_information.description }}
   ip address {{ controller.host }} {{ interface_information.subnet_mask }}
@@ -24,3 +26,12 @@ netconf-yang
 restconf
 {% endif -%}
 {% endif %}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! AAA Method List
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+aaa authentication login default {{ aaa_method_list_order.authentication }}
+aaa authentication login NOAUTH none
+aaa authorization exec default {{ aaa_method_list_order.authorization }}
+line con 0
+ login authentication NOAUTH
+username {{ controller.username }} privilege 15 password 0 {{ controller.password }}
