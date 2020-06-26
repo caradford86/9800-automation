@@ -8,6 +8,7 @@ interface vlan {{ interface_information.vlan }}
   description {{ interface_information.description }}
   ip address {{ controller.host }} {{ interface_information.subnet_mask }}
   no shutdown
+wireless management interface Vlan{{ interface_information.vlan }}
 {% endif %}
 {% if interface_information.gateway -%}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -34,4 +35,7 @@ aaa authentication login NOAUTH none
 aaa authorization exec default {{ aaa_method_list_order.authorization }}
 line con 0
  login authentication NOAUTH
-username {{ controller.username }} privilege 15 password 0 {{ controller.password }}
+user-name {{ controller.username }}
+ privilege 15
+ password 0 {{ controller.password }}
+ type mgmt-user
