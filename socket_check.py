@@ -2,7 +2,7 @@ import socket
 from time import time, sleep
 
 
-def socket_check(ip, port=22, socket_timeout=1, scan_timeout=400, retry=1):
+def socket_check(ip, port=22, socket_timeout=1, scan_timeout=400, retry=1, message_to_display=10):
     '''
     Socket Check
 
@@ -26,6 +26,7 @@ def socket_check(ip, port=22, socket_timeout=1, scan_timeout=400, retry=1):
         None
     '''
     end_time = time() + scan_timeout
+    counter = 1
     while end_time > time():
         try:
             a_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -33,8 +34,11 @@ def socket_check(ip, port=22, socket_timeout=1, scan_timeout=400, retry=1):
             a_socket.connect((ip, port))
             return True
         except Exception as e:
-            print(str(e))
-            print(f"{ip}:{port} not open..sleep for {retry} seconds")
+            if counter == message_to_display:
+                print("Waiting for device to respond")
+                counter = 1
+            else:
+                counter += 1
             sleep(retry)
         finally:
             a_socket.close()
@@ -44,7 +48,7 @@ def socket_check(ip, port=22, socket_timeout=1, scan_timeout=400, retry=1):
 def main():
     ip = '127.0.0.1'
     port = 9000
-    response = socket_check(ip, port, scan_timeout=10)
+    response = socket_check(ip, port, scan_timeout=100)
     if response:
         print(f"{ip}:{port} is responsive")
     else:

@@ -1,0 +1,41 @@
+{% if interface_information is defined -%}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Network Management VLAN
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+vlan {{ interface_information.vlan }}
+  name {{ interface_information.description }}
+interface vlan {{ interface_information.vlan }}
+  description {{ interface_information.description }}
+  ip address {{ controller.host }} {{ interface_information.subnet_mask }}
+  no shutdown
+wireless management interface Vlan{{ interface_information.vlan }}
+{% endif %}
+{% if interface_information.gateway -%}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Default Gateway
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ip route 0.0.0.0 0.0.0.0 {{ interface_information.gateway }}
+{%endif %}
+{% if services is defined -%}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Enable Network Services
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+{% if services.restconf_enabled -%}
+netconf-yang
+{% endif -%}
+{% if services.netconf_enabled -%}
+restconf
+{% endif -%}
+{% endif %}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! AAA Method List
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+aaa authentication login default {{ aaa_method_list_order.authentication }}
+aaa authentication login NOAUTH none
+aaa authorization exec default {{ aaa_method_list_order.authorization }}
+line con 0
+ login authentication NOAUTH
+user-name {{ controller.username }}
+ privilege 15
+ password 0 {{ controller.password }}
+ type mgmt-user
