@@ -2,7 +2,7 @@ import re
 import socket
 from time import time, sleep
 
-from jinja2 import Template
+from jinja2 import Environment, FileSystemLoader
 import requests
 
 requests.packages.urllib3.disable_warnings()
@@ -77,9 +77,14 @@ def create_templates(jinja_template, data):
     Returns:
         String. This is the rendered template.
     '''
-    with open(jinja_template) as f:
-        template = Template(f.read())
-        config_snippet = template.render(data)
+    # with open(jinja_template) as f:
+    # stream = f.read()
+    # print(stream)
+    env = Environment(loader=FileSystemLoader('.'))
+    template = env.get_template(jinja_template)
+
+    # template = Template(f.read())
+    config_snippet = template.render(data)
     return config_snippet
 
 
@@ -102,7 +107,6 @@ def write_template_to_config(inputfile, config_snippet, rendered_config):
     input_data += config_snippet
     with open(rendered_config, 'w') as f:
         f.write(input_data)
-
 
 def socket_check(
     ip,

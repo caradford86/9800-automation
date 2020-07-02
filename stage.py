@@ -38,7 +38,7 @@ def parse_cli():
                         default='initial.cfg')
     parser.add_argument('-t', '--template',
                         help='Jinja Template',
-                        default='templates/config_additions.j2')
+                        default='templates/final_config.j2')
     parser.add_argument('-r', '--rendered-config',
                         help='Final configuration file',
                         default='input/rendered_config.cfg')
@@ -54,13 +54,15 @@ def main():
     jinja_template = cli_args.template
     rendered_config = cli_args.rendered_config
 
+    print(jinja_template)
     # load device file
     with open(devicefile) as f:
         data = yaml.safe_load(f.read())
         device = data.get('controller')
 
     config_snippet = create_templates(jinja_template, data)
-    write_template_to_config(inputfile, config_snippet, rendered_config)
+    with open(rendered_config, 'w') as f:
+        f.write(config_snippet)
 
     # open SSH connection
     net_connect = ConnectHandler(**device)
