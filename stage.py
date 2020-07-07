@@ -54,7 +54,6 @@ def main():
     jinja_template = cli_args.template
     rendered_config = cli_args.rendered_config
 
-    print(jinja_template)
     # load device file
     with open(devicefile) as f:
         data = yaml.safe_load(f.read())
