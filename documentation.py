@@ -3,7 +3,7 @@ from pathlib import Path
 
 import yaml
 
-from utils import build_url, get_url, write_to_file, format_output
+from utils import build_url, get_url, write_to_file, format_output, normalize
 
 
 def document():
@@ -38,7 +38,9 @@ def document():
     print(f'saving data to file: {outputfile_stem}.json')
     input_string = json.dumps(combined_data, indent=2)
     formatted_output = format_output(input_string)
+    normalize(formatted_output)
     write_to_file(outputfile_stem, formatted_output, output_dir=output_dir)
+
 
 
 if __name__ == '__main__':
