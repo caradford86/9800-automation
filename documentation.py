@@ -30,7 +30,6 @@ def document():
 
         print(f'retrieving data for: {ep_name}')
         json_data = get_url(url, auth=(user, pw), params=params)
-
         combined_data.update(json_data)
 
     outputfile_stem = "combined_output"

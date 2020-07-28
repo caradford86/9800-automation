@@ -114,6 +114,7 @@ def main():
 
     if nginx_is_up and netconf_is_up:
         print('Data collection initiated')
+        time.sleep(5)
         document()
     else:
         print('Device did not come up before timeout expired')

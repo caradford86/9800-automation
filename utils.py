@@ -233,7 +233,7 @@ def http_check(
             sleep(retry)
     return None
 
-def normalize(inputfile):
+def normalize(combined_string):
     # this code will format json data to make it easier to access in osiris
 
     # create a dictionary of various wlc data components
@@ -241,14 +241,12 @@ def normalize(inputfile):
         'acls': {},
         'snmp': {}
     }
-
+    combined_output = json.loads(combined_string)
     # read in json data to a string variable
-    # combined_output_str = Path('combined_output.json').read_text()
 
     # load the string variable into json
-    combined_output = inputfile
-
     # add a new key to the wlcdata nested dictionary and load the value with the data from combined_output 
+    # print(combined_output['Cisco_IOS_XE_native:snmp_server'])
     wlcdata['snmp']['community'] = combined_output['Cisco_IOS_XE_native:snmp_server']['Cisco_IOS_XE_snmp:community']
     wlcdata['snmp']['host_config'] = combined_output['Cisco_IOS_XE_native:snmp_server']['Cisco_IOS_XE_snmp:host_config']
     wlcdata['acls']['extacl'] = combined_output['Cisco_IOS_XE_native:access_list']['Cisco_IOS_XE_acl:extended']
@@ -262,7 +260,7 @@ def normalize(inputfile):
             community['access_mode'] = 'RW'
 
     # add a new 'type' key to the community dict with the value in wlcdata
-    snmp_hosts = wlcdata['snmp']['host_config']['ip_community_port']
+    snmp_hosts = wlcdata['snmp']['host_config'].get('ip_community_port', [])
     for host in snmp_hosts:
         if host.get('informs'):
             host['type'] = 'informs'

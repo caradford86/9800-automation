@@ -42,3 +42,4 @@ endpoints:
   radius: Cisco-IOS-XE-native:native/radius
   tacacs: Cisco-IOS-XE-native:native/tacacs
   acl: Cisco-IOS-XE-native:native/ip/access-list
+  config: Cisco-IOS-XE-native:native
