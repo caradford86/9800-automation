@@ -8,7 +8,7 @@ from utils import build_url, get_url, write_to_file, format_output, normalize
 
 def document():
     # load data from yaml file
-    data = yaml.safe_load(Path('data.yaml').read_text())
+    data = yaml.safe_load(Path('input/data.yaml').read_text())
 
     # set some variables for us to use
     output_dir = "output"
