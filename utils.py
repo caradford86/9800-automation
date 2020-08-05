@@ -375,5 +375,4 @@ def normalize(combined_string):
     combined_output.update(wlcdata)
 
     # write combined_output variable to normalized_output file
-    with open('normalized_output.json', 'w') as outfile:
-        json.dump(combined_output, outfile)
+    return json.dumps(combined_output)
