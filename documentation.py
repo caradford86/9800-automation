@@ -37,10 +37,8 @@ def document():
     print(f'saving data to file: {outputfile_stem}.json')
     input_string = json.dumps(combined_data, indent=2)
     formatted_output = format_output(input_string)
-    normalize(formatted_output)
-    write_to_file(outputfile_stem, formatted_output, output_dir=output_dir)
-
-
+    normalize_output = normalize(formatted_output)
+    write_to_file(outputfile_stem, normalize_output, output_dir=output_dir)
 
 if __name__ == '__main__':
     document()
