@@ -271,7 +271,9 @@ def normalize(combined_string):
     version = combined_output.get('version')
     if version:
         minor_version = version.split('.')[-1]
-
+    else:
+        minor_version = '3'
+        
     # add a new 'type' key to the community dict with the value in wlcdata
     if minor_version < '3':
         snmp_hosts = wlcdata['snmp']['host_config'].get('ip_community_port') or []
