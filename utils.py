@@ -20,7 +20,7 @@ HEADERS = {
 }
 
 
-def get_url(url, auth=None, params={}, verify=False):
+def get_url(url, auth=None, params={}, verify=False, ep_name=''):
     """Wrapper function to make GET calls using requests
 
     Arguments:
@@ -30,6 +30,7 @@ def get_url(url, auth=None, params={}, verify=False):
     Returns:
         JSON -- json response data for GET call
     """
+    try:
     resp = requests.get(
         url,
         auth=auth,
@@ -39,6 +40,10 @@ def get_url(url, auth=None, params={}, verify=False):
     if resp.ok:
         return resp.json()
     resp.raise_for_status()
+
+    except json.decoder.JSONDecodeError:
+        print(f'No data present for {ep_name}')
+        return {}
 
 
 def build_url(host, endpoint,  port=443):
