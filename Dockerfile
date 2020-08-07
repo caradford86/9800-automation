@@ -6,6 +6,7 @@ WORKDIR /wlc
 
 ENV PYTHONUNBUFFERED='true'
 ENV DEBIAN_FRONTEND=noninteractive
+ENV NET_TEXTFSM=./ntc-templates/templates
 
 # Install Linux packages
 RUN apt-get update \
