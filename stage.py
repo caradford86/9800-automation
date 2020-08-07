@@ -11,7 +11,7 @@ from documentation import document
 from utils import create_templates, write_template_to_config, \
                   socket_check, http_check
 
-DEVICEFILE = "data.yaml"
+DEVICEFILE = "input/data.yaml"
 
 
 def reboot_device(conn):

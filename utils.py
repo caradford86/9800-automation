@@ -20,7 +20,7 @@ HEADERS = {
 }
 
 
-def get_url(url, auth=None, params={}, verify=False):
+def get_url(url, auth=None, params={}, verify=False, ep_name=''):
     """Wrapper function to make GET calls using requests
 
     Arguments:
@@ -30,15 +30,20 @@ def get_url(url, auth=None, params={}, verify=False):
     Returns:
         JSON -- json response data for GET call
     """
-    resp = requests.get(
-        url,
-        auth=auth,
-        headers=HEADERS,
-        params=params,
-        verify=verify)
-    if resp.ok:
-        return resp.json()
-    resp.raise_for_status()
+    try:
+        resp = requests.get(
+            url,
+            auth=auth,
+            headers=HEADERS,
+            params=params,
+            verify=verify)
+        if resp.ok:
+            return resp.json()
+        resp.raise_for_status()
+    
+    except json.decoder.JSONDecodeError:
+        print(f'No data present for {ep_name}')
+        return {}
 
 
 def build_url(host, endpoint,  port=443):
@@ -244,27 +249,39 @@ def normalize(combined_string):
     combined_output = json.loads(combined_string)
     # read in json data to a string variable
 
-    # load the string variable into json
     # add a new key to the wlcdata nested dictionary and load the value with the data from combined_output 
-    # print(combined_output['Cisco_IOS_XE_native:snmp_server'])
-    wlcdata['snmp']['community'] = combined_output['Cisco_IOS_XE_native:snmp_server']['Cisco_IOS_XE_snmp:community']
-    wlcdata['snmp']['host_config'] = combined_output['Cisco_IOS_XE_native:snmp_server']['Cisco_IOS_XE_snmp:host_config']
-    wlcdata['acls']['extacl'] = combined_output['Cisco_IOS_XE_native:access_list']['Cisco_IOS_XE_acl:extended']
+    wlcdata['snmp'] = combined_output.get('Cisco_IOS_XE_native:snmp_server') or {}
+    wlcdata['snmp']['community'] = wlcdata['snmp'].get('Cisco_IOS_XE_snmp:community')
+
+    snmp_host_cfg = wlcdata['snmp'].get('Cisco_IOS_XE_snmp:host_config')
+    if snmp_host_cfg is None:
+        snmp_host_cfg = wlcdata['snmp'].get('Cisco_IOS_XE_snmp:host')
+    wlcdata['snmp']['host_config'] = snmp_host_cfg
+    wlcdata['acls']['extacl'] = combined_output['Cisco_IOS_XE_native:access_list'].get('Cisco_IOS_XE_acl:extended')
 
     # add a new 'access_mode' key to the community dict with the value in wlcdata
-    communities = wlcdata['snmp']['community']
+    communities = wlcdata['snmp'].get('community') or []
     for community in communities:
         if community.get('RO'):
             community['access_mode'] = 'RO'
         elif community.get('RW'):
             community['access_mode'] = 'RW'
 
+
+    version = combined_output.get('version')
+    if version:
+        minor_version = version.split('.')[-1]
+
     # add a new 'type' key to the community dict with the value in wlcdata
-    snmp_hosts = wlcdata['snmp']['host_config'].get('ip_community_port', [])
+    if minor_version < '3':
+        snmp_hosts = wlcdata['snmp']['host_config'].get('ip_community_port') or []
+    else:
+        snmp_hosts = snmp_host_cfg or []
+    
     for host in snmp_hosts:
-        if host.get('informs'):
+        if isinstance(host, dict) and host.get('informs'):
             host['type'] = 'informs'
-        else:
+        elif isinstance(host, dict):
             host['type'] = 'traps'
 
     # format acl data based on source address
@@ -375,5 +392,4 @@ def normalize(combined_string):
     combined_output.update(wlcdata)
 
     # write combined_output variable to normalized_output file
-    with open('normalized_output.json', 'w') as outfile:
-        json.dump(combined_output, outfile)
+    return json.dumps(combined_output)

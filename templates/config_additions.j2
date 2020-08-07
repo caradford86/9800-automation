@@ -12,6 +12,15 @@ wireless management interface Vlan{{ interface_information.vlan }}
 {% endif %}
 {% if interface_information.gateway -%}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Interface Configuration
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+interface {{ interface_information.phy_int }}
+  switchport mode trunk
+  no shutdown
+wireless management interface Vlan{{ interface_information.vlan }}
+{% endif %}
+{% if interface_information.gateway -%}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Default Gateway
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ip route 0.0.0.0 0.0.0.0 {{ interface_information.gateway }}
