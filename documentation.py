@@ -29,7 +29,7 @@ def document():
         url = build_url(host, ep_value, port=port)
 
         print(f'retrieving data for: {ep_name}')
-        json_data = get_url(url, auth=(user, pw), params=params)
+        json_data = get_url(url, auth=(user, pw), params=params, ep_name=ep_name)
         combined_data.update(json_data)
 
     outputfile_stem = "combined_output"
