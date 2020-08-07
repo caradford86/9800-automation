@@ -1,26 +1,26 @@
 ---
-# Set connection details for the controllers
+# ----------------- Staging WLC Configuration *edit before running* --------------------------------
 controller:
-  host: 1.1.1.2
+  host: 1.1.1.2                         # update address according to network in staging environment
   port: 22
   device_type: 'cisco_xe'
-  username: username
+  username: username                    # update credentials according to staging environment
   password: password
 
-software_version: '16.12.3'
+software_version: '16.12.3'             # update version according to staging environment
 
-interface_information:
+interface_information:                  # update interface details according to platform used in staging environment
   description: MANAGEMENT_NETWORK
   vlan: 100
   subnet_mask: 255.255.255.0
   gateway: 1.1.1.1
-  phy_int: 'Gigabit Ethernet 1'
+  phy_int: 'Gigabit Ethernet 1'         # update to the correct interface naming convention for the platform in use
 
 aaa_method_list_order:
   authentication: 'local group radius'
   authorization: 'local group radius'
 
-# ----------------- API ENDPOINTS --------------------------------
+# ----------------- API ENDPOINTS - *do not edit* --------------------------------
 
 api_port: 443
 services:
