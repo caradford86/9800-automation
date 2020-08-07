@@ -1,0 +1,28 @@
+  
+name: Docker Image CI
+
+on:
+  pull_request:
+    branches:
+      - '!master'
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login to DockerHub Registry
+      run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+    - name: Get the version
+      id: vars
+      run: echo ::set-output name=sha_short::$(git rev-parse --short HEAD)
+    - name: Build the tagged Docker image
+      run: docker build . --tag wwt01/c9k_auto:${{steps.vars.outputs.sha_short}}
+    - name: Push the tagged Docker image
+      run: docker push wwt01/c9k_auto:${{steps.vars.outputs.sha_short}}
+    - name: Build the latest Docker image
+      run: docker build . --tag wwt01/c9k_auto:latest
+    - name: Push the latest Docker image
+      run: docker push wwt01/c9k_auto:latest
