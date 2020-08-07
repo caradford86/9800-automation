@@ -6,13 +6,14 @@ import yaml
 from utils import build_url, get_url, write_to_file, format_output, normalize
 
 
-def document():
+def document(context={}):
     # load data from yaml file
     data = yaml.safe_load(Path('input/data.yaml').read_text())
-
+        
     # set some variables for us to use
     output_dir = "output"
     device = data.get('controller')
+    version = data.get('software_version')
     endpoint_data = data.get('endpoints')
     port = data.get('api_port')
     host = device.get('host')
@@ -25,6 +26,12 @@ def document():
     # for example: vlans: Cisco-IOS-XE-vlan-oper:vlans/vlan
     # in which case, ep_name = 'vlans' and ep_value = 'Cisco-IOS-XE-vlan-oper:vlans/vlan'
     combined_data = {}
+    if context:
+        combined_data.update(context)
+
+    if version:
+        combined_data.update({'version':version})
+
     for ep_name, ep_value in endpoint_data.items():
         url = build_url(host, ep_value, port=port)
 
