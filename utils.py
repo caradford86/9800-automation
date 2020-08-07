@@ -2,7 +2,11 @@ import re
 import socket
 from time import time, sleep
 
-from jinja2 import Template
+from pathlib import Path
+from pprint import pprint
+import json
+
+from jinja2 import Environment, FileSystemLoader
 import requests
 
 requests.packages.urllib3.disable_warnings()
@@ -16,7 +20,7 @@ HEADERS = {
 }
 
 
-def get_url(url, auth=None, params={}, verify=False):
+def get_url(url, auth=None, params={}, verify=False, ep_name=''):
     """Wrapper function to make GET calls using requests
 
     Arguments:
@@ -26,15 +30,20 @@ def get_url(url, auth=None, params={}, verify=False):
     Returns:
         JSON -- json response data for GET call
     """
-    resp = requests.get(
-        url,
-        auth=auth,
-        headers=HEADERS,
-        params=params,
-        verify=verify)
-    if resp.ok:
-        return resp.json()
-    resp.raise_for_status()
+    try:
+        resp = requests.get(
+            url,
+            auth=auth,
+            headers=HEADERS,
+            params=params,
+            verify=verify)
+        if resp.ok:
+            return resp.json()
+        resp.raise_for_status()
+    
+    except json.decoder.JSONDecodeError:
+        print(f'No data present for {ep_name}')
+        return {}
 
 
 def build_url(host, endpoint,  port=443):
@@ -77,9 +86,14 @@ def create_templates(jinja_template, data):
     Returns:
         String. This is the rendered template.
     '''
-    with open(jinja_template) as f:
-        template = Template(f.read())
-        config_snippet = template.render(data)
+    # with open(jinja_template) as f:
+    # stream = f.read()
+    # print(stream)
+    env = Environment(loader=FileSystemLoader('.'))
+    template = env.get_template(jinja_template)
+
+    # template = Template(f.read())
+    config_snippet = template.render(data)
     return config_snippet
 
 
@@ -102,7 +116,6 @@ def write_template_to_config(inputfile, config_snippet, rendered_config):
     input_data += config_snippet
     with open(rendered_config, 'w') as f:
         f.write(input_data)
-
 
 def socket_check(
     ip,
@@ -224,3 +237,159 @@ def http_check(
                 counter += 1
             sleep(retry)
     return None
+
+def normalize(combined_string):
+    # this code will format json data to make it easier to access in osiris
+
+    # create a dictionary of various wlc data components
+    wlcdata = {
+        'acls': {},
+        'snmp': {}
+    }
+    combined_output = json.loads(combined_string)
+    # read in json data to a string variable
+
+    # add a new key to the wlcdata nested dictionary and load the value with the data from combined_output 
+    wlcdata['snmp'] = combined_output.get('Cisco_IOS_XE_native:snmp_server') or {}
+    wlcdata['snmp']['community'] = wlcdata['snmp'].get('Cisco_IOS_XE_snmp:community')
+
+    snmp_host_cfg = wlcdata['snmp'].get('Cisco_IOS_XE_snmp:host_config')
+    if snmp_host_cfg is None:
+        snmp_host_cfg = wlcdata['snmp'].get('Cisco_IOS_XE_snmp:host')
+    wlcdata['snmp']['host_config'] = snmp_host_cfg
+    wlcdata['acls']['extacl'] = combined_output['Cisco_IOS_XE_native:access_list'].get('Cisco_IOS_XE_acl:extended')
+
+    # add a new 'access_mode' key to the community dict with the value in wlcdata
+    communities = wlcdata['snmp'].get('community') or []
+    for community in communities:
+        if community.get('RO'):
+            community['access_mode'] = 'RO'
+        elif community.get('RW'):
+            community['access_mode'] = 'RW'
+
+
+    version = combined_output.get('version')
+    if version:
+        minor_version = version.split('.')[-1]
+
+    # add a new 'type' key to the community dict with the value in wlcdata
+    if minor_version < '3':
+        snmp_hosts = wlcdata['snmp']['host_config'].get('ip_community_port') or []
+    else:
+        snmp_hosts = snmp_host_cfg or []
+    
+    for host in snmp_hosts:
+        if isinstance(host, dict) and host.get('informs'):
+            host['type'] = 'informs'
+        elif isinstance(host, dict):
+            host['type'] = 'traps'
+
+    # format acl data based on source address
+
+    for acl in wlcdata['acls']['extacl']:
+        sequences = acl.get('access_list_seq_rule')
+        if sequences is not None:
+            for seq in sequences:
+                if seq['ace_rule'].get('any'):
+                    seq['source'] = 'any'
+                    seq['source_mask'] = '0.0.0.0'
+                elif seq['ace_rule'].get('host'):
+                    seq['source'] = seq['ace_rule'].get('host')
+                    seq['source_mask'] = '255.255.255.255'
+                elif seq['ace_rule'].get('ipv4_address'):
+                    seq['source'] = seq['ace_rule'].get('ipv4_address')
+                    seq['source_mask'] = seq['ace_rule'].get('mask')
+
+    # format acl data based on destination address
+    for acl in wlcdata['acls']['extacl']:
+        sequences = acl.get('access_list_seq_rule')
+        if sequences is not None:
+            for seq in sequences:
+                if seq['ace_rule'].get('dst_any'):
+                    seq['destination'] = 'any'
+                    seq['dest_mask'] = '0.0.0.0'
+                elif seq['ace_rule'].get('dst_host'):
+                    seq['destination'] = seq['ace_rule'].get('dst_host')
+                    seq['dest_mask'] = '255.255.255.255'
+                elif seq['ace_rule'].get('dest_ipv4_address'):
+                    seq['destination'] = seq['ace_rule'].get('dest_ipv4_address')
+                    seq['dest_mask'] = seq['ace_rule'].get('dest_mask')
+
+    # format acl data based on source port
+    for acl in wlcdata['acls']['extacl']:
+        sequences = acl.get('access_list_seq_rule')
+        if sequences is not None:
+            for seq in sequences:
+                if seq['ace_rule'].get('src_eq'):
+                    src_port = str(seq['ace_rule'].get('src_eq'))
+                    seq['src_port'] = f'eq {src_port}'
+                elif seq['ace_rule'].get('src_gt'):
+                    seq['src_port'] = 'gt ' + str(seq['ace_rule'].get('src_gt'))
+                elif seq['ace_rule'].get('src_lt'):
+                    seq['src_port'] = 'lt ' + str(seq['ace_rule'].get('src_lt'))
+                elif seq['ace_rule'].get('src_neq'):
+                    seq['src_port'] = 'neq ' + str(seq['ace_rule'].get('src_neq'))
+                elif seq['ace_rule'].get('src_range1'):
+                    seq['src_port'] = str(seq['ace_rule'].get('src_range1')) + ' - ' + str(seq['ace_rule'].get('src_range2'))
+                else:
+                    seq['src_port'] = ' '
+
+    # format acl data based on destination port
+    for acl in wlcdata['acls']['extacl']:
+        sequences = acl.get('access_list_seq_rule')
+        if sequences is not None:
+            for seq in sequences:
+                if seq['ace_rule'].get('dst_eq'):
+                    seq['dst_port'] = 'eq ' + str(seq['ace_rule'].get('dst_eq'))
+                elif seq['ace_rule'].get('dst_gt'):
+                    seq['dst_port'] = 'gt ' + str(seq['ace_rule'].get('dst_gt'))
+                elif seq['ace_rule'].get('dst_lt'):
+                    seq['dst_port'] = 'lt ' + str(seq['ace_rule'].get('dst_lt'))
+                elif seq['ace_rule'].get('dst_neq'):
+                    seq['dst_port'] = 'neq ' + str(seq['ace_rule'].get('dst_neq'))
+                elif seq['ace_rule'].get('dst_range1'):
+                    seq['dst_port'] = str(seq['ace_rule'].get('dst_range1')) + ' - ' + str(seq['ace_rule'].get('dst_range2'))
+                else:
+                    seq['dst_port'] = ' '
+
+    # add key for dscp
+    for acl in wlcdata['acls']['extacl']:
+        sequences = acl.get('access_list_seq_rule')
+        if sequences is not None:
+            for seq in sequences:
+                if seq['ace_rule'].get('dscp'):
+                    seq['dscp'] = seq['ace_rule'].get('dscp')
+                else:
+                    seq['dscp'] = 'None'
+
+    # add key for log
+    for acl in wlcdata['acls']['extacl']:
+        sequences = acl.get('access_list_seq_rule')
+        if sequences is not None:
+            for seq in sequences:
+                if seq['ace_rule'].get('log'):
+                    seq['log'] = 'Enabled'
+                else:
+                    seq['log'] = 'Disabled'
+
+    # add key for action
+    for acl in wlcdata['acls']['extacl']:
+        sequences = acl.get('access_list_seq_rule')
+        if sequences is not None:
+            for seq in sequences:
+                if seq['ace_rule'].get('action'):
+                    seq['action'] = seq['ace_rule'].get('action')
+
+    # add key for protocol
+    for acl in wlcdata['acls']['extacl']:
+        sequences = acl.get('access_list_seq_rule')
+        if sequences is not None:
+            for seq in sequences:
+                if seq['ace_rule'].get('protocol'):
+                    seq['protocol'] = seq['ace_rule'].get('protocol')
+
+    # add wlcdata to combined_output variable for single file load into osiris
+    combined_output.update(wlcdata)
+
+    # write combined_output variable to normalized_output file
+    return json.dumps(combined_output)

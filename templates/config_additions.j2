@@ -12,6 +12,15 @@ wireless management interface Vlan{{ interface_information.vlan }}
 {% endif %}
 {% if interface_information.gateway -%}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Interface Configuration
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+interface {{ interface_information.phy_int }}
+  switchport mode trunk
+  no shutdown
+wireless management interface Vlan{{ interface_information.vlan }}
+{% endif %}
+{% if interface_information.gateway -%}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Default Gateway
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ip route 0.0.0.0 0.0.0.0 {{ interface_information.gateway }}
@@ -33,6 +42,7 @@ restconf
 aaa authentication login default {{ aaa_method_list_order.authentication }}
 aaa authentication login NOAUTH none
 aaa authorization exec default {{ aaa_method_list_order.authorization }}
+ip http authentication local
 line con 0
  login authentication NOAUTH
 user-name {{ controller.username }}
