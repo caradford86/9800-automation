@@ -1,9 +1,9 @@
 ---
 # Set connection details for the controllers
-controller: 10.1.1.111
+controller: 1.1.1.1
 port: 443
-username: cradford
-password: P@22w0rd!@
+username: username
+password: password
 
 # ----------------- API ENDPOINTS --------------------------------
 
