@@ -14,7 +14,7 @@ interface_information:                  # update interface details according to 
   vlan: 100
   subnet_mask: 255.255.255.0
   gateway: 1.1.1.1
-  phy_int: 'Gigabit Ethernet 1'         # update to the correct interface naming convention for the platform in use
+  phy_int: 'GigabitEthernet 1'         # update to the correct interface naming convention for the platform in use
 
 aaa_method_list_order:
   authentication: 'local group radius'
