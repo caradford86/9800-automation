@@ -12,6 +12,7 @@ from utils import create_templates, write_template_to_config, \
                   socket_check, http_check
 
 DEVICEFILE = "input/data.yaml"
+NETMIKO_PARAMS = ['host', 'port', 'device_type', 'username', 'password']
 
 
 def reboot_device(conn):
@@ -64,7 +65,8 @@ def main():
         f.write(config_snippet)
 
     # open SSH connection
-    net_connect = ConnectHandler(**device)
+    conn_details = {key:value for key, value in device.items() if key in NETMIKO_PARAMS}
+    net_connect = ConnectHandler(**conn_details)
 
     # enable SCP on the controller
     net_connect.send_config_set(['ip scp server enable'])
