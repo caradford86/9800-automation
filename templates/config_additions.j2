@@ -1,43 +1,33 @@
-{% if interface_information is defined -%}
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! Network Management VLAN
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-vlan {{ interface_information.vlan }}
-  name {{ interface_information.description }}
-interface vlan {{ interface_information.vlan }}
-  description {{ interface_information.description }}
-  ip address {{ controller.host }} {{ interface_information.subnet_mask }}
-  no shutdown
-wireless management interface Vlan{{ interface_information.vlan }}
-{% endif %}
-{% if interface_information.gateway -%}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Interface Configuration
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-interface {{ interface_information.phy_int }}
-  switchport mode trunk
-  no shutdown
-wireless management interface Vlan{{ interface_information.vlan }}
-{% endif %}
 {% if interface_information.gateway -%}
+interface {{ controller.mgmt_int }}
+  no switchport
+  ip address {{ interface_information.ip_addr }} {{ interface_information.subnet_mask }}
+  no shutdown
+{% endif %}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! Default Gateway
+! Default Route
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+{% if controller.platform == "9800-CL" and interface_information.gateway -%}
 ip route 0.0.0.0 0.0.0.0 {{ interface_information.gateway }}
-{%endif %}
-{% if services is defined -%}
+{% elif interface_information.gateway -%}
+ip route vrf {{ interface_information.vrf }} 0.0.0.0 0.0.0.0 {{ interface_information.gateway }}
+{% endif %}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Enable Network Services
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+{% if services is defined -%}
 {% if services.restconf_enabled -%}
 netconf-yang
-{% endif -%}
+{% endif %}
 {% if services.netconf_enabled -%}
 restconf
-{% endif -%}
+{% endif %}
 {% endif %}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! AAA Method List
+! AAA
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 aaa authentication login default {{ aaa_method_list_order.authentication }}
 aaa authentication login NOAUTH none
@@ -49,3 +39,4 @@ user-name {{ controller.username }}
  privilege 15
  password 0 {{ controller.password }}
  type mgmt-user
+boot system bootflash:packages.conf
