@@ -1,20 +1,23 @@
 ---
 # ----------------- Staging WLC Configuration *edit before running* --------------------------------
 controller:
-  host: 1.1.1.2                         # update address according to network in staging environment
+  host: 1.1.1.2                        # update address according to network in staging environment
   port: 22
   device_type: 'cisco_xe'
   username: username                    # update credentials according to staging environment
   password: password
+  platform: '9800-L'                      # choose one of the following 9800-L, 9800-40, 9800-80, 9800-CL
+  mgmt_int: 'GigabitEthernet0'         # update to the correct interface naming convention based on the platform in use
 
 software_version: '16.12.3'             # update version according to staging environment
 
 interface_information:                  # update interface details according to platform used in staging environment
   description: MANAGEMENT_NETWORK
   vlan: 100
+  ip_addr: 1.1.1.2
   subnet_mask: 255.255.255.0
-  gateway: 1.1.1.1
-  phy_int: 'GigabitEthernet 1'         # update to the correct interface naming convention for the platform in use
+  gateway: 10.1.1.1
+  vrf: 'Mgmt-intf'
 
 aaa_method_list_order:
   authentication: 'local group radius'
