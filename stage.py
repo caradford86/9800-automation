@@ -18,7 +18,7 @@ NETMIKO_PARAMS = ['host', 'port', 'device_type', 'username', 'password']
 def reboot_device(conn):
     print('Reload initiated')
     output = conn.send_command_timing('reload', delay_factor=6)
-    if "confirm" in output:
+    if "confirm" or "Save" in output:
         output += conn.send_command_timing(
             "\n", strip_command=False, strip_prompt=False
         )
