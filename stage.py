@@ -1,5 +1,6 @@
 import argparse
 import time
+import re
 
 from netmiko import ConnectHandler
 from netmiko import file_transfer
@@ -64,12 +65,26 @@ def main():
     with open(rendered_config, 'w') as f:
         f.write(config_snippet)
 
+    # create a list of vlans based on the translated config to be created using netmiko
+    pattern = r'^vlan\s\d+'
+    vlans = []
+
+    with open(inputfile) as f:
+        lines = f.readlines()
+        for line in lines:
+            match = re.search(pattern, line)
+            if match:
+                vlan = match.group()
+                vlans.append(vlan)
+
     # open SSH connection
     conn_details = {key:value for key, value in device.items() if key in NETMIKO_PARAMS}
     net_connect = ConnectHandler(**conn_details)
 
     # enable SCP on the controller
     net_connect.send_config_set(['ip scp server enable'])
+    # configure vlans on the controller
+    net_connect.send_config_set(vlans)
 
     # copy the configuration to flash
     print('Copying Translated_Config.cfg to flash')
